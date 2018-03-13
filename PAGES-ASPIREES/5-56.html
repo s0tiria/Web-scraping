@@ -1,0 +1,601 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko">
+<head>
+<title>불안한 황교안 버티는 김병준… 이상한 ‘총리 동거’ 언제까지-국민일보</title>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="국민일보" />
+<meta name="keywords" content="국민일보, kmib" />
+<meta name="viewport" content="width=1024px" />
+<meta property="og:title" content="불안한 황교안 버티는 김병준… 이상한 ‘총리 동거’ 언제까지" />
+<meta name="title" content="불안한 황교안 버티는 김병준… 이상한 ‘총리 동거’ 언제까지" />
+<meta property="og:image" content="http://image.kmib.co.kr/online_image/2016/1119/201611190005_11120923645294_1.jpg" />
+
+<meta property="dable:item_id" content="0923645294" />
+<meta property="og:url" content="http://news.kmib.co.kr/article/view.asp?arcid=0923645294" />
+<meta property="og:description" content="불안한 황교안 버티는 김병준… 이상한 ‘총리 동거’ 언제까지" />
+<meta property="dable:author" content="김현길 기자" />
+<meta property="article:section" content="시사" />
+<meta property="article:section2" content="정치" />
+<meta property="article:published_time" content="2016-11-19T00:05:00+09:00" />
+
+<link rel="shortcut icon" href="http://www.kmib.co.kr/images/cmn/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="http://www.kmib.co.kr/images/cmn/favicon.png" type="image/png" />
+<script src="http://www.kmib.co.kr/js/jquery.js"></script>
+<script src="http://www.kmib.co.kr/js/common.js?v=160905"></script>
+<script type="text/javascript" src="http://news.kmib.co.kr/js/article_common.js?ver=20160704"></script>
+<script type="text/javascript" src="http://news.kmib.co.kr/js/sub_font.js?ver=20140616"></script>
+<script type="text/javascript" src="https://101.livere.co.kr/B/passport/livere8_passport.js" charset="utf-8"></script> 
+<link href="http://www.kmib.co.kr/css/common.css?v=160719" type="text/css" rel="stylesheet" media="all" />
+<link href="http://news.kmib.co.kr/css/article.css?v=160802" type="text/css" rel="stylesheet">
+<script type="text/javascript">
+$(document).ready(function(){
+var current_pic_idx = 0;
+
+var gisaPicList = $(".pic>div");
+var gisaPicLength = gisaPicList.length;
+if (gisaPicLength>1)
+{
+	$(".preimg").click(function () {view_gisa_image("p");});
+	$(".nextimg").click(function () {view_gisa_image("n");});
+}
+
+function view_gisa_image(dic)
+{
+	if (current_pic_idx==0 && dic=="p")
+	{
+		return false;
+	}
+	if (current_pic_idx==gisaPicLength-1 && dic=="n")
+	{
+		return false;
+	}
+	if (dic=="p")
+	{
+		current_pic_idx = current_pic_idx - 1
+	}
+	else if (dic=="n")
+	{
+		current_pic_idx = current_pic_idx + 1
+	}
+	else
+	{
+		return false;
+	}
+	gisaPicList.each(function(index){
+		if (current_pic_idx==$(this).index())
+		{
+			$(this).show();
+			$(".morepic>img").eq($(this).index()).attr("src","/images/img_pic_on.gif");
+		}
+		else
+		{
+			$(this).hide();
+			$(".morepic>img").eq($(this).index()).attr("src","/images/img_pic_off.gif");
+		}
+	});
+}
+
+/* 상단 롤링 */
+var timgnwsTimer;
+var timgnwsObj = $("div.timgnws_inner>div.b_area>ul>li");
+if (timgnwsObj.length>3)
+{
+	timgnwsTimer = setInterval(function(){rollingTimgnws()}, 3000);
+	$("div.timgnws_inner>div.btn_area>a.prev").click(function(){
+		clearInterval(timgnwsTimer);
+		$("div.timgnws_inner>div.b_area>ul>li").eq(timgnwsObj.length-1).prependTo($("div.timgnws_inner>div.b_area>ul"));
+		timgnwsTimer = setInterval(function(){rollingTimgnws()}, 3000);
+	});
+	$("div.timgnws_inner>div.btn_area>a.next").click(function(){
+		clearInterval(timgnwsTimer);
+		$("div.timgnws_inner>div.b_area>ul>li").eq(0).appendTo($("div.timgnws_inner>div.b_area>ul"));
+		timgnwsTimer = setInterval(function(){rollingTimgnws()}, 3000);
+	});
+	$("div.timgnws_inner>div.b_area>ul>li").mouseover(function(){
+		clearInterval(timgnwsTimer);
+	});
+	$("div.timgnws_inner>div.b_area>ul>li").mouseout(function(){
+		timgnwsTimer = setInterval(function(){rollingTimgnws()}, 3000);
+	});
+}
+function rollingTimgnws()
+{
+	$("div.timgnws_inner>div.b_area>ul>li").eq(0).appendTo($("div.timgnws_inner>div.b_area>ul"));
+}
+});
+function resizeImage(url)
+{
+	var imgObj = new Image();
+	imgObj.src = url;
+	if(imgObj.width <= 300)
+	{
+		$("#article").removeClass("nws_arti");
+		$("#article").addClass("nws_arti2");
+	}
+}
+
+//이미지 크게 보기 스크립트
+function show_large_image(imgUrl, imgW, imgH)
+{
+	var img_path = imgUrl.replace("http://", "").split("/");
+	var img_year, img_date, img_name, l_img_win;
+	if (img_path.length!=5)
+	{
+		return false;
+	}
+	img_year = img_path[2];
+	img_date = img_path[3];
+	img_name = img_path[4];
+	
+	var pop_url = "view_large_img.asp?iy="+img_year+"&id="+img_date+"&im="+img_name;
+	var pop_width, pop_height; 
+	pop_width = parseInt(imgW)+10;
+	pop_height = parseInt(imgH);
+	window.open(pop_url, "l_img_pop", "width="+pop_width+",height="+pop_height+",menubar=0,resizeble=1,scrollbars=1,status=0,titlebar=0,toolbar=0");
+	return false;
+}
+</script>
+
+</head>
+<body>
+
+<div id="wrap">
+<!-- header -->
+<script src="http://www.kmib.co.kr/js/header.js?v=161230"></script>
+<!-- //header -->
+
+<div id="container">
+<!-- content -->
+<div id="content">
+	<div id="sub">	
+		<div class="sub_header">
+
+
+		
+			<!-- 상단 이미지기사 -->
+			<div class="timgnws">
+				<div class="timgnws_inner">
+					<div class="btn_area">
+						<a href="javascript:;;" class="img_cmn prev">이전</a><a href="javascript:;;" class="img_cmn next">다음</a>
+					</div>
+					<div class="b_area">
+<ul>
+<li>
+<a href="http://news.kmib.co.kr/article/view.asp?arcid=0011174327&code=61111111&sid1=pol">
+<span class="thum"><img src="http://image.kmib.co.kr/online_image/2017/0103/201701031650_61110011174327_1.jpg" alt=""></span>
+<strong class="tit">“썰전 대본 유출?” 왠지 육성 들리는 이번주 방송 예상</strong>
+</a>
+</li>
+
+<li>
+<a href="http://news.kmib.co.kr/article/view.asp?arcid=0011173165&code=61121111&sid1=soc">
+<span class="thum"><img src="http://image.kmib.co.kr/online_image/2017/0103/201701030924_61120011173165_1.jpg" alt=""></span>
+<strong class="tit">전원책 jtbc 신년토론전 女아나에도 '버럭' (영상)</strong>
+</a>
+</li>
+
+<li>
+<a href="http://news.kmib.co.kr/article/view.asp?arcid=0011172830&code=61121111&sid1=soc">
+<span class="thum"><img src="http://image.kmib.co.kr/online_image/2017/0103/201701031017_61120011172830_1.jpg" alt=""></span>
+<strong class="tit">손석희도 막지 못한 전원책 ‘버럭’… 보다못한 유시민</strong>
+</a>
+</li>
+
+<li>
+<a href="http://news.kmib.co.kr/article/view.asp?arcid=0011172137&code=61121111&sid1=soc">
+<span class="thum"><img src="http://image.kmib.co.kr/clipImage/2017/0102/20170102160750.jpg" alt=""></span>
+<strong class="tit">'촛불 비난' 김영식 회장 천호식품 '짝퉁 홍삼 농축액' 팔다 적발</strong>
+</a>
+</li>
+
+<li>
+<a href="http://news.kmib.co.kr/article/view.asp?arcid=0011172424&code=61111111&sid1=pol">
+<span class="thum"><img src="http://image.kmib.co.kr/online_image/2017/0103/201701030001_61110011172424_1.jpg" alt=""></span>
+<strong class="tit">‘잠수함설’ 최초 제기했던 공학자 “자로, 의도를 모르겠다”</strong>
+</a>
+</li>
+
+
+<li>
+<a href="http://news.kmib.co.kr/article/view.asp?arcid=0011171148&code=61111111&sid1=pol">
+<span class="thum"><img src="http://image.kmib.co.kr/clipImage/2017/0102/20170102095444.JPG" alt=""></span>
+<strong class="tit">'무슨말인지 모르겠어서' 화제된 대통령 간담회 답변</strong>
+</a>
+</li>
+
+
+</ul>
+</div>
+				</div>
+			</div>
+			<!-- //상단 이미지기사 -->
+			
+	<!-- ad 700*200 / 160729 변경 -->
+	<div style="border-bottom:1px solid #ddd;padding:10px 0;margin-bottom:20px;text-align:center;">
+	<iframe src="http://adex.ednplus.com/xc/h/mDqk2AcQ" width="728" height="90" frameborder="0" scrolling="no" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0"></iframe>
+
+</div>
+	<!--// ad 700*200 -->
+	
+
+			<!-- 기사 상단 -->
+			<div class="nwsti_inner">
+				<!-- 경로-->
+				<div class="locabar">
+					<h2>
+						<!--a href="list.asp?sid1=mis">교계뉴스</a-->
+						
+						<a href="list.asp?sid1=all">시사</a>
+						
+						<span class="img_cmn"></span>
+					</h2>
+					<p class="loca">
+						<!--a href="list.asp?sid1=mis">미션</a><span>&gt;</span><a href="list.asp?sid1=chr">교계뉴스</a-->
+						
+						<a href="list.asp?sid1=all">시사</a><span>
+						
+						&gt;
+						
+						<a href="list.asp?sid1=pol">정치</a>
+						
+					</p>
+				</div>
+				<!-- //경로 -->
+				<!-- 타이틀 -->
+				<div class="nwsti">
+				<h3>불안한 황교안 버티는 김병준… 이상한 ‘총리 동거’ 언제까지</h3>
+				
+				<h4>벌써 3주째… 金, 자진 사퇴 안해</h4>
+				
+				<div class="nwsti_btm">
+				<div class="date"><strong>입력 : </strong> <span class="t11">2016-11-19 00:05</span> </div>
+				<div class="btn_area">
+					<ul>
+						<li><iframe src="//www.facebook.com/plugins/like.php?href=http%3A//news.kmib.co.kr/article/view.asp%3Farcid%3D0923645294%26code%3D11122000%26sid1%3Dpol&layout=button_count&show_face=falseaction=like&share=false" scrolling="no" frameborder="0" width="92" height="22" class="mt5 mr5" allowtransparency="true"></iframe></li>
+						<li><a href="javascript:getShortUrl_new('t','http%3A//news.kmib.co.kr/article/view.asp%3Farcid%3D0923645294%26code%3D11122000%26sid1%3Dpol','불안한 황교안 버티는 김병준… 이상한 ‘총리 동거’ 언제까지','0923645294');" class="img_cmn btn_tw">트위터로 퍼가기</a></li>
+						<li><a href="javascript:getShortUrl_new('f','http%3A//news.kmib.co.kr/article/view.asp%3Farcid%3D0923645294%26code%3D11122000%26sid1%3Dpol','불안한 황교안 버티는 김병준… 이상한 ‘총리 동거’ 언제까지','0923645294');" class="img_cmn btn_fb">페이스북으로 퍼가기</a></li>
+						<li><a href="javascript:getShortUrl_new('g','http%3A//news.kmib.co.kr/article/view.asp%3Farcid%3D0923645294%26code%3D11122000%26sid1%3Dpol','불안한 황교안 버티는 김병준… 이상한 ‘총리 동거’ 언제까지','0923645294');" class="img_cmn btn_google">구글로 퍼가기</a></li>
+						<li class="print"><a href='javascript:printWin("0923645294");' class="img_cmn btn_print">인쇄하기</a></li>
+						<li class="mg0"><a href="javascript:fontPlus();" class="img_cmn btn_zoom_in">글자 크게</a></li>
+						<li class="mg0"><a href="javascript:fontMinus();" class="img_cmn btn_zoom_out">글자 작게</a></li>
+					</ul>
+				</div>
+				</div>
+				</div>
+				<!-- //기사 타이틀 -->
+			</div>
+			<!-- //기사 상단 -->
+	</div>
+
+	<div class="sub_content">
+	<!-- NwsCon 전체 시작 -->
+	<div class="NwsCon">
+
+
+		<!-- nws_arti 시작 -->
+			
+			<div id="article" class="nws_arti">
+				
+				<!-- 기사 상단 사진 -->
+				<div id="gisaimage" class="nwspic">
+					<div class="pic">
+					
+						<div id="picLst" >
+							<img src="http://image.kmib.co.kr/online_image/2016/1119/201611190005_11120923645294_1.jpg" alt="불안한 황교안 버티는 김병준… 이상한 ‘총리 동거’ 언제까지 기사의 사진" onload="resizeImage(this.src);"/>
+							
+						</div>
+					
+					</div>
+					
+				</div>
+				<!-- //기사 상단 사진 -->
+				
+				<div class="tx" id="articleBody" itemprop="articleBody">
+			
+				<!-- 기사 내용 -->
+
+					황교안(왼쪽 사진)국무총리와 김병준(오른쪽) 국무총리 내정자 간 유례없는 ‘기묘한 동거’가 18일로 17일째를 맞았다. 총리 내정 이후 임명동의안 국회 제출까지 별다른 규정이 없다. 박근혜 대통령의 지명 철회나 김 총리 내정자의 자진 사퇴가 없으면 동거 체제가 길어질 가능성도 있다.<br><br> 현재 김 내정자는 금융감독원 연수원 사무실로 출근하기도 하지만 대학이나 지방 강연 일정을 함께 소화하고 있다. 17일에도 광주에서 강연 일정을 소화했고, 이날은 금감원 연수원에 따로 출근하지 않았다. 국회 인사청문회 준비도 손놓은 상태라고 한다.<br><br> 김 내정자는 지난 2일 총리에 지명됐지만, 엿새 만인 지난 8일 박 대통령이 여야 합의 총리 추천을 요구하면서 사실상 낙마한 것으로 받아들여졌다. 하지만 이후 여야 합의 총리 추천 논의가 실종됐다.<br><br> 총리 내정자 신분이 이처럼 지속되는 것은 매우 이례적이다. 박근혜정부 들어 김용준 전 헌법재판소장, 문창극 전 중앙일보 주필은 인사청문회 요청서나 임명동의안 제출 전에 낙마했지만 자진 사퇴까진 각각 5일, 14일이 걸렸다. 청문회 전에 자진 사퇴한 안대희 전 대법관은 국회에 임명동의안이 제출됐었다. 총리서리 제도가 있던 김대중정부 당시 김종필 총리가 국회 인준 없이 6개월 넘게 서리 꼬리표를 떼지 못한 적은 있지만 관련 절차는 진행됐었다.<br><br> 인사청문회법은 국무위원 임명동의안 등이 제출된 날로부터 20일 이내에 심사나 인사청문회를 마쳐야 한다고 규정하고 있다. 그러나 내정자 신분에 대한 기간 규정은 따로 없다. 김 내정자는 언론을 통해 새로운 후보가 나올 때까지 “자진 사퇴는 없다”는 입장을 밝혔다. 총리 문제에 대한 여야 합의가 없을 경우 기묘한 동거는 계속될 전망이다.<br><br>김현길 기자 hgkim@kmib.co.kr<br><br>
+				</div>
+				<!-- //기사 내용 -->
+		</div>
+		<!-- //nws_arti 끝 -->
+
+		<!-- ad icon_AD -->
+		<script type="text/javascript" src="http://js2.keywordsconnect.com/iconad_kmib.js"></script>
+		<!--// ad icon_AD -->
+
+		
+		<!-- 6줄 광고/20160817 -->
+		<div style="padding-bottom:30px;">
+			<div style="float:left;width:450px;">		  	
+			<iframe width="455" height="250" src="http://ad.adinc.kr/cgi-bin/PelicanC.dll?impr?pageid=02ze&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" ></iframe>
+
+
+		  </div>
+		<!-- 160729 ad추가 -->
+			<div style="float:right;margin-bottom:20px;">	
+			<iframe src="http://adex.ednplus.com/xc/h/mDrV6s5J" width="250" height="250" frameborder="0" scrolling="no" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0"></iframe>
+			</div>
+		<!-- //160729 ad추가 -->
+		</div>
+		<!-- //6줄 광고/20160817 -->
+		
+
+		<!-- sns 영역 -->
+		<div class="b_sns" style="clear:both;margin-top:10px;">
+		<a href="javascript:getShortUrl_new('t','http%3A//news.kmib.co.kr/article/view.asp%3Farcid%3D0923645294%26code%3D11122000%26sid1%3Dpol','불안한 황교안 버티는 김병준… 이상한 ‘총리 동거’ 언제까지','0923645294');"><img src="http://news.kmib.co.kr/images/icn_sns_twt.gif" alt="트위터" /></a><a href="javascript:getShortUrl_new('f','http%3A//news.kmib.co.kr/article/view.asp%3Farcid%3D0923645294%26code%3D11122000%26sid1%3Dpol','불안한 황교안 버티는 김병준… 이상한 ‘총리 동거’ 언제까지','0923645294');"><img src="http://news.kmib.co.kr/images/icn_sns_fb.gif" alt="페이스북" /></a><a href="javascript:getShortUrl_new('g','http%3A//news.kmib.co.kr/article/view.asp%3Farcid%3D0923645294%26code%3D11122000%26sid1%3Dpol','불안한 황교안 버티는 김병준… 이상한 ‘총리 동거’ 언제까지','0923645294');"><img src="http://news.kmib.co.kr/images/icn_sns_gp.gif" alt="구글플러스" /></a>
+		</div>
+		<!-- //sns 영역 -->
+		<div class="miranda"></div>
+
+
+<!--700*180 ad 레오플 -->
+<div style="padding-bottom:20px;">
+<iframe width="700" height="180" src="http://ad.reople.co.kr/cgi-bin/PelicanC.dll?impr?pageid=00NZ&nocnt=y&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" ></iframe>
+</div>
+<!--//700*180 ad 레오플 -->
+
+
+<!-- 관련기사 -->
+<!-- //관련기사 -->
+<!-- 인기기사 -->
+<div class="best_nw">
+<h4> 당신이 좋아할 만한 기사</h4>
+<ul>
+<li><a href="http://news.kmib.co.kr/article/view.asp?arcid=0011174258&code=61121111&sid1=soc">"실명 얘기하시면 좀…" 기자 면박주며 웃는 정유라 영상</a></li>
+<li><a href="http://news.kmib.co.kr/article/view.asp?arcid=0923671235&code=11121100&sid1=pol">[단독] “진급 힘들다” 평가 조현천, 국정원 추 前국장 독대 후 기무사령관 승진</a></li>
+<li><a href="http://news.kmib.co.kr/article/view.asp?arcid=0011173477&code=61121111&sid1=soc">[JTBC 신년토론] 일방통행 전원책, 말 잊은 손석희, 말리는 유시민</a></li>
+<li><a href="http://news.kmib.co.kr/article/view.asp?arcid=0011173417&code=61121111&sid1=soc">주진우 "가족에게 차량 돌진, 신변 위협 불안" 호소</a></li>
+<li><a href="http://news.kmib.co.kr/article/view.asp?arcid=0011173256&code=61181111&sid1=ent">작정한 듯한 설리 인스타(feat 구하라)</a></li>
+
+
+<li><a href="http://news.kmib.co.kr/article/view.asp?arcid=0011172830&code=61121111&sid1=soc">손석희도 막지 못한 전원책 ‘버럭’… 보다못한 유시민</a></li>
+<li><a href="http://news.kmib.co.kr/article/view.asp?arcid=0011173027&code=61121311&sid1=soc">"난 사인만 했다" 체포된 정유라 인터뷰 육성 전문</a></li>
+<li><a href="http://news.kmib.co.kr/article/view.asp?arcid=0011173165&code=61121111&sid1=soc">전원책 jtbc 신년토론전 女아나에도 '버럭' (영상)</a></li>
+<li><a href="http://news.kmib.co.kr/article/view.asp?arcid=0011172042&code=61121111&sid1=soc">정유라 덴마크서 체포된 순간 영상 공개… JTBC “기자가 신고”</a></li>
+
+
+<li><a href="http://news.kmib.co.kr/article/view.asp?arcid=0011171360&code=61121111&sid1=soc">이재명 "TV조선 반드시 폐간시킬 것" 전면전 선포</a></li>
+
+
+</ul>
+</div>
+<!-- //인기기사 -->
+<!-- //인기기사 -->
+
+
+<!-- 700*370 ad  -->
+<div style="padding-bottom:20px;width:700px;height:370px;">
+  <iframe width="700" height="370" src="http://ads.mncmedia.co.kr/mad/KUKINEWS/mid_6thumb_wrapper.html" border="0" frameborder="0" scrolling="no" leftmargin="0" topmargin="0"></iframe>
+</div>
+<!--// 700*370 ad  -->
+
+<!-- 포토갤러리 -->
+<div class="nws_best_gall">
+<div class="h_area">
+<h4>인기 포토갤러리</h4>
+</div>
+<div class="b_area">
+<ul>
+<li class="headline">
+<a href="http://news.kmib.co.kr/article/view.asp?arcid=0011173256&code=61181111&sid1=ent">
+<span class="thum"><img alt="" src="http://image.kmib.co.kr/online_image/2017/0103/201701030952_61180011173256_1.jpg"></span>
+<span class="tit_area"><strong class="tit">작정한 듯한 설리 인스타(feat 구하라)</strong></span>
+</a>
+</li>
+
+<li>
+<a href="http://news.kmib.co.kr/article/view.asp?arcid=0011173165&code=61121111&sid1=soc">
+<span class="thum"><img alt="" src="http://image.kmib.co.kr/online_image/2017/0103/201701030933_61120011173165_1.jpg"></span>
+<span class="tit_area"><strong class="tit">전원책 jtbc 신년토론전 女아나에도 '버럭' </strong></span>
+</a>
+</li>
+
+<li>
+<a href="http://news.kmib.co.kr/article/view.asp?arcid=0011172733&code=61121111&sid1=soc">
+<span class="thum"><img alt="" src="http://image.kmib.co.kr/online_image/2017/0103/201701030003_61120011172733_1.jpg"></span>
+<span class="tit_area"><strong class="tit">JTBC 취재진이 정유라 은신처 확신한 ‘결정적 증거</strong></span>
+</a>
+</li>
+
+<li>
+<a href="http://news.kmib.co.kr/article/view.asp?arcid=0011166029&code=61121111&sid1=soc">
+<span class="thum"><img alt="" src="http://image.kmib.co.kr/clipImage/2016/1230/20161230093431.JPG"></span>
+<span class="tit_area"><strong class="tit">'쌀포대에 강아지를 가득 담아 버렸네요' 고발 사진</strong></span>
+</a>
+</li>
+
+
+
+<li>
+<a href="http://news.kmib.co.kr/article/view.asp?arcid=0011161233&code=61181111&sid1=ent">
+<span class="thum"><img alt="" src="http://image.kmib.co.kr/online_image/2016/1227/201612271626_61180011161233_1.jpg"></span>
+<span class="tit_area"><strong class="tit">'김새롬, 남편에 발길질' 수상한 영상에 무반응인 이유</strong></span>
+</a>
+</li>
+
+
+
+
+
+
+<li>
+<a href="http://news.kmib.co.kr/article/view.asp?arcid=0011148745&code=61121211&sid1=soc">
+<span class="thum"><img alt="" src="http://image.kmib.co.kr/clipImage/2016/1221/20161221092038.JPG"></span>
+<span class="tit_area"><strong class="tit">"대한항공 승무원 위기대처 미숙" 리차드 막스가 공개한 기내 난동 사진</strong></span>
+</a>
+</li>
+
+
+
+<li>
+<a href="http://news.kmib.co.kr/article/view.asp?arcid=0011158101&code=61121111&sid1=soc">
+<span class="thum"><img alt="" src="http://image.kmib.co.kr/clipImage/2016/1226/20161226134130.JPG"></span>
+<span class="tit_area"><strong class="tit">기내난동 중소기업 사장 아들 6일만에 출석… “과도한 배려” 지적</strong></span>
+</a>
+</li>
+
+<li>
+<a href="http://news.kmib.co.kr/article/view.asp?arcid=0011144419&code=61111411&sid1=pol">
+<span class="thum"><img alt="" src="http://image.kmib.co.kr/clipImage/2016/1220/20161220133635.JPG"></span>
+<span class="tit_area"><strong class="tit">'성추행 몰카' 찍힌 칠레외교관에 대한 교민 반응</strong></span>
+</a>
+</li>
+
+<li>
+<a href="http://news.kmib.co.kr/article/view.asp?arcid=0011133640&code=61181111&sid1=ent">
+<span class="thum"><img alt="" src="http://image.kmib.co.kr/online_image/2016/1214/201612141032_61180011133640_1.jpg"></span>
+<span class="tit_area"><strong class="tit">아내 옆에서 다른 여성과 '친밀 인사' 이병헌 영상</strong></span>
+</a>
+</li>
+
+
+</ul>
+</div>
+</div>
+<!-- //포토갤러리 -->
+
+
+<!-- ad 700*150 -->
+<div style="margin:15px 0;">
+  <iframe src="http://adin.ad4980.kr/s/2015/09/24/z2111355421.html" width="700" height="150" marginheight="0" marginwidth="0" scrolling="no" frameborder="0" allowtransparency="false"></iframe>
+</div>
+<!--// ad 700*150 -->
+
+
+
+
+<!-- 688*110 ad -->
+<div style="padding-bottom:20px;width:688px;height:110px;margin:0 auto;">
+<iframe src="http://imp.mklaud.com/ad?id=2032" scrolling="no" border="0" marginWidth="0" marginHeight="0" frameBorder="0" width="688" height="110"></iframe>
+</div>
+<!-- //688*110 ad -->
+
+
+
+
+<!-- 댓글영역 -->
+<div class="comnt_area">
+<div id="livereContainer">
+	<script type="text/javascript">
+	var consumer_seq	= "34";
+	var livere_seq		= "23026";
+	var smartlogin_seq	= "38";
+
+	var title = "불안한 황교안 버티는 김병준… 이상한 ‘총리 동거’ 언제까지";
+	var refer = "news.kmib.co.kr/article/view.asp?arcid=0923645294";
+
+	livereReply = new Livere( livere_seq , refer , title );
+
+	livereLib.start();
+	</script>
+</div>
+</div>
+<!-- //댓글영역 -->
+
+</div>
+<!-- //NwsCon 전체 끝 -->
+
+<!-- SideCon 전체 시작 -->
+<div class="SideCon">
+		<iframe id="subIframe" src="http://news.kmib.co.kr/inc/ifm_sub_content.asp?sub_sid=pol&aid=0923645294&ads=1&mflag=n" width="250" marginwidth="0" marginheight="0" frameborder="0" border="0" scrolling="no"></iframe>
+</div>
+<!-- //SideCon 전체 끝 -->
+	</div>
+</div>
+<!-- //content -->
+</div>
+<!-- footer -->
+<script src="http://www.kmib.co.kr/js/footer.js?v=161103"></script>
+<!-- //footer -->
+<div style="padding-top:100px;"></div>
+</div>
+
+
+<!--양쪽 날개배너-->
+<div id="left_top_ad" style="position:absolute;left:50%;margin-left:-660px;top:165px;width:160px;height:600px;z-index:100;">
+<!-- AdTradr.com Asynchronous Ad Tag For Kmib.co.kr -->
+<!-- Ad Unit Name: 160x600-1 -->
+<!-- Ad Unit Size(s): 160x600 -->
+<script src="https://adtradradservices.com/adassets/kmib.co.kr-1430bb3020b40c9181b6905e1e47070c/adtradr-ad-tag-160x600-1478402709039.js"></script>
+<!-- AdTradr.com Asynchronous Ad Tag For Kmib.co.kr -->
+</div>
+
+<div id="right_top_ad" style="top:165px;z-index:9999999999999;">
+<!-- ad 120*600 -->
+<iframe src="http://adex.ednplus.com/xc/h/Fz53pdU8" width="120" height="600" frameborder="0" scrolling="no" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0"></iframe>
+<!--// ad 120*600 -->
+</div>
+<script type="text/javascript" src="http://news.kmib.co.kr/js/bnr_scroll.js"></script>
+<script type="text/javascript">
+scroll_bnr($("#left_top_ad"), 165);
+scroll_bnr($("#right_top_ad"), 165);
+</script>
+<!--//양쪽 날개배너-->
+
+<!-- Bottom_970x90 -->
+<div style="text-align:center;margin-bottom:96px;">
+<ins class="daum_ddn_area" style="display:none;" 
+ data-ad-unit    = "DAN-t4ccfwpbj0a8" 
+ data-ad-media   = "1VU" 
+ data-ad-pubuser = "1oC" 
+ data-ad-type    = "D" 
+ data-ad-width   = "970" 
+ data-ad-height  = "90"></ins> 
+<script type="text/javascript" src="//s1.daumcdn.net/svc/original/U03/commonjs/ddn/common/js/ad.min.js"></script>
+</div>
+
+
+<!--NetInsight//-->
+<script src="http://www.kmib.co.kr/js/wanal.js" type="text/javascript"></script>
+<script id="refCnt" type="text/javascript" src="http://api.kmib.co.kr/ref/ref_check_web.js?aid=0923645294&code=11122000&rDate=2016-11-19"></script>
+
+<!--아이앤비넷 15.01.30-->
+<script type="text/javascript" src="http://js2.keywordsconnect.com/inspace_kmib.js"></script>
+<!--//아이앤비넷 15.01.30-->
+
+<!--인라이플 15.12.21-->
+<script src="http://www.dreamsearch.or.kr/servlet/adBannerFloating?from=&u=2015121600009&us=3952&s=4669&iwh=180_180&igb=70&fType=2" type="text/javascript"></script>
+<!--//인라이플 15.12.21-->
+
+<!-- 160613 인라이플 -->
+<script src="http://www.dreamsearch.or.kr/servlet/adBannerFloating?from=&u=2015121600009&us=5878&s=6593&iwh=77_180&fType=6&igb=87"></script>
+<!-- //160613 인라이플 -->
+
+<!-- netinsight recommend script start -->
+<script type="text/javascript" src="http://rec.netinsight.co.kr/facebook.netinsight.recommend.controller.js"></script>
+<script type="text/javascript">
+var NISPublisher = 'kmib'; // 발급받은 매체 아이디
+var recommend =  new NISRecommend(NISPublisher); // 추천기사용 인스턴스 생성
+recommend.setArticle('11122000', '11122000', '0923645294', '2016-11-19 00:05'); // 기사 설정
+recommend.send(); // 기사 전송
+</script>
+<!-- netinsight recommend end start -->
+
+<!-- 네오인터렉티브 -->
+<script type="text/javascript" src="http://nscreen.neoebiz.co.kr/xJqScreen.php?data=kmib"></script>
+<!--// 네오인터렉티브 -->
+
+<!-- 인터웍스미디어 -->
+<script type="text/javascript" src="//interface.interworksmedia.co.kr/js/iwmads.min.js"></script>
+<script type="text/javascript">
+    iwmads('#articleBody > br:eq(4)', {mediaId: 'kmib', site: 'www.kmib.interplay/kmib_news', reNewsId: /([\?&]*arcid=)(\w+)(?:&?.*)$/});
+</script>
+<!--// 인터웍스미디어 -->
+
+<!-- Dable 스크립트 시작 -->
+<script>
+(function(d,a,b,l,e,_) {
+d[b]=d[b]||function(){(d[b].q=d[b].q||[]).push(arguments)};e=a.createElement(l);
+e.async=1;e.charset='utf-8';e.src='//static.dable.io/dist/plugin.min.js';
+_=a.getElementsByTagName(l)[0];_.parentNode.insertBefore(e,_);
+})(window,document,'dable','script');
+dable('setService', 'kmib.co.kr');
+dable('sendLog');
+</script>
+<!-- Dable 스크립트 종료 -->
+
+</body>
+</html>

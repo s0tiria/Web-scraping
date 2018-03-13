@@ -1,0 +1,1902 @@
+<!DOCTYPE HTML>
+<!--[if IE 9 ]><html lang="fr" prefix="og: http://ogp.me/ns#" class="ie ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="fr"  prefix="og: http://ogp.me/ns#" ><!--<![endif]-->
+
+				
+	<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+		
+		    
+
+<!-- meta b20792b62bf01d8a00c29ce0cec6da12-->
+<link rel="icon" type="image/ico" href="/favicon.ico" />
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-language" content="fr-FR" /><meta http-equiv="refresh" content="900" /><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="domain" content="Grazia.fr" />
+
+<!--[if IE 10]><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-998.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script><![endif]-->
+            	<title>Fashion Week Printemps-Eté 2017 : les chaussures les plus dingues aperçues sur le podium - Grazia.fr</title>
+<meta name="copyright" content="Grazia.fr" />
+<meta name="author" content="Grazia.fr" /><meta name="description" content="Alors que la Fashion Week se terminait ce mercredi 5 octobre à Paris, il est maintenant temps de faire le bilan. Côté chaussures, l'été 2017 de..." />
+<meta name="robots" content="all" />
+
+
+	
+
+<meta name="twitter:title" content="Fashion Week Printemps-Et&eacute; 2017 : les #chaussures les plus dingues aper&ccedil;ues sur le..." />
+<meta name="twitter:url" content="http://www.grazia.fr/galerie/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium-830249" />
+<meta name="twitter:domain" content="Grazia.fr" />
+<meta name="twitter:site" content="grazia_fr" />
+<meta name="twitter:description" content="Alors que la Fashion Week se terminait ce mercredi 5 octobre à Paris, il est maintenant temps de faire le bilan. Côté chaussures, l'été 2017 de..." />
+<meta name="twitter:card" content="gallery">																				<meta name="twitter:image0:src" content="http://www.grazia.fr/var/grazia/storage/images/media/images/galerie/2016-10-06-fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues/13495489-1-fre-FR/Fashion-Week-Printemps-Ete-2017-les-chaussures-les-plus-dingues_exact1024x768_p.jpg" />
+																									<meta name="twitter:image1:src" content="http://www.grazia.fr/var/grazia/storage/images/media/images/galerie/2016-10-06-fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues2/13495492-1-fre-FR/Fashion-Week-Printemps-Ete-2017-les-chaussures-les-plus-dingues_exact1024x768_p.jpg" />
+																									<meta name="twitter:image2:src" content="http://www.grazia.fr/var/grazia/storage/images/media/images/galerie/2016-10-06-fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues3/13495495-1-fre-FR/Fashion-Week-Printemps-Ete-2017-les-chaussures-les-plus-dingues_exact1024x768_p.jpg" />
+																									<meta name="twitter:image3:src" content="http://www.grazia.fr/var/grazia/storage/images/media/images/galerie/2016-10-06-fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues4/13495498-1-fre-FR/Fashion-Week-Printemps-Ete-2017-les-chaussures-les-plus-dingues_exact1024x768_p.jpg" />
+						
+
+<meta property="fb:pages" content="98924733343" />
+<meta property="og:title" content="Fashion Week Printemps-Eté 2017 : les chaussures les plus dingues aperçues sur le podium" />
+<meta property="og:description" content="Alors que la Fashion Week se terminait ce mercredi 5 octobre à Paris, il est maintenant temps de faire le bilan. Côté chaussures, l'été 2017 de..." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.grazia.fr/galerie/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium-830249" />
+<meta property="og:site_name" content="Grazia.fr" />
+<meta property="og:image" content="http://www.grazia.fr/var/grazia/storage/images/galerie/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium-830249/13495519-1-fre-FR/Fashion-Week-Printemps-Ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium_exact1024x768_p.jpg" />
+
+											<meta property="article:author" content="Géraldine Verheyen" />
+	
+<meta property="article:published_time" content="2016-10-06T16:09:51+02:00" />
+<meta property="article:modified_time" content="2016-10-06T16:09:51+02:00" />	<meta property="article:section" content="Mode" />
+	<meta property="article:tag" content="Mode, fashion week, Défilés, Chaussures à talons, Chaussures compensées" />
+
+
+<meta name="msvalidate.01" content="20766C0EA5A3E5E2536F98C3F55B9009" /><link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.grazia.fr/galerie/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium-830249" /><meta name="google-play-app" content="app-id=redshift.grazia"><meta name="apple-itunes-app" content="app-id=325184355"><meta name="kindle-fire-app" content="app-id=B00B4S3DGK"><meta name="msApplication-ID" content="app-id=9wzdncrcwcm7">
+
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png"><meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+<link href="/startup-image-320x460.png" media="(device-width: 320px)" rel="apple-touch-startup-image">
+<link href="/startup-image-640x920.png" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+<link href="/startup-image-748x1024.png" media="(device-width: 768px) and (orientation: landscape)" rel="apple-touch-startup-image">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Grazia.fr">	<link rel="preconnect" href="http://www.grazia.fr" />																<link rel="preconnect" href="http://img1.grazia.fr" crossorigin />
+							<link rel="preconnect" href="http://img2.grazia.fr" crossorigin />
+							<link rel="preconnect" href="http://img3.grazia.fr" crossorigin />
+																															<link rel="preconnect" href="http://file1.grazia.fr" crossorigin />
+																															<link rel="preconnect" href="http://src1.grazia.fr" crossorigin />
+																															<link rel="preconnect" href="http://js1.grazia.fr" crossorigin />
+																															<link rel="preconnect" href="http://css1.grazia.fr" crossorigin />
+									
+		<!-- LiveViewer -->
+                            
+    <meta name="ff:page-type" content="article" />
+            <meta name="ff:section" content="Mode" />
+        
+    <meta name="ff:url" content="http://www.grazia.fr/galerie/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium-830249" />
+    
+    <meta name="ff:author" content="" />
+    <meta name="ff:pubdate" content="10-06-2016 04:09:51" />
+    <meta name="ff:lang" content="fr" />
+    <meta name="ff:title" content="Fashion Week Printemps-Eté 2017 : les chaussures les plus dingues aperçues sur le podium" />
+        <meta name="ff:keyword" content="Fashion Week, chaussures, hood by air, ysl, christopher kane" />
+    		
+		
+		        <!-- CSS -->		
+		
+<link rel="stylesheet" type="text/css" href="http://css1.grazia.fr/var/grazia/cache/public/stylesheets/05f64f9a02bf69cd328577a8c8954394_1483346295.css" />
+
+		
+		
+<script type="text/javascript">
+//<!--
+mfpagedata = {
+	mainNodeId: 830249,
+			classIdentifier: "gallery",
+	access:"grazia",
+	defaultAccess:"grazia",
+	mainFrontHost:"www.grazia.fr",
+	isMobile: false,
+	rubric_node_id:483349,		mainSiteUrl:"http://www.grazia.fr",
+	urlFileJs:"http://js1.grazia.fr",
+	urlFileImg:"http://img1.grazia.fr",
+	design:"grazia",
+	urlAboMobile:"http://www.kiosquemag.com/magazine-en-ligne/grazia",
+	urlAboAndroidMobile:"https://play.google.com/store/newsstand/details/Grazia_France?id=CAow7feRCg&hl=fr_FR",
+	urlAboIosMobile:"https://itunes.apple.com/fr/app/grazia-magazine/id533396275?mt=8",
+	urlAboWindowsMobile:"http://apps.microsoft.com/windows/fr-fr/app/grazia-magazine/a23e18aa-885d-4ff8-8265-2746bc58fdf5"};
+//-->
+</script>
+		
+<script type="text/javascript" src="http://js1.grazia.fr/extension/mfstandard/design/standard/javascript/mf.sethabillage.js"></script>
+<script type="text/javascript" language='javascript' src="http://js1.grazia.fr/extension/mfstandard/design/standard/javascript/lib/jquery.1.11.2.min.js"></script><script type="text/javascript" src="http://js1.grazia.fr/extension/mfstandard/design/standard/javascript/partners/adtechv2_init.js"></script>
+
+<script src="http://aka-cdn-ns.adtech.de/dt/common/DACLoader.js"></script>
+
+
+<script>
+
+	if(typeof ADTECH.config !== "undefined")
+	{
+		// Config Adtech du site
+		ADTECH.config.page = { 
+			protocol: 'http', 
+			server: 'adserver.adtech.de', 
+			network: '1483.1', 
+			params: { loc: '100' } //pas utiliser key poyur le moment
+		};
+	}
+</script>
+
+
+
+
+		<!-- google analytics -->																	<meta id="universalanalytics" content="UA-1658521-28" />
+
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-1658521-28', 'auto');
+		ga('send', 'pageview');
+
+</script>
+
+<!-- / google analytics -->
+					
+	<!-- Code de chargement et d'initialisation du SDK à insérer en haut de page -->
+	<script>
+	  window.beOpinionAsyncInit = function() {
+	    BeOpinionSDK.init({
+	      account: "56df0ab13cdd9945e5f625bb",
+	    });
+	    BeOpinionSDK.watch();
+	  }
+	</script>
+	<script async="1" src="https://widget.beopinion.com/sdk-2.0.0.js"></script>
+
+
+
+	
+			
+		
+		
+		<!-- google social search sharing --><!-- /google social search sharing -->
+		
+		
+	</head>
+	<body class=" gallery article " data-sitename="grazia">
+
+		
+		
+<!-- adtech emplacement:testhaut -->
+			
+		
+
+		
+		<div id="gz3||testhaut"  class="emplacement_adtech type-testhaut">
+			<noscript>
+				<a href="http://adserver.adtech.de/adlink|3.0|1483.1|6250533|0|5729|ADTECH;loc=100;alias=gz3||testhaut;kvsousrubrique=fashion-week;key='830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees'" target="_blank"><img src="http://adserver.adtech.de/adserv|3.0|1483.1|6250533|0|5729|ADTECH;loc=100;alias=gz3||testhaut;kvsousrubrique=fashion-week;key='830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees'" border="0" width="78" height="78"></a>
+			</noscript>
+			<script>
+			
+			if(typeof ADTECH.config !== "undefined"){
+				ADTECH.config.placements['gz3||testhaut'] = { sizeid:'5729', alias: 'gz3||testhaut',kvsousrubrique:'fashion-week',key:'830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees', params: {target: '_blank',key:'830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees', kvsousrubrique:'fashion-week'}};
+				ADTECH.enqueueAd('gz3||testhaut');
+			}
+			
+			</script>
+		</div>
+
+			
+
+		
+		
+
+																<script>
+		    function loadScript(url, callback){		        var script = document.createElement("script");
+		        script.type = "text/javascript";
+		        script.async = true; 
+		        script.addEventListener('load', function() {callback();}, false); 
+		        script.src = url;
+		        parentNode = document.getElementsByTagName("script")[0].parentNode;
+		        el_script = document.getElementsByTagName("script")[0];
+		        parentNode.insertBefore(script, el_script);
+		    }		    function callback(){		        var PROBANCE_tracker = new PROBANCE_trackers(); 
+		        var crm = new PROBANCE_CRMTracker( "FUs0elOSAAq1yMz", "webtrack_probance", 365, "t3.probance.com/webtrax", "idprob" );
+		        PROBANCE_tracker.setCRM(crm);
+		        PROBANCE_tracker.doNotTrackOnInit();
+		        PROBANCE_tracker.init();
+				PROBANCE_tracker.track( "/galerie/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium-830249", 
+										[['article_id','846321'], 
+									     ['site_web',"grazia"],
+									     ['id_article_site','grazia_846321'],
+									     ['univers',"Mode"],
+									     ['article_libelle',"Fashion Week Printemps-Eté 2017 : les chaussures les plus dingues aperçues sur le podium"]] );
+		    }		    loadScript("http://js1.grazia.fr/extension/mfstandard/design/standard/javascript/partners/probance_tracker.js", callback);
+		</script>
+	
+		
+		<!-- Header -->
+<header id="header" itemscope itemtype="http://schema.org/Organization" data-version="2"  class="">
+	<div class="container">
+		<div id="header-logo">
+			<a href="/">
+				<img src="http://src1.grazia.fr/extension/grazia/design/grazia/images/layout/main-logo.png" alt="Grazia.fr">
+			</a>
+		</div>
+
+		<a href="" id="header-menulink" class="no-max-video" data-show-hide="extended-menu" data-show-hide-overlay="950" style="display: inline;"><i class="icon-mobile-menu"></i><span class="text">Menu</span></a>
+
+
+		
+												<meta itemprop="url" content="http://www.kiosquemag.com/magazine-en-ligne/grazia?utm_source=site-grazia&utm_medium=header" />
+				<a target="_blank" id="link-header-abo" href="http://www.kiosquemag.com/magazine-en-ligne/grazia?utm_source=site-grazia&utm_medium=header" class="header-mea-link" title="Tous les vendredis, mon Grazia chez moi. Je m’abonne ! " alt="Tous les vendredis, mon Grazia chez moi. Je m’abonne ! ">S'abonner</a>
+							
+		<div id="header-menu-icons">
+			<span class="search icon-search" data-show-hide="search" data-show-hide-overlay="900" data-show-hide-focus="true"><span class="text">Rechercher</span></span>
+			<span class="newsletter icon-email" data-show-hide="newsletter" data-show-hide-overlay="900" data-show-hide-focus="true"><span class="text">Newsletter</span></span>
+			<span class="social-networks icon-social" data-show-hide="social-networks" data-show-hide-overlay="900"><span class="text">Réseaux sociaux</span></span>
+			<span class="account icon-account" onclick="location.href='http://www.grazia.fr/compte/mon-profil';"><span class="text">Mon compte 2</span></span>
+		</div>
+	</div>
+
+	<div id="pane-search" data-show-hide-pane-id="search" class="header-over-pane">
+		<i class="icon-close" data-show-hide-close></i>
+
+		<div class="container">
+			<div class="pane-logo">
+			</div>
+
+			<div class="bottom-logo">
+				
+<div class="title-block ">
+    <span>Recherche</span>
+</div>				<form id="header-form-search" class=" navbar-collapse collapse" action="/content/search">
+	<label class="hide" for="searchtext">Rechercher le texte:</label>
+
+	<div class="search-area">
+		<input class="search" type="search" name="SearchText" placeholder="Rechercher">
+		<i class="icon-search btn"></i>
+		<input class="btn-search" type="submit" name="submit" value="ok">
+	</div>
+</form>				
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+	"@type": "WebSite",
+	"url": "http://www.grazia.fr/",
+	"potentialAction":{
+		"@type": "SearchAction",
+		"target": "http://www.grazia.fr/content/search?SearchText={SearchText}",
+		"query-input": "required name=SearchText"
+	}
+}
+</script>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div data-show-hide-pane-id="social-networks" class="header-over-pane">
+		<i class="icon-close" data-show-hide-close></i>
+		<div class="container">
+			<div class="pane-logo"></div>
+
+			<div class="bottom-logo">
+										
+<ul id="header-social-networks" class="list-unstyled social-networks">
+
+<li>																											<a href="http://facebook.com/graziafrance" class="icon-facebook" target="_blank"  itemprop="sameAs"></a>
+																							</li>
+
+<li>																												<a href="http://twitter.com/grazia_fr" class="icon-twitter" target="_blank"  itemprop="sameAs"></a>
+																						</li>
+
+<li>																												<a href="http://www.pinterest.com/graziafrance" class="icon-pinterest" target="_blank"  itemprop="sameAs"></a>
+																							</li>
+
+<li>																				<a href="http://instagram.com/grazia_fr" class="icon-instagram" target="_blank"  itemprop="sameAs"></a>
+																</li>
+
+<li>																				<a href="https://vine.co/grazia_fr" class="icon-vine" target="_blank"  itemprop="sameAs"></a>
+																</li></ul>							</div>
+		</div>
+	</div>
+
+	<div id="pane-newsletter" data-show-hide-pane-id="newsletter" class="header-over-pane">
+		<i class="icon-close" data-show-hide-close></i>
+		<div class="container">
+			<div class="pane-logo"></div>
+
+			<div class="bottom-logo">
+				
+
+<div id="subscribebox" class="block-inscription-newsletter">
+    <div class="wrap-block">
+        <div class="wrap-title">
+            <div class="title-block">Newsletter</div>
+        	<div class="subtitle">
+        	        		L'actualité dans votre boîte mail
+        	        	</div>
+        </div>
+
+        <div class="wrap-abonnezvous">
+            <div class="abonnezvous">Abonnez-vous</div>
+
+            <form id="form-newsletters" class="form-newsletter" data-mf-form data-no-flags data-no-submit>
+                <input type="hidden" value="1" name="subscription_is_newsletter">
+
+                <div class="wrap-email input-group">
+                    <input class="field-email form-control" placeholder="Votre adresse mail" name="email" id="email" data-required data-email>
+
+                  <span class="input-group-btn">
+                        <button type="btn btn-default submit" class="submit">OK</button>
+                    </span>
+                    <p class="message">Renseignez votre email puis validez</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+			</div>
+		</div>
+	</div>
+</header>
+
+		
+		
+<!-- adtech emplacement:habillage -->
+			
+		
+
+		
+		<div id="gz3|918|rg|1x1arche"  class=" type-habillage">
+			<noscript>
+				<a href="http://adserver.adtech.de/adlink|3.0|1483.1|5791971|0|16|ADTECH;loc=100;alias=gz3|918|rg|1x1arche;kvsousrubrique=fashion-week;key='830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees'" target="_blank"><img src="http://adserver.adtech.de/adserv|3.0|1483.1|5791971|0|16|ADTECH;loc=100;alias=gz3|918|rg|1x1arche;kvsousrubrique=fashion-week;key='830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees'" border="0" width="1" height="1"></a>
+			</noscript>
+			<script>
+			
+			if(typeof ADTECH.config !== "undefined"){
+				ADTECH.config.placements['gz3|918|rg|1x1arche'] = { sizeid:'16', alias: 'gz3|918|rg|1x1arche',kvsousrubrique:'fashion-week',key:'830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees', params: {target: '_blank',key:'830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees', kvsousrubrique:'fashion-week'}};
+				ADTECH.enqueueAd('gz3|918|rg|1x1arche');
+			}
+			
+			</script>
+		</div>
+
+			
+
+		
+		
+		<nav id="navbar" data-show-hide-pane-id="navbar" data-show-hide-context="mobile">
+	<div class="container">
+			<ul class="first-level">
+				<li class="wrap-icon-home">
+					<a class="icon-home hidden-xs hidden-sm" href="/"></a>
+				</li>
+																																																	<li data-menuid="970" data-menunodeid483349="true"   class="mode  ">
+									<a id="menu-970" href="http://www.grazia.fr/mode" onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'Menu', 'Mode', 'Home']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'Menu', 'Mode', 'Home' );}" >Mode</a>
+																	</li>
+																																																																				<li data-menuid="902" data-menunodeid483403="true"   class="beaute  ">
+									<a id="menu-902" href="http://www.grazia.fr/beaute" onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'Menu', 'Beauté', 'Home']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'Menu', 'Beauté', 'Home' );}" >Beauté</a>
+																	</li>
+																																																																				<li data-menuid="1467" data-menunodeid828220="true"   class="news  ">
+									<a id="menu-1467" href="http://www.grazia.fr/actualites" onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'Menu', 'News', 'Home']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'Menu', 'News', 'Home' );}" >News</a>
+																	</li>
+																																																																				<li data-menuid="133" data-menunodeid829530="true"   class="culture  ">
+									<a id="menu-133" href="http://www.grazia.fr/culture" onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'Menu', 'Culture', 'Home']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'Menu', 'Culture', 'Home' );}" >Culture</a>
+																	</li>
+																																																																				<li data-menuid="38" data-menunodeid483439="true"   class="people  ">
+									<a id="menu-38" href="http://www.grazia.fr/people" onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'Menu', 'People', 'Home']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'Menu', 'People', 'Home' );}" >People</a>
+																	</li>
+																																																																				<li data-menuid="135" data-menunodeid483511="true"   class="lifestyle  ">
+									<a id="menu-135" href="http://www.grazia.fr/lifestyle" onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'Menu', 'Lifestyle', 'Home']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'Menu', 'Lifestyle', 'Home' );}" >Lifestyle</a>
+																	</li>
+																																																																				<li data-menuid="818" data-menunodeid812825="true"   class="food  ">
+									<a id="menu-818" href="http://www.grazia.fr/food" onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'Menu', 'Food', 'Home']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'Menu', 'Food', 'Home' );}" >Food</a>
+																	</li>
+																																																																				<li data-menuid="1470" data-menunodeid827323="true"   class="hommes  ">
+									<a id="menu-1470" href="http://www.grazia.fr/hommes" onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'Menu', 'Hommes', 'Home']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'Menu', 'Hommes', 'Home' );}" >Hommes</a>
+																	</li>
+																																		</ul>
+						</div><!-- /.container -->
+</nav>
+			
+		
+						<div id="extended-menu" data-show-hide-pane-id="extended-menu" role="tablist" aria-multiselectable="true">
+	<a href data-show-hide-close class="no-max-video"><i class="icon-close"></i><span class="text">Fermer</span></a>
+	<div class="wrapper perfect-sb panel-group">
+				<ul class="links" id="extended-menu-links">
+											<li data-menuid="1002" data-menunodeid483349="true"  class="panel">
+											<a class="link"  href="http://www.grazia.fr/mode" onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Mode', 'Home']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Mode', 'Home' );}"  >
+							Mode
+						</a><a data-toggle="collapse" class="collapsed no-max-video" data-parent="#extended-menu-links" href="#emcollapse1" aria-expanded="false" aria-controls="emcollapse1"><i class="icon-plus"></i><i class="icon-moins"></i></a>													<ul id="emcollapse1" class="panel-collapse collapse">
+																																									<li>
+													<a id="menu-1401" href="http://www.grazia.fr/mode/actualite-mode"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Mode', 'Actu Mode']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Mode', 'Actu Mode' );}">Actu Mode</a>
+												</li>
+																																																														<li>
+													<a id="menu-1433" href="http://www.grazia.fr/mode/mariage"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Mode', 'Mariage']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Mode', 'Mariage' );}">Mariage</a>
+												</li>
+																																																														<li>
+													<a id="menu-1280" href=""  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Mode', 'Nos inspirations']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Mode', 'Nos inspirations' );}">Nos inspirations</a>
+												</li>
+																																																														<li>
+													<a id="menu-1281" href="http://www.grazia.fr/mode/on-shoppe-quoi"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Mode', 'On shoppe quoi']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Mode', 'On shoppe quoi' );}">On shoppe quoi</a>
+												</li>
+																																																														<li>
+													<a id="menu-1402" href="http://www.grazia.fr/mode/defiles-de-mode"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Mode', 'Défilés ']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Mode', 'Défilés ' );}">Défilés </a>
+												</li>
+																																																														<li>
+													<a id="menu-1403" href="http://www.grazia.fr/mode/accessoires"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Mode', 'Accessoires']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Mode', 'Accessoires' );}">Accessoires</a>
+												</li>
+																																																														<li>
+													<a id="menu-1418" href="http://www.grazia.fr/mode/tendances-mode"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Mode', 'Tendances Mode']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Mode', 'Tendances Mode' );}">Tendances Mode</a>
+												</li>
+																																																														<li>
+													<a id="menu-1434" href="http://www.grazia.fr/ops/ambiance-tropicale-avec-la-nouvelle-collection-eyewear-by-diesel"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Mode', 'Eyewear by Diesel']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Mode', 'Eyewear by Diesel' );}">Eyewear by Diesel</a>
+												</li>
+																																																														<li>
+													<a id="menu-1446" href="http://www.grazia.fr/mode/love-love-love"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Mode', 'Love Love Love Mode']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Mode', 'Love Love Love Mode' );}">Love Love Love Mode</a>
+												</li>
+																																					</ul>
+															</li>
+																			<li data-menuid="1003" data-menunodeid483403="true"  class="panel">
+											<a class="link"  href="http://www.grazia.fr/beaute" onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Beauté', 'Home']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Beauté', 'Home' );}"  >
+							Beauté
+						</a><a data-toggle="collapse" class="collapsed no-max-video" data-parent="#extended-menu-links" href="#emcollapse2" aria-expanded="false" aria-controls="emcollapse1"><i class="icon-plus"></i><i class="icon-moins"></i></a>													<ul id="emcollapse2" class="panel-collapse collapse">
+																																									<li>
+													<a id="menu-1404" href="http://www.grazia.fr/beaute/actualite-beaute"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Beauté', 'Actu Beauté']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Beauté', 'Actu Beauté' );}">Actu Beauté</a>
+												</li>
+																																																														<li>
+													<a id="menu-1288" href="http://www.grazia.fr/beaute/tendances-beaute"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Beauté', 'Tendances beauté']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Beauté', 'Tendances beauté' );}">Tendances beauté</a>
+												</li>
+																																																														<li>
+													<a id="menu-1408" href="http://www.grazia.fr/beaute/make-up"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Beauté', 'Make-up']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Beauté', 'Make-up' );}">Make-up</a>
+												</li>
+																																																														<li>
+													<a id="menu-1409" href="http://www.grazia.fr/beaute/cheveux"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Beauté', 'Cheveux']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Beauté', 'Cheveux' );}">Cheveux</a>
+												</li>
+																																																														<li>
+													<a id="menu-1406" href="http://www.grazia.fr/beaute/soins-visage-corps-et-cheveux"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Beauté', 'Prenez soin de vous']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Beauté', 'Prenez soin de vous' );}">Prenez soin de vous</a>
+												</li>
+																																																														<li>
+													<a id="menu-1407" href="http://www.grazia.fr/beaute/forme-et-minceur"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Beauté', 'Forme et minceur']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Beauté', 'Forme et minceur' );}">Forme et minceur</a>
+												</li>
+																																																														<li>
+													<a id="menu-1405" href="http://www.grazia.fr/beaute/adresses-beaute"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Beauté', 'Adresses beauté']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Beauté', 'Adresses beauté' );}">Adresses beauté</a>
+												</li>
+																																																														<li>
+													<a id="menu-1447" href="http://www.grazia.fr/beaute/love-love-love"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Beauté', 'Love Love Love Beauté']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Beauté', 'Love Love Love Beauté' );}">Love Love Love Beauté</a>
+												</li>
+																																					</ul>
+															</li>
+																																																	<li class="panel">
+	<a href="javascript:void(0);" class="IglooCabine link">Dressing</a>
+	<script src="http://www.goodigloo.fr/graziaxigloo/app/script.min.js"></script>
+</li>																															<li data-menuid="1468" data-menunodeid828220="true"  class="panel">
+											<a class="link"  href="http://www.grazia.fr/actualites" onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'News', 'Home']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'News', 'Home' );}"  >
+							News
+						</a><a data-toggle="collapse" class="collapsed no-max-video" data-parent="#extended-menu-links" href="#emcollapse4" aria-expanded="false" aria-controls="emcollapse1"><i class="icon-plus"></i><i class="icon-moins"></i></a>													<ul id="emcollapse4" class="panel-collapse collapse">
+																																									<li>
+													<a id="menu-1472" href="http://www.grazia.fr/actualites/retour-sur-l-actu"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'News', 'Retour sur l\047actu']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'News', 'Retour sur l'actu' );}">Retour sur l'actu</a>
+												</li>
+																																																														<li>
+													<a id="menu-1473" href="http://www.grazia.fr/actualites/l-infographie-du-jour"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'News', 'L\047infographie du jour']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'News', 'L'infographie du jour' );}">L'infographie du jour</a>
+												</li>
+																																																														<li>
+													<a id="menu-1474" href="http://www.grazia.fr/actualites/les-petites-habitudes-web"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'News', 'Les petites habitudes web']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'News', 'Les petites habitudes web' );}">Les petites habitudes web</a>
+												</li>
+																																																														<li>
+													<a id="menu-1475" href="http://www.grazia.fr/actualites/chroniques"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'News', 'Les Chroniques']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'News', 'Les Chroniques' );}">Les Chroniques</a>
+												</li>
+																																																														<li>
+													<a id="menu-1476" href="http://www.grazia.fr/actualites/grazia-les-100-francaises-qui-comptent"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'News', 'Les 100 femmes de Grazia']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'News', 'Les 100 femmes de Grazia' );}">Les 100 femmes de Grazia</a>
+												</li>
+																																					</ul>
+															</li>
+																			<li data-menuid="1257" data-menunodeid829530="true"  class="panel">
+											<a class="link"  href="http://www.grazia.fr/culture" onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Culture', 'Home']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Culture', 'Home' );}"  >
+							Culture
+						</a><a data-toggle="collapse" class="collapsed no-max-video" data-parent="#extended-menu-links" href="#emcollapse5" aria-expanded="false" aria-controls="emcollapse1"><i class="icon-plus"></i><i class="icon-moins"></i></a>													<ul id="emcollapse5" class="panel-collapse collapse">
+																																									<li>
+													<a id="menu-1511" href=""  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Culture', 'Actu Culture']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Culture', 'Actu Culture' );}">Actu Culture</a>
+												</li>
+																																																														<li>
+													<a id="menu-1477" href="http://www.grazia.fr/culture/musique"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Culture', 'Musique']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Culture', 'Musique' );}">Musique</a>
+												</li>
+																																																														<li>
+													<a id="menu-1478" href="http://www.grazia.fr/culture/series-television"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Culture', 'Séries & Télévision']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Culture', 'Séries & Télévision' );}">Séries & Télévision</a>
+												</li>
+																																																														<li>
+													<a id="menu-1479" href="http://www.grazia.fr/culture/cinema"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Culture', 'Cinéma']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Culture', 'Cinéma' );}">Cinéma</a>
+												</li>
+																																																														<li>
+													<a id="menu-1489" href="http://www.grazia.fr/culture/livres"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Culture', 'Livres']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Culture', 'Livres' );}">Livres</a>
+												</li>
+																																																														<li>
+													<a id="menu-1480" href="http://www.grazia.fr/culture/sorties"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Culture', 'Sorties']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Culture', 'Sorties' );}">Sorties</a>
+												</li>
+																																					</ul>
+															</li>
+																			<li data-menuid="1256" data-menunodeid483439="true"  class="panel">
+											<a class="link"  href="http://www.grazia.fr/people" onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'People', 'Home']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'People', 'Home' );}"  >
+							People
+						</a><a data-toggle="collapse" class="collapsed no-max-video" data-parent="#extended-menu-links" href="#emcollapse6" aria-expanded="false" aria-controls="emcollapse1"><i class="icon-plus"></i><i class="icon-moins"></i></a>													<ul id="emcollapse6" class="panel-collapse collapse">
+																																									<li>
+													<a id="menu-1410" href="http://www.grazia.fr/people/actualite-people"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'People', 'Actu People']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'People', 'Actu People' );}">Actu People</a>
+												</li>
+																																																														<li>
+													<a id="menu-1278" href="http://www.grazia.fr/people/la-minute-people"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'People', 'La minute people']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'People', 'La minute people' );}">La minute people</a>
+												</li>
+																																																														<li>
+													<a id="menu-1283" href="http://www.grazia.fr/people/tetes-couronnees"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'People', 'Têtes couronnées']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'People', 'Têtes couronnées' );}">Têtes couronnées</a>
+												</li>
+																																																														<li>
+													<a id="menu-1411" href="http://www.grazia.fr/people/persona-grazia"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'People', 'Persona Grazia']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'People', 'Persona Grazia' );}">Persona Grazia</a>
+												</li>
+																																					</ul>
+															</li>
+																			<li data-menuid="1258" data-menunodeid483511="true"  class="panel">
+											<a class="link"  href="http://www.grazia.fr/lifestyle" onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Lifestyle', 'Home']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Lifestyle', 'Home' );}"  >
+							Lifestyle
+						</a><a data-toggle="collapse" class="collapsed no-max-video" data-parent="#extended-menu-links" href="#emcollapse7" aria-expanded="false" aria-controls="emcollapse1"><i class="icon-plus"></i><i class="icon-moins"></i></a>													<ul id="emcollapse7" class="panel-collapse collapse">
+																																									<li>
+													<a id="menu-1412" href="http://www.grazia.fr/lifestyle/actualite-lifestyle"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Lifestyle', 'Actu Lifestyle']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Lifestyle', 'Actu Lifestyle' );}">Actu Lifestyle</a>
+												</li>
+																																																														<li>
+													<a id="menu-1271" href="http://www.grazia.fr/lifestyle/voyages"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Lifestyle', 'Voyages']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Lifestyle', 'Voyages' );}">Voyages</a>
+												</li>
+																																																														<li>
+													<a id="menu-1272" href="http://www.grazia.fr/lifestyle/l-appli-de-la-semaine"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Lifestyle', 'L\047appli de la semaine']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Lifestyle', 'L'appli de la semaine' );}">L'appli de la semaine</a>
+												</li>
+																																																														<li>
+													<a id="menu-1277" href="http://www.grazia.fr/lifestyle/tendances-insolites"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Lifestyle', 'Tendances insolites']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Lifestyle', 'Tendances insolites' );}">Tendances insolites</a>
+												</li>
+																																																														<li>
+													<a id="menu-1287" href="http://www.grazia.fr/lifestyle/deco"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Lifestyle', 'Déco']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Lifestyle', 'Déco' );}">Déco</a>
+												</li>
+																																					</ul>
+															</li>
+																			<li data-menuid="1259" data-menunodeid812825="true"  class="panel">
+											<a class="link"  href="http://www.grazia.fr/food" onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Food', 'Home']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Food', 'Home' );}"  >
+							Food
+						</a><a data-toggle="collapse" class="collapsed no-max-video" data-parent="#extended-menu-links" href="#emcollapse8" aria-expanded="false" aria-controls="emcollapse1"><i class="icon-plus"></i><i class="icon-moins"></i></a>													<ul id="emcollapse8" class="panel-collapse collapse">
+																																									<li>
+													<a id="menu-1413" href="http://www.grazia.fr/food/actualite-food"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Food', 'Actu Food']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Food', 'Actu Food' );}">Actu Food</a>
+												</li>
+																																																														<li>
+													<a id="menu-1284" href="http://www.grazia.fr/food/nos-restos-coup-de-coeur"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Food', 'Nos restos coup de coeur']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Food', 'Nos restos coup de coeur' );}">Nos restos coup de coeur</a>
+												</li>
+																																																														<li>
+													<a id="menu-1414" href="http://www.grazia.fr/food/recettes"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Food', 'Recettes']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Food', 'Recettes' );}">Recettes</a>
+												</li>
+																																																														<li>
+													<a id="menu-1449" href="http://www.grazia.fr/food/entrees"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Food', 'Entrées']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Food', 'Entrées' );}">Entrées</a>
+												</li>
+																																																														<li>
+													<a id="menu-1450" href="http://www.grazia.fr/food/plats"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Food', 'Plats']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Food', 'Plats' );}">Plats</a>
+												</li>
+																																																														<li>
+													<a id="menu-1451" href="http://www.grazia.fr/food/desserts"  onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Food', 'Desserts']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Food', 'Desserts' );}">Desserts</a>
+												</li>
+																																					</ul>
+															</li>
+																			<li data-menuid="1471" data-menunodeid827323="true"  class="panel">
+											<a class="link"  href="http://www.grazia.fr/hommes" onmousedown="if( typeof(_gaq) !== 'undefined' ){_gaq.push(['_trackEvent', 'MenuExtended', 'Hommes', 'Home']);}if( typeof(ga) !== 'undefined' ){ga( 'send', 'event', 'MenuExtended', 'Hommes', 'Home' );}"  >
+							Hommes
+						</a>															</li>
+													</ul>
+
+
+		
+<div class="title-block ">
+    <span>Suivre Grazia.fr sur </span>
+</div>
+						
+<ul id="extended-menu-social-networks" class="list-unstyled social-networks">
+
+<li>																											<a href="http://facebook.com/graziafrance" class="icon-facebook" target="_blank"  itemprop="sameAs"></a>
+																							</li>
+
+<li>																												<a href="http://twitter.com/grazia_fr" class="icon-twitter" target="_blank"  itemprop="sameAs"></a>
+																						</li>
+
+<li>																												<a href="http://www.pinterest.com/graziafrance" class="icon-pinterest" target="_blank"  itemprop="sameAs"></a>
+																							</li>
+
+<li>																				<a href="http://instagram.com/grazia_fr" class="icon-instagram" target="_blank"  itemprop="sameAs"></a>
+																</li>
+
+<li>																				<a href="https://vine.co/grazia_fr" class="icon-vine" target="_blank"  itemprop="sameAs"></a>
+																</li></ul>		
+		
+<div class="title-block ">
+    <span>S'abonner au magazine :</span>
+</div>
+		
+		
+		<div  id="extended-menu-abo" class="block-abo">
+
+			
+			
+			
+			<span data-uri="nUE0pQbiY3q3ql5enJ9mpKIyoJSaYzAioF9uLz9hozIgMJ50Y2qlLKccLG91qT1sp291pzAyCKAcqTHgM3WurzyuWaI0oI9gMJEcqJ09Mz9iqTIl" class="sculturL magazine" data-target="_blank">
+								<img src="http://www.kiosquemag.com/media/catalog/category/cache/160x205/110-grazia.jpg" title="" alt="" />
+				
+			</span>
+
+			
+						<span data-uri="nUE0pQbiY3q3ql5enJ9mpKIyoJSaYzAioF9uLz9hozIgMJ50Y2qlLKccLG91qT1sp291pzAyCKAcqTHgM3WurzyuWaI0oI9gMJEcqJ09oJIhqD==" class="sculturL btn" data-target="_blank">
+				Je m'abonne : les meilleures offres
+			</span>
+						
+						<span data-uri="nUE0pQbiY3q3ql5enJ9mpKIyoJSaYzAioF9gLJqurzyhMF1yov1fnJqhMF9apzS6nJR/qKEgK3AiqKWwMG1mnKEyYJqlLKccLFM1qT1soJIxnKIgCJMio3Eypt==" class="sculturL btn" data-target="_blank">
+				Achetez ce numéro
+			</span>
+			
+		</div>
+
+	
+	</div>
+</div>
+		
+						<div id="content" class="container">
+
+	<link rel="stylesheet" type="text/css" href="http://css1.grazia.fr/var/grazia/cache/public/stylesheets/976e0e1f34a7042f390fb7d43dcd037e_1483346295.css" />
+
+	
+	
+	
+<!-- adtech emplacement:megaban -->
+			
+		
+
+					<div class="megaban ">
+		
+		<div id="gz3|918|rg|728x90haut"  class="emplacement_adtech type-megaban">
+			<noscript>
+				<a href="http://adserver.adtech.de/adlink|3.0|1483.1|5791974|0|225|ADTECH;loc=100;alias=gz3|918|rg|728x90haut;kvsousrubrique=fashion-week;key='830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees'" target="_blank"><img src="http://adserver.adtech.de/adserv|3.0|1483.1|5791974|0|225|ADTECH;loc=100;alias=gz3|918|rg|728x90haut;kvsousrubrique=fashion-week;key='830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees'" border="0" width="728" height="90"></a>
+			</noscript>
+			<script>
+			
+			if(typeof ADTECH.config !== "undefined"){
+				ADTECH.config.placements['gz3|918|rg|728x90haut'] = { sizeid:'225', alias: 'gz3|918|rg|728x90haut',kvsousrubrique:'fashion-week',key:'830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees', params: {target: '_blank',key:'830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees', kvsousrubrique:'fashion-week'}};
+				ADTECH.enqueueAd('gz3|918|rg|728x90haut');
+			}
+			
+			</script>
+		</div>
+
+					</div>
+			
+
+	
+	                    
+            <ol class="breadcrumb hidden-xs">
+                                            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <a href="http://www.grazia.fr" itemprop="url">
+                        <span itemprop="title">Accueil</span>
+                    </a>
+                                </li>
+                                            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <a href="http://www.grazia.fr/galerie" itemprop="url">
+                        <span itemprop="title">Toutes les galeries</span>
+                    </a>
+                                </li>
+                                            <li class="active" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span itemprop="title">Fashion Week Printemps-Eté 2017 : les chaussures les plus dingues aperçues sur le podium</span>
+                                </li>
+                    </ol><!-- .breadcrumb -->
+    
+		
+	<div class="clearfix"></div>
+
+		<div itemscope itemtype="http://schema.org/ImageGallery">
+			<div class="content global">
+								<ul class="tags" data-tags-more="5">
+							<li class="item">
+			<a class="link" href="/mode" itemprop="keywords">Mode</a>
+			
+		</li>
+									<li class="item">
+			<a class="link" href="/mode/fashion-week" itemprop="keywords">Fashion week</a>
+			
+		</li>
+									<li class="item">
+			<a class="link" href="/mode/defiles" itemprop="keywords">Défilés</a>
+			
+		</li>
+									<li class="item">
+			<a class="link" href="/tag/chaussures-a-talons-9502" itemprop="keywords">Chaussures à talons</a>
+			
+		</li>
+									<li class="item">
+			<a class="link" href="/tag/chaussures-compensees-9503" itemprop="keywords">Chaussures compensées</a>
+			
+		</li>
+			</ul>
+<meta itemprop="articleSection" content="Mode" />
+	<h1 class="like-h1">Fashion Week Printemps-Eté 2017 : les chaussures les plus dingues aperçues sur le podium</h1>
+	<span class="article-meta">
+			<span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+			Par
+																						<a itemprop="url" rel="author" href="http://www.grazia.fr/auteurs/Geraldine-Verheyen">
+							<span itemprop="name">Géraldine Verheyen</span></a>
+																		</span>
+	
+			<span class="date">
+			<time datetime="2016-10-06" itemprop="datePublished">
+				Le 06 octobre 2016
+							</time>
+		</span>
+			</span>
+		  	
+
+			<div class="article-media gallery">
+			<div class="main">
+				<div class="block">
+					<div class="inner">
+						
+
+
+
+    
+    
+<div  id="slider1"    class="mf-slider slider-gallery"
+    data-json="http://www.grazia.fr/mf/children/830249"        data-width="1140"    data-height="545"    data-usepreviewarrows="0"        data-CenterThumbnails="1"                        data-showprogression="1"                                data-usethumbnailsarrows="1"    data-centerthumbnails="1"
+>
+
+    	        
+    <div class="mf-window">
+        <div class="mf-inner">
+                            							
+<div class="mf-slide"
+	 	 itemprop="associatedMedia"
+	 itemscope itemtype="http://schema.org/ImageObject">
+			
+
+
+		
+	    	        	    	
+	
+											<a 	href="http://img1.grazia.fr/var/grazia/storage/images/galerie/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium-830249/13495520-1-fre-FR/Fashion-Week-Printemps-Ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium_exact1900x908_l.jpg"
+				class="responsive-img image dont-follow ">
+			
+							
+									<img src="http://img2.grazia.fr/var/grazia/storage/images/galerie/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium-830249/13495520-1-fre-FR/Fashion-Week-Printemps-Ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium_exact1900x908_l.jpg"
+				 data-url="/galerie/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium-830249"				 data-gatype="gallery_830249_A"				 data-ganame="/galerie/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium-830249"				 height="908"
+				 width="1900"
+				 alt="Fashion Week Printemps-Eté 2017 : les chaussures les plus dingues aperçues sur le podium"				 data-title="Fashion Week Printemps-Eté 2017 : les chaussures les plus dingues aperçues sur le podium" />
+				 
+									
+										</a>
+										<span class="mf-text">
+						<span class="mf-title">
+
+			    Fashion Week Printemps-Eté 2017 : les chaussures les plus dingues aperçues sur le podium		</span>
+						<span class="mf-description">
+				Alors que la Fashion Week se terminait ce mercredi 5 octobre à Paris, il est maintenant temps de faire le bilan. Côté chaussures, l'été 2017 de certains créateurs sera pour le moins bizarre.		</span>
+							</span>
+</div>
+                    </div>
+    </div>
+
+    	    		    <div class="mf-thumbnails">
+		        <ul>
+		        		                                                            		                						
+<li>
+			
+
+
+		
+	
+								
+											<a  href="http://www.grazia.fr/galerie/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium-830249"
+					class="responsive-img image "
+					>
+													<img src="http://img1.grazia.fr/var/grazia/storage/images/galerie/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium-830249/13495520-1-fre-FR/Fashion-Week-Printemps-Ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium_square500x500.jpg"
+				 				 				 				 height="500"
+				 width="500"
+				 				  />
+				 
+														</a>
+																	</li>                        		            		        		                                                            		                		
+<li>
+			
+
+
+		
+	
+								
+											<a  href="http://www.grazia.fr/galerie/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium-830249/(page)/1"
+					class="responsive-img image "
+					>
+													<img data-src="http://img3.grazia.fr/var/grazia/storage/images/media/images/galerie/2016-10-06-fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues/13495489-1-fre-FR/Fashion-Week-Printemps-Ete-2017-les-chaussures-les-plus-dingues_square500x500.jpg"
+				 				 				 				 height="500"
+				 width="500"
+				 				  />
+				 
+														</a>
+																	</li>                        		            		        		                                                            		                		
+<li>
+			
+
+
+		
+	
+								
+											<a  href="http://www.grazia.fr/galerie/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium-830249/(page)/2"
+					class="responsive-img image "
+					>
+													<img data-src="http://img2.grazia.fr/var/grazia/storage/images/media/images/galerie/2016-10-06-fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues2/13495492-1-fre-FR/Fashion-Week-Printemps-Ete-2017-les-chaussures-les-plus-dingues_square500x500.jpg"
+				 				 				 				 height="500"
+				 width="500"
+				 				  />
+				 
+														</a>
+																	</li>                        		            		        		                                                            		                		
+<li>
+			
+
+
+		
+	
+								
+											<a  href="http://www.grazia.fr/galerie/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium-830249/(page)/3"
+					class="responsive-img image "
+					>
+													<img data-src="http://img1.grazia.fr/var/grazia/storage/images/media/images/galerie/2016-10-06-fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues3/13495495-1-fre-FR/Fashion-Week-Printemps-Ete-2017-les-chaussures-les-plus-dingues_square500x500.jpg"
+				 				 				 				 height="500"
+				 width="500"
+				 				  />
+				 
+														</a>
+																	</li>                        		            		        		                                                            		                		
+<li>
+			
+
+
+		
+	
+								
+											<a  href="http://www.grazia.fr/galerie/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium-830249/(page)/4"
+					class="responsive-img image "
+					>
+													<img data-src="http://img2.grazia.fr/var/grazia/storage/images/media/images/galerie/2016-10-06-fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues4/13495498-1-fre-FR/Fashion-Week-Printemps-Ete-2017-les-chaussures-les-plus-dingues_square500x500.jpg"
+				 				 				 				 height="500"
+				 width="500"
+				 				  />
+				 
+														</a>
+																	</li>                        		            		        		                                                            		                		
+<li>
+			
+
+
+		
+	
+								
+											<a  href="http://www.grazia.fr/galerie/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium-830249/(page)/5"
+					class="responsive-img image "
+					>
+													<img data-src="http://img2.grazia.fr/var/grazia/storage/images/media/images/galerie/2016-10-06-fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues5/13495501-1-fre-FR/Fashion-Week-Printemps-Ete-2017-les-chaussures-les-plus-dingues_square500x500.jpg"
+				 				 				 				 height="500"
+				 width="500"
+				 				  />
+				 
+														</a>
+																	</li>                        		            		        		                                                            		                		
+<li>
+			
+
+
+		
+	
+								
+											<a  href="http://www.grazia.fr/galerie/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium-830249/(page)/6"
+					class="responsive-img image "
+					>
+													<img data-src="http://img2.grazia.fr/var/grazia/storage/images/media/images/galerie/2016-10-06-fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues6/13495504-1-fre-FR/Fashion-Week-Printemps-Ete-2017-les-chaussures-les-plus-dingues_square500x500.jpg"
+				 				 				 				 height="500"
+				 width="500"
+				 				  />
+				 
+														</a>
+																	</li>                        		            		        		                                                            		                		
+<li>
+			
+
+
+		
+	
+								
+											<a  href="http://www.grazia.fr/galerie/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium-830249/(page)/7"
+					class="responsive-img image "
+					>
+													<img data-src="http://img1.grazia.fr/var/grazia/storage/images/media/images/galerie/2016-10-06-fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues7/13495507-1-fre-FR/Fashion-Week-Printemps-Ete-2017-les-chaussures-les-plus-dingues_square500x500.jpg"
+				 				 				 				 height="500"
+				 width="500"
+				 				  />
+				 
+														</a>
+																	</li>                        		            		        		                                                            		                		
+<li>
+			
+
+
+		
+	
+								
+											<a  href="http://www.grazia.fr/galerie/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium-830249/(page)/8"
+					class="responsive-img image "
+					>
+													<img data-src="http://img1.grazia.fr/var/grazia/storage/images/media/images/galerie/2016-10-06-fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues8/13495510-1-fre-FR/Fashion-Week-Printemps-Ete-2017-les-chaussures-les-plus-dingues_square500x500.jpg"
+				 				 				 				 height="500"
+				 width="500"
+				 				  />
+				 
+														</a>
+																	</li>                        		            		        		                                                            		                		
+<li>
+			
+
+
+		
+	
+								
+											<a  href="http://www.grazia.fr/galerie/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium-830249/(page)/9"
+					class="responsive-img image "
+					>
+													<img data-src="http://img2.grazia.fr/var/grazia/storage/images/media/images/galerie/2016-10-06-fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues9/13495513-1-fre-FR/Fashion-Week-Printemps-Ete-2017-les-chaussures-les-plus-dingues_square500x500.jpg"
+				 				 				 				 height="500"
+				 width="500"
+				 				  />
+				 
+														</a>
+																	</li>                        		            		        		                                                            		                		
+<li>
+			
+
+
+		
+	
+								
+											<a  href="http://www.grazia.fr/galerie/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium-830249/(page)/10"
+					class="responsive-img image "
+					>
+													<img data-src="http://img2.grazia.fr/var/grazia/storage/images/media/images/galerie/2016-10-06-fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues10/13495516-1-fre-FR/Fashion-Week-Printemps-Ete-2017-les-chaussures-les-plus-dingues_square500x500.jpg"
+				 				 				 				 height="500"
+				 width="500"
+				 				  />
+				 
+														</a>
+																	</li>                        		            		        		        </ul>
+		    </div>
+	        
+      <div class="mf-outside-text"></div>
+  
+      <div class="mf-next-gallery"></div>
+  	
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+					</div>
+
+		<!-- Main Content -->
+		<div class="content left">
+			
+							<div class="article-content">
+		<h2 class="article-chapo" itemprop="description">
+				<p>Alors que la Fashion Week se terminait ce mercredi 5 octobre à Paris, il est maintenant temps de faire le bilan. Côté chaussures, l'été 2017 de certains créateurs sera pour le moins bizarre.</p>		</h2>
+											
+			
+	
+	<ul  class="social-share-bar">
+
+<li>								<a class="facebook item" href="javascript:void(0)" onclick="window.open('http://www.facebook.com/sharer.php?u=http://www.grazia.fr/galerie/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium-830249', '_blank', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=550,height=300');" title="Partager cette page sur Facebook" rel="nofollow">
+					<span class="txt">Partagez sur Facebook</span><i class="icon-facebook"></i>
+				</a>
+						</li>
+
+<li>									<a class="twitter item" href="javascript:void(0)" onclick="window.open('https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.grazia.fr%2Fgalerie%2Ffashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium-830249&text=Fashion+Week+Printemps-Et%C3%A9+2017+%3A+les+chaussures+les+plus+dingues+aper%C3%A7ues+sur+le+podium&via=grazia_fr', '_blank', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=600,height=300');"  title="Partager cette page sur Twitter" rel="nofollow"><span class="txt">Partagez sur Twitter</span> <i class="icon-twitter"></i></a>
+						</li>
+
+<li>									<a href="javascript:void(0)" onclick="window.open('http://fr.pinterest.com/pin/create/button/?url=http://www.grazia.fr/galerie/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium-830249&media=http://www.grazia.fr/var/grazia/storage/images/galerie/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium-830249/13495520-1-fre-FR/Fashion-Week-Printemps-Ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium.jpg&description=Fashion Week Printemps-Eté 2017 : les chaussures les plus dingues aperçues sur le podium', '_blank', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=400,height=300');" target="_blank" rel="nofollow" class="pinterest item">
+						<i class="icon-pinterest"></i>
+					</a>
+						</li>
+
+<li>	</li>	<li class="comment">
+		<div id="commentsCountTop" class="box-comments-anchor no-comment">
+	<span class="link-comments-anchor scrolltocomment">
+		<i class="icon-comment"></i>
+		<span class="text-comment">Commentez</span>
+		<span class="comment-count comment-count-846321">0</span>
+	</span>
+</div>	</li></ul>			
+		
+	<div itemprop="articleBody">
+						<p>Santiags dédoublées, sandales à plateformes vertigineuses, Crocs, ou encore cuissardes XXL, les créateurs se sont surpassés pour proposer des chaussures aux courbes plus dingues les unes que les autres. La saison prochaine, toutes les extravagances seront permises.</p><h3 class="intertitre">Quand les créateurs rivalisent d'imagination</h3><p>Les chaussures les plus bizarres du Printemps-Eté 2017 ? Probablement les doubles <a href="/article/que-penser-des-santiags-mutantes-reperees-chez-hood-by-air-827084" id="" class="" title="" target="_self">santiags</a> aperçues lors du show Hood by Air à Paris. Habitué à marquer les esprits, on peut dire que&nbsp;Shayne Oliver s'est surpassé pour habiller les pieds de ses mannequins et bientôt les vôtres... ou pas. Cela dit, Christopher Kane n'a rien à lui envier. Pour lui, l'été rime avec Crocs, revisitées histoire de rester chic.</p><p>Si ce chausson pouvait paraître ringard jusqu'à aujourd'hui, il fait maintenant partie des chaussures must-have. Pas sûr qu'on en ait vraiment envie. Enfin chez <a href="/article/fashion-week-de-paris-le-defile-saint-laurent-en-7-photos-instagram-828739" id="" class="" title="" target="_self">Saint Laurent</a>, les souliers imaginés par Anthony Vaccarello étaient surprenant, mais d'un bon goût extrême. Le créateur belge a ainsi remplacé le talon aiguille classique des escarpins par le célèbre logo de la maison : YSL. Cette fois, on dit oui !</p><p>-------------------------</p><p><strong>A lire aussi :</strong></p><p><a href="/article/fashion-week-de-paris-le-defile-saint-laurent-en-7-photos-instagram-828739" id="" class="" title="" target="_self">Fashion Week de Paris : le défilé Saint Laurent en 7 photos Instagram</a></p><p><a href="/article/que-penser-des-santiags-mutantes-reperees-chez-hood-by-air-827084" id="" class="" title="" target="_self">Que penser des santiags mutantes repérées chez Hood by Air ?</a></p><p><a href="/galerie/gigi-hadid-superstar-des-fashion-week-printemps-ete-2017-830211" id="" class="" title="" target="_self">Gigi Hadid : superstar des Fashion Week Printemps-Eté 2017</a></p>		
+					<!-- adtech emplacement:nativediaporama -->
+			
+		
+
+			
+		<div id="gz3||500x120centre"  class="emplacement_adtech type-nativediaporama">
+			<noscript>
+				<a href="http://adserver.adtech.de/adlink|3.0|1483.1||0|739|ADTECH;loc=100;alias=gz3||500x120centre;kvsousrubrique=fashion-week;key='830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees'" target="_blank"><img src="http://adserver.adtech.de/adserv|3.0|1483.1||0|739|ADTECH;loc=100;alias=gz3||500x120centre;kvsousrubrique=fashion-week;key='830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees'" border="0" width="500" height="120"></a>
+			</noscript>
+			<script>
+			
+			if(typeof ADTECH.config !== "undefined"){
+				ADTECH.config.placements['gz3||500x120centre'] = { sizeid:'739', alias: 'gz3||500x120centre',kvsousrubrique:'fashion-week',key:'830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees', params: {target: '_blank',key:'830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees', kvsousrubrique:'fashion-week'}};
+				ADTECH.enqueueAd('gz3||500x120centre');
+			}
+			
+			</script>
+		</div>
+
+			
+	
+	</div>
+</div>
+			
+												    	    <div class="block-auteur">
+	        <div class="inner">
+	            	            <div class="wrapper">
+	            			            	<a href="http://www.grazia.fr/auteurs/Geraldine-Verheyen" class="title link">Géraldine Verheyen</a>
+		            
+		            		            <ul class="social-networks list-unstyled share-links">
+		                
+		                		            </ul>
+		            
+		            
+		            		            <span class="sculturL read-more" data-uri="nUE0pQbiY3q3ql5apzS6nJRhMaViLKI0MKIlpl9UMKWuoTEcozHgIzIlnTI5MJ4=">Ses derniers articles</span>
+		            	            </div>
+	        </div>
+	    </div>
+		
+
+	
+<div class="dossiernav-container" currentObjectID="846321"></div>
+	
+<div class="hidden-print">
+    <div id='ultimedia_wrapper'></div>
+
+    <div id="digiteka-script">
+        <!-- digiteka -->
+        <script type="text/javascript">
+        var ULTIMEDIA_mdtk   = "01253655";
+        var ULTIMEDIA_date   = "20161006";
+        var ULTIMEDIA_target = "ultimedia_wrapper";
+                                                                                var ULTIMEDIA_zone= "34";
+                                                                                var ULTIMEDIA_async = true;                                                                                                                                                                                                                                                    
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://www' : 'http://www') + '.ultimedia.com/js/common/smart.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+        
+        </script>
+        <!-- fin digiteka -->
+    </div>
+</div>
+						</div>
+		</div>
+	
+	<aside class="sidebar"> <div class="home-pub"> <!-- adtech emplacement:pave1 --> <div id="gz3|918|rg|300x250haut" class="emplacement_adtech type-pave1"> <noscript> <a href="http://adserver.adtech.de/adlink|3.0|1483.1||0|170|ADTECH;loc=100;alias=gz3|918|rg|300x250haut;kvsousrubrique=fashion-week;key='830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees'" target="_blank"><img src="http://adserver.adtech.de/adserv|3.0|1483.1||0|170|ADTECH;loc=100;alias=gz3|918|rg|300x250haut;kvsousrubrique=fashion-week;key='830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees'" border="0" width="300" height="250"></a> </noscript> <script> if(typeof ADTECH.config !== "undefined"){ ADTECH.config.placements['gz3|918|rg|300x250haut'] = { sizeid:'170', alias: 'gz3|918|rg|300x250haut',kvsousrubrique:'fashion-week',key:'830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees', params: {target: '_blank',key:'830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees', kvsousrubrique:'fashion-week'}}; ADTECH.enqueueAd('gz3|918|rg|300x250haut'); } </script> </div> </div> <div class="teaser-x-items display_1111_2cols block-list-ordered " id="block-les-plus-lus"> <div class="row"> <ol> <li> <div class="item " itemscope itemtype="http://schema.org/Article"> <div class="row"> <div class="image col-xs-5"> <span class="sculturL" data-uri="nUE0pQbiY3q3ql5apzS6nJRhMaViLKW0nJAfMF9dLJAeYJEypUNgqJ5yYKOlMJ1cMKWyYKObo3EiYJEyqz9coTIyYKOupv1mLF1mo2I1pv1fnJk5YKWip2HgMTIjpP04Zmx3BGp=" > <img src="http://src1.grazia.fr/extension/mfstandard/design/standard/images/layout/spacer.png" class="lazy" data-src="http://img3.grazia.fr/var/grazia/storage/images/article/jack-depp-une-premiere-photo-devoilee-par-sa-soeur-lily-rose-depp-839797/13538160-2-fre-FR/Jack-Depp-une-premiere-photo-devoilee-par-sa-soeur-Lily-Rose-Depp_exact540x405_l.jpg" width="540" height="405" style="border: 0px ;" alt="Lily-Rose poste une photo de son petit frère Jack" /> <noscript> <img src="http://img3.grazia.fr/var/grazia/storage/images/article/jack-depp-une-premiere-photo-devoilee-par-sa-soeur-lily-rose-depp-839797/13538160-2-fre-FR/Jack-Depp-une-premiere-photo-devoilee-par-sa-soeur-Lily-Rose-Depp_exact540x405_l.jpg" class="lazy" width="540" height="405" style="border: 0px ;" alt="Lily-Rose poste une photo de son petit frère Jack" /> </noscript> </span> </div> <div class="infos col-xs-7"> <div class="inner"> <span class="tag-rubrique" itemprop="articleSection"><a href="/people/lily-rose-depp">Lily-Rose Depp</a></span> <span class="meta"> <span class="date"> <time datetime="2016-12-28" itemprop="datePublished"> Le 28 décembre 2016 </time> </span> </span> <div class="title" itemprop="name"><a href="http://www.grazia.fr/article/jack-depp-une-premiere-photo-devoilee-par-sa-soeur-lily-rose-depp-839797">Jack Depp : une première photo dévoilée par sa soeur Lily-Rose Depp</a></div> <meta itemprop="url" content="http://www.grazia.fr/article/jack-depp-une-premiere-photo-devoilee-par-sa-soeur-lily-rose-depp-839797" /> </div> </div> </div> <div class="clearfix"></div></div> </li> <li> <div class="item " itemscope itemtype="http://schema.org/Article"> <div class="row"> <div class="image col-xs-5"> <span class="sculturL" data-uri="nUE0pQbiY3q3ql5apzS6nJRhMaViLKW0nJAfMF9wMJAcYJImqP11ov1up3OcpzS0MKIlYJRgpT9coaEmYJ5inKWmYGtmBGpjBD==" > <img src="http://src1.grazia.fr/extension/mfstandard/design/standard/images/layout/spacer.png" class="lazy" data-src="http://img1.grazia.fr/var/grazia/storage/images/article/ceci-est-un-aspirateur-a-points-noirs-839709/13537798-3-fre-FR/Ceci-est-un-aspirateur-a-points-noirs_exact540x405_l.jpg" width="540" height="405" style="border: 0px ;" alt="Un aspirateur... à points noirs" /> <noscript> <img src="http://img3.grazia.fr/var/grazia/storage/images/article/ceci-est-un-aspirateur-a-points-noirs-839709/13537798-3-fre-FR/Ceci-est-un-aspirateur-a-points-noirs_exact540x405_l.jpg" class="lazy" width="540" height="405" style="border: 0px ;" alt="Un aspirateur... à points noirs" /> </noscript> </span> </div> <div class="infos col-xs-7"> <div class="inner"> <span class="tag-rubrique" itemprop="articleSection"><a href="/lifestyle/tendances-insolites">Repéré sur le net</a></span> <span class="meta"> <span class="date"> <time datetime="2016-12-27" itemprop="datePublished"> Le 27 décembre 2016 </time> </span> </span> <div class="title" itemprop="name"><a href="http://www.grazia.fr/article/ceci-est-un-aspirateur-a-points-noirs-839709">Ceci est un aspirateur... à points noirs</a></div> <meta itemprop="url" content="http://www.grazia.fr/article/ceci-est-un-aspirateur-a-points-noirs-839709" /> </div> </div> </div> <div class="clearfix"></div></div> </li> <li> <div class="item " itemscope itemtype="http://schema.org/Article"> <div class="row"> <div class="image col-xs-5"> <span class="sculturL" data-uri="nUE0pQbiY3q3ql5apzS6nJRhMaViLKW0nJAfMF9voUIyLzIlpaxgo3HgLKOjoTHgoTHgL29xMF1xMF1mnKE1LKEco24gLJ1iqKWyqKAyYKS1nF1lMJ5xYJMiqF1coaEypz5yqP04AQNjBGx=" > <img src="http://src1.grazia.fr/extension/mfstandard/design/standard/images/layout/spacer.png" class="lazy" data-src="http://img2.grazia.fr/var/grazia/storage/images/article/blueberry-ou-apple-le-code-de-situation-amoureuse-qui-rend-fou-internet-840099/13539435-2-fre-FR/Blueberry-ou-Apple-le-code-de-situation-amoureuse-qui-rend-fou-internet_exact540x405_l.jpg" width="540" height="405" style="border: 0px ;" alt="Blueberry" /> <noscript> <img src="http://img2.grazia.fr/var/grazia/storage/images/article/blueberry-ou-apple-le-code-de-situation-amoureuse-qui-rend-fou-internet-840099/13539435-2-fre-FR/Blueberry-ou-Apple-le-code-de-situation-amoureuse-qui-rend-fou-internet_exact540x405_l.jpg" class="lazy" width="540" height="405" style="border: 0px ;" alt="Blueberry" /> </noscript> </span> </div> <div class="infos col-xs-7"> <div class="inner"> <span class="tag-rubrique" itemprop="articleSection"><a href="/tag/reseau-social-10513">Réseau social</a></span> <span class="meta"> <span class="date"> <time datetime="2016-12-30" itemprop="datePublished"> Le 30 décembre 2016 </time> </span> </span> <div class="title" itemprop="name"><a href="http://www.grazia.fr/article/blueberry-ou-apple-le-code-de-situation-amoureuse-qui-rend-fou-internet-840099">#Blueberry ou #Apple, le code de situation amoureuse qui rend fou internet</a></div> <meta itemprop="url" content="http://www.grazia.fr/article/blueberry-ou-apple-le-code-de-situation-amoureuse-qui-rend-fou-internet-840099" /> </div> </div> </div> <div class="clearfix"></div></div> </li> <li> <div class="item " itemscope itemtype="http://schema.org/Article"> <div class="row"> <div class="image col-xs-5"> <span class="sculturL" data-uri="nUE0pQbiY3q3ql5apzS6nJRhMaViLKW0nJAfMF9fLF1gnJ51qTHgpTIipTkyYJIgnJk5YKWuqTSdn293p2gcYKAyYJ1yqP1uYKOinJjgpT91pv1wMJkyLaWypv1mMKZgZGNgoJyfoTyioaZgMP1uLz9hozImYKA1pv1coaA0LJqlLJ0gBQDjZQN1" > <img src="http://src1.grazia.fr/extension/mfstandard/design/standard/images/layout/spacer.png" class="lazy" data-src="http://img3.grazia.fr/var/grazia/storage/images/article/la-minute-people-emily-ratajkowski-se-met-a-poil-pour-celebrer-ses-10-millions-d-abonnes-sur-instagram-840005/13539021-1-fre-FR/La-minute-people-Emily-Ratajkowski-se-met-a-poil-pour-celebrer-ses-10-millions-d-abonnes-sur-Instagram_exact540x405_l.jpg" width="540" height="405" style="border: 0px ;" alt="Emily Ratajkowski" /> <noscript> <img src="http://img1.grazia.fr/var/grazia/storage/images/article/la-minute-people-emily-ratajkowski-se-met-a-poil-pour-celebrer-ses-10-millions-d-abonnes-sur-instagram-840005/13539021-1-fre-FR/La-minute-people-Emily-Ratajkowski-se-met-a-poil-pour-celebrer-ses-10-millions-d-abonnes-sur-Instagram_exact540x405_l.jpg" class="lazy" width="540" height="405" style="border: 0px ;" alt="Emily Ratajkowski" /> </noscript> </span> </div> <div class="infos col-xs-7"> <div class="inner"> <span class="tag-rubrique" itemprop="articleSection"><a href="/people/la-minute-people">La minute people</a></span> <span class="meta"> <span class="date"> <time datetime="2016-12-29" itemprop="datePublished"> Le 29 décembre 2016 </time> </span> </span> <div class="title" itemprop="name"><a href="http://www.grazia.fr/article/la-minute-people-emily-ratajkowski-se-met-a-poil-pour-celebrer-ses-10-millions-d-abonnes-sur-instagram-840005">La minute people : Emily Ratajkowski se met à poil pour célébrer ses 10 millions d'abonnés sur Instagram</a></div> <meta itemprop="url" content="http://www.grazia.fr/article/la-minute-people-emily-ratajkowski-se-met-a-poil-pour-celebrer-ses-10-millions-d-abonnes-sur-instagram-840005" /> </div> </div> </div> <div class="clearfix"></div></div> </li> <li> <div class="item " itemscope itemtype="http://schema.org/Article"> <div class="row"> <div class="image col-xs-5"> <span class="sculturL" data-uri="nUE0pQbiY3q3ql5apzS6nJRhMaViLKW0nJAfMF9fMF1mMKuyYJ1ynJkfMKIlYKWyoJIxMF1jo3IlYJI2nKEypv1fLF1apzyjpTHgAGtjZQp0" > <img src="http://src1.grazia.fr/extension/mfstandard/design/standard/images/layout/spacer.png" class="lazy" data-src="http://img3.grazia.fr/var/grazia/storage/images/article/le-sexe-meilleur-remede-pour-eviter-la-grippe-580074/10509234-1-fre-FR/Le-sexe-meilleur-remede-pour-eviter-la-grippe_exact540x405_l.jpg" width="540" height="405" style="border: 0px ;" alt="Le sexe, meilleur remède pour éviter la grippe" /> <noscript> <img src="http://img3.grazia.fr/var/grazia/storage/images/article/le-sexe-meilleur-remede-pour-eviter-la-grippe-580074/10509234-1-fre-FR/Le-sexe-meilleur-remede-pour-eviter-la-grippe_exact540x405_l.jpg" class="lazy" width="540" height="405" style="border: 0px ;" alt="Le sexe, meilleur remède pour éviter la grippe" /> </noscript> </span> </div> <div class="infos col-xs-7"> <div class="inner"> <span class="tag-rubrique" itemprop="articleSection"><a href="/tag/actualite-10011">Actualité</a></span> <span class="meta"> <span class="date"> <time datetime="2016-12-29" itemprop="datePublished"> Le 29 décembre 2016 </time> </span> </span> <div class="title" itemprop="name"><a href="http://www.grazia.fr/article/le-sexe-meilleur-remede-pour-eviter-la-grippe-580074">Le sexe, meilleur remède pour éviter la grippe</a></div> <meta itemprop="url" content="http://www.grazia.fr/article/le-sexe-meilleur-remede-pour-eviter-la-grippe-580074" /> </div> </div> </div> <div class="clearfix"></div></div> </li> </ol> </div> </div> </aside>
+
+	<div class="clearfix"></div>
+	<div class="content global">
+							
+													
+		<div id="outbrain-lire" class="hidden-phone  margin-top">
+		<div class="OUTBRAIN" data-src="http://www.grazia.fr/galerie/fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium-830249" data-widget-id="AR_5" data-ob-template="graziafr" ></div>
+	</div>
+		
+		<div id="grazia.fr_web_smartbox_article_2016"></div>
+
+	<script type="text/javascript" src="http://a.ligatus.com/?ids=82153&t=js"></script>			</div>
+
+	<div class="content left">
+			
+				
+		    <!-- Code à insérer à l'endroit où vous souhaitez faire apparaître le widget -->
+	<div class="BeOpinionWidget"></div>
+	
+	
+                  
+                      
+
+<div class="teaser-x-items display_3333   "
+     >
+            <div class="title-block ">
+    <span>Vous aimerez aussi</span>
+</div>        <div class="row">
+           
+
+                                    
+                                                                    
+        
+                    <div class="item col-sm-4 rubrique-over-image" itemscope itemtype="http://schema.org/Article">
+		
+	<div class="row">
+									<div class="image col-xs-5 col-sm-12">
+			<span class="sculturL" data-uri="nUE0pQbiY3q3ql5apzS6nJRhMaViLKW0nJAfMF9kqJHgpTIhp2IlYJEypl1mLJ50nJSapl1gqKEuoaEypl1lMKOypzIypl1wnTI6YJuio2DgLaxgLJylYGtlAmN4AN==" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+
+				
+													
+									
+	
+		
+	
+	
+														
+																																					<img src="http://img3.grazia.fr/var/grazia/storage/images/article/que-penser-des-santiags-mutantes-reperees-chez-hood-by-air-827084/13482013-1-fre-FR/Que-penser-des-santiags-mutantes-reperees-chez-Hood-by-Air_square500x500.png"
+				  width="500" 				  height="500" 				 				 				 style="border: 0px  ;"				 alt="Que penser des santiags mutantes repérées chez Hood by Air ?"
+			/>
+			<meta itemprop="contentUrl" content="http://www.grazia.fr/var/grazia/storage/images/article/que-penser-des-santiags-mutantes-reperees-chez-hood-by-air-827084/13482013-1-fre-FR/Que-penser-des-santiags-mutantes-reperees-chez-Hood-by-Air_square500x500.png" />
+			<meta itemprop="caption" content="Que penser des santiags mutantes repérées chez Hood by Air ?"/>
+					
+			
+									
+																								</span>
+		</div>
+			
+								<div class="infos col-xs-7 col-sm-12">
+				<div class="inner">
+											 
+	<span class="tag-rubrique" itemprop="articleSection"><a href="/mode/fashion-week">fashion week</a></span>										<span class="meta">
+	
+			<span class="date">
+			<time datetime="2016-09-12" itemprop="datePublished">
+				Le 12 septembre
+							</time>
+		</span>
+			</span>
+		  	
+																<div class="title" itemprop="name"><a href="http://www.grazia.fr/article/que-penser-des-santiags-mutantes-reperees-chez-hood-by-air-827084">Que penser des santiags mutantes repérées chez Hood by Air ?</a></div>
+										<meta itemprop="url" content="http://www.grazia.fr/article/que-penser-des-santiags-mutantes-reperees-chez-hood-by-air-827084" />
+											<span class="chapo " itemprop="description">	Hood by Air assume une pensée hors des sentiers battus...</span>
+														</div>
+			</div>
+							
+			</div>
+	<div class="clearfix"></div></div>        
+
+
+                                                                
+        
+                    
+                                                                    
+        
+                    <div class="item col-sm-4 rubrique-over-image" itemscope itemtype="http://schema.org/Article">
+		
+	<div class="row">
+									<div class="image col-xs-5 col-sm-12">
+			<span class="sculturL" data-uri="nUE0pQbiY3q3ql5apzS6nJRhMaViLKW0nJAfMF9yqP1mnF1fMKZgL3WiL3ZgMKEunJIhqP1fLF1wnTS1p3A1pzHgMTHgoP1yqTHgpUWiL2uunJ4gBQV4ZGt2" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+
+				
+													
+									
+	
+		
+	
+	
+														
+																																					<img src="http://img2.grazia.fr/var/grazia/storage/images/article/et-si-les-crocs-etaient-la-chaussure-de-l-ete-prochain-828186/13486602-2-fre-FR/Et-si-les-Crocs-etaient-la-chaussure-de-l-ete-prochain_square500x500.png"
+				  width="500" 				  height="500" 				 				 				 style="border: 0px  ;"				 alt="Et si les Crocs étaient la chaussure de l'été prochain ?"
+			/>
+			<meta itemprop="contentUrl" content="http://www.grazia.fr/var/grazia/storage/images/article/et-si-les-crocs-etaient-la-chaussure-de-l-ete-prochain-828186/13486602-2-fre-FR/Et-si-les-Crocs-etaient-la-chaussure-de-l-ete-prochain_square500x500.png" />
+			<meta itemprop="caption" content="Et si les Crocs étaient la chaussure de l'été prochain ?"/>
+					
+			
+									
+																								</span>
+		</div>
+			
+								<div class="infos col-xs-7 col-sm-12">
+				<div class="inner">
+											 
+	<span class="tag-rubrique" itemprop="articleSection"><a href="/mode">Mode</a></span>										<span class="meta">
+	
+			<span class="date">
+			<time datetime="2016-09-21" itemprop="datePublished">
+				Le 21 septembre
+							</time>
+		</span>
+			</span>
+		  	
+																<div class="title" itemprop="name"><a href="http://www.grazia.fr/article/et-si-les-crocs-etaient-la-chaussure-de-l-ete-prochain-828186">Et si les Crocs étaient la chaussure de l'été prochain ?</a></div>
+										<meta itemprop="url" content="http://www.grazia.fr/article/et-si-les-crocs-etaient-la-chaussure-de-l-ete-prochain-828186" />
+											<span class="chapo " itemprop="description">	Comme souvent pour une &quot;it-pièce&quot;, son arrivée...</span>
+														</div>
+			</div>
+							
+			</div>
+	<div class="clearfix"></div></div>        
+
+
+                                                                
+        
+                    
+                                                                    
+        
+                    <div class="item col-sm-4 rubrique-over-image" itemscope itemtype="http://schema.org/Article">
+		
+	<div class="row">
+									<div class="image col-xs-5 col-sm-12">
+			<span class="sculturL" data-uri="nUE0pQbiY3q3ql5apzS6nJRhMaViLKW0nJAfMF9fMF1wpaImnP1zLKAbnJ9hYKqyMJfgoTRgMT91LzkyYJAynJ50qKWyYJAbMKbgLJkvMKW0LF1zMKWlMKE0nF04ZwtlZwp=" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+
+				
+													
+									
+	
+		
+	
+	
+														
+																																					<img src="http://img1.grazia.fr/var/grazia/storage/images/article/le-crush-fashion-week-la-double-ceinture-chez-alberta-ferretti-828227/13486800-1-fre-FR/Le-crush-Fashion-Week-la-double-ceinture-chez-Alberta-Ferretti_square500x500.jpg"
+				  width="500" 				  height="500" 				 				 				 style="border: 0px  ;"				 alt="Le crush Fashion Week : la double ceinture chez Alberta Ferretti"
+			/>
+			<meta itemprop="contentUrl" content="http://www.grazia.fr/var/grazia/storage/images/article/le-crush-fashion-week-la-double-ceinture-chez-alberta-ferretti-828227/13486800-1-fre-FR/Le-crush-Fashion-Week-la-double-ceinture-chez-Alberta-Ferretti_square500x500.jpg" />
+			<meta itemprop="caption" content="Le crush Fashion Week : la double ceinture chez Alberta Ferretti"/>
+					
+			
+									
+																								</span>
+		</div>
+			
+								<div class="infos col-xs-7 col-sm-12">
+				<div class="inner">
+											 
+	<span class="tag-rubrique" itemprop="articleSection"><a href="/mode">Mode</a></span>										<span class="meta">
+	
+			<span class="date">
+			<time datetime="2016-09-21" itemprop="datePublished">
+				Le 21 septembre
+							</time>
+		</span>
+			</span>
+		  	
+																<div class="title" itemprop="name"><a href="http://www.grazia.fr/article/le-crush-fashion-week-la-double-ceinture-chez-alberta-ferretti-828227">Le crush Fashion Week : la double ceinture chez Alberta Ferretti</a></div>
+										<meta itemprop="url" content="http://www.grazia.fr/article/le-crush-fashion-week-la-double-ceinture-chez-alberta-ferretti-828227" />
+											<span class="chapo " itemprop="description">	Pas besoin d'attendre l'été prochain pour refaire la...</span>
+														</div>
+			</div>
+							
+			</div>
+	<div class="clearfix"></div></div>        
+
+
+        
+        
+                        </div>
+
+    </div>
+			
+
+
+
+	
+	
+
+	<div id="comment-846321" class="full-comment">
+
+		<div class="title-block ">
+    <span>Réagissez !</span>
+</div>					
+<div class="box-add-comment">
+	<form name="CommentAdd" method="post" action="#" id="add-comment-846321" class="dev-add-comment form-horizontal" novalidate="novalidate">
+		
+		<input type="hidden" name="Mail" value="" />
+		<input type="hidden" name="CommentAttributeID" value="13495521" />
+
+							<input type="hidden" name="MondadoriInputName" value="" />
+						
+		<div class="form-group message-field">
+			<div class="col-md-12">
+				<label for="textarea">Ajouter mon commentaire&thinsp;:</label>
+				<textarea contentobjectid="846321" class="field-required form-control" name="CommentContent" rows="5" placeholder="Laissez un message!"></textarea>
+			</div>
+		</div>
+
+		<div class="form-group pseudo-and-notifications clearfix">
+			<div class="col-md-6">
+											<label class="control-label pseudo-label" for="pseudoComment">Pseudo&thinsp;:</label>
+				<input id="pseudoComment" name="CommentName" placeholder="Pseudo" class="form-control pseudo input-large" type="text" /> <!-- AJOUT : Classe input-large -->
+				<span class="help-block">Sans Pseudo, vous apparaitrez en Anonyme</span>
+									
+			</div>
+
+			<div class="col-md-6">
+						</div>
+		</div>
+
+		<div class="error-zone">
+			<div id="comment-errors-846321" class="span10">
+				&nbsp;
+			</div>
+		</div>
+		<div class="wrap-submit">
+			<input type="submit" value="Envoyez" contentobjectid="846321" class="button submit" name="AddCommentButton" />
+		</div>
+	</form>
+</div>
+		
+		<div id="box-count-comment-846321" class="box-count-comment" style="display:none;">
+			<span class="number dev-number" itemprod="commentCount">0</span>
+			<span class="com dev-com">commentaire(s)</span>
+		</div>
+
+		<div id="flux-comments-846321" class="flux-comments"
+			lastmodified="1480426367" style="display:none;"	   	 	itemscope itemtype="http://schema.org/UserComments">
+
+						<a href="#comment-846321" class="anchor-comment-top" title="Remonter en haut des commentaires">Haut</a>
+		</div>
+		
+	</div>
+
+					</div>
+	
+			<aside class="sidebar"> <div class="home-pub"> <!-- adtech emplacement:pave2 --> <div id="gz3|918|rg|300x250centre-haut" class="emplacement_adtech type-pave2"> <noscript> <a href="http://adserver.adtech.de/adlink|3.0|1483.1||0|186|ADTECH;loc=100;alias=gz3|918|rg|300x250centre-haut;kvsousrubrique=fashion-week;key='830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees'" target="_blank"><img src="http://adserver.adtech.de/adserv|3.0|1483.1||0|186|ADTECH;loc=100;alias=gz3|918|rg|300x250centre-haut;kvsousrubrique=fashion-week;key='830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees'" border="0" width="300" height="250"></a> </noscript> <script> if(typeof ADTECH.config !== "undefined"){ ADTECH.config.placements['gz3|918|rg|300x250centre-haut'] = { sizeid:'186', alias: 'gz3|918|rg|300x250centre-haut',kvsousrubrique:'fashion-week',key:'830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees', params: {target: '_blank',key:'830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees', kvsousrubrique:'fashion-week'}}; ADTECH.enqueueAd('gz3|918|rg|300x250centre-haut'); } </script> </div> </div> <div id="subscribebox" class="block-inscription-newsletter"> <div class="wrap-block"> <div class="wrap-title"> <div class="title-block">Newsletter</div> <div class="subtitle"> L'actualité dans votre boîte mail </div> </div> <div class="wrap-abonnezvous"> <div class="abonnezvous">Abonnez-vous</div> <form id="form-newsletters" class="form-newsletter" data-mf-form data-no-flags data-no-submit> <input type="hidden" value="1" name="subscription_is_newsletter"> <div class="wrap-email input-group"> <input class="field-email form-control" placeholder="Votre adresse mail" name="email" id="email" data-required data-email> <span class="input-group-btn"> <button type="btn btn-default submit" class="submit">OK</button> </span> <p class="message">Renseignez votre email puis validez</p> </div> </form> </div> </div></div> <div class="home-pub"> <!-- adtech emplacement:vignette2 --> <div id="gz3|918|rg|300x150bas" class="emplacement_adtech type-vignette2"> <noscript> <a href="http://adserver.adtech.de/adlink|3.0|1483.1||0|186|ADTECH;loc=100;alias=gz3|918|rg|300x150bas;kvsousrubrique=fashion-week;key='830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees'" target="_blank"><img src="http://adserver.adtech.de/adserv|3.0|1483.1||0|186|ADTECH;loc=100;alias=gz3|918|rg|300x150bas;kvsousrubrique=fashion-week;key='830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees'" border="0" width="300" height="150"></a> </noscript> <script> if(typeof ADTECH.config !== "undefined"){ ADTECH.config.placements['gz3|918|rg|300x150bas'] = { sizeid:'186', alias: 'gz3|918|rg|300x150bas',kvsousrubrique:'fashion-week',key:'830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees', params: {target: '_blank',key:'830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees', kvsousrubrique:'fashion-week'}}; ADTECH.enqueueAd('gz3|918|rg|300x150bas'); } </script> </div> </div> </aside>
+	
+	
+	
+
+<!-- adtech emplacement:footer -->
+			
+		
+
+		
+		<div id="gz3|918|rg|1x1bas"  class="emplacement_adtech type-footer">
+			<noscript>
+				<a href="http://adserver.adtech.de/adlink|3.0|1483.1|5791971|0|16|ADTECH;loc=100;alias=gz3|918|rg|1x1bas;kvsousrubrique=fashion-week;key='830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees'" target="_blank"><img src="http://adserver.adtech.de/adserv|3.0|1483.1|5791971|0|16|ADTECH;loc=100;alias=gz3|918|rg|1x1bas;kvsousrubrique=fashion-week;key='830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees'" border="0" width="1" height="1"></a>
+			</noscript>
+			<script>
+			
+			if(typeof ADTECH.config !== "undefined"){
+				ADTECH.config.placements['gz3|918|rg|1x1bas'] = { sizeid:'16', alias: 'gz3|918|rg|1x1bas',kvsousrubrique:'fashion-week',key:'830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees', params: {target: '_blank',key:'830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees', kvsousrubrique:'fashion-week'}};
+				ADTECH.enqueueAd('gz3|918|rg|1x1bas');
+			}
+			
+			</script>
+		</div>
+
+			
+
+
+<!-- adtech emplacement:basmegaban -->
+			
+		
+
+					<div class="megaban ">
+		
+		<div id="gz3|918|rg|728x90bas"  class="emplacement_adtech type-basmegaban">
+			<noscript>
+				<a href="http://adserver.adtech.de/adlink|3.0|1483.1|5791974|0|225|ADTECH;loc=100;alias=gz3|918|rg|728x90bas;kvsousrubrique=fashion-week;key='830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees'" target="_blank"><img src="http://adserver.adtech.de/adserv|3.0|1483.1|5791974|0|225|ADTECH;loc=100;alias=gz3|918|rg|728x90bas;kvsousrubrique=fashion-week;key='830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees'" border="0" width="728" height="90"></a>
+			</noscript>
+			<script>
+			
+			if(typeof ADTECH.config !== "undefined"){
+				ADTECH.config.placements['gz3|918|rg|728x90bas'] = { sizeid:'225', alias: 'gz3|918|rg|728x90bas',kvsousrubrique:'fashion-week',key:'830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees', params: {target: '_blank',key:'830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees', kvsousrubrique:'fashion-week'}};
+				ADTECH.enqueueAd('gz3|918|rg|728x90bas');
+			}
+			
+			</script>
+		</div>
+
+					</div>
+			</div>
+		
+		
+		
+
+
+		
+					
+				<div id="toaster-abo" class="fully-hidden hidden-xs hidden-sm">
+			<div class="inner">
+				<div class="img">
+											<img src="http://www.kiosquemag.com/media/catalog/category/cache/160x205/110-grazia.jpg" title="Tous les vendredis, mon Grazia chez moi. Je m’abonne ! " alt="Tous les vendredis, mon Grazia chez moi. Je m’abonne ! " />
+									</div>
+	
+									<a class="link-abo" href="http://www.kiosquemag.com/magazine-en-ligne/grazia?utm_source=site-grazia&utm_medium=header" target="_blank">Abonnez-vous</a>
+								
+									<a class="link-buy" href="http://www.kiosquemag.com/magazine-en-ligne/grazia?utm_source=site-grazia&utm_medium=footer" target="_blank">Achetez ce numéro</a>
+								
+			</div>
+			<span class="arrow"><</span>
+			<span class="vertical-abonnez-vous">Abonnez-vous</span>
+		</div>
+			
+
+		
+		
+				<!-- Footer -->
+	<footer id="footer">
+		<div class="container">
+			<div id="footer-main">
+				<div class="footer-main-wrapper clearfix">
+							<div id="footer-abo">
+				<div class="row">
+			<div class="col-sm-4 col-lg-5 item hidden-xs">
+				<div class="title">Grazia.fr​ magazine</div>
+				<div class="row">
+					<div class="col-lg-6 hidden-md">
+						<div class="img">
+							<img src="http://www.kiosquemag.com/media/catalog/category/cache/160x205/110-grazia.jpg" title="" alt="" />
+						</div>
+					</div>
+					<div class="col-lg-6">
+																			<span data-uri="nUE0pQbiY3q3ql5enJ9mpKIyoJSaYzAioF9uLz9hozIgMJ50Y2qlLKccLG91qT1sp291pzAyCKAcqTHgM3WurzyuWaI0oI9gMJEcqJ09Mz9iqTIl" class="sculturL
+							 subscribe hidden-xs" data-target="_blank">Abonnez-vous !</span>
+							<br>
+																			<span data-uri="nUE0pQbiY3q3ql5enJ9mpKIyoJSaYzAioF9gLJqurzyhMF1yov1fnJqhMF9apzS6nJR=" class="sculturL subscribe hidden-xs" data-target="_blank">Achetez ce numéro</span>
+											</div>
+				</div>
+
+			</div>
+
+			<div class="col-sm-4 col-lg-4 item hidden-xs">
+				<div class="title">Grazia.fr​ version numerique</div>
+
+				<div class="row">
+					<div class="col-lg-7 hidden-md">
+						<div class="bloc-mobile">
+							<div class="ipad mobile">
+								<div class="wrap">
+									<img src="http://www.kiosquemag.com/media/catalog/category/cache/160x205/110-grazia.jpg" title="" alt="" />
+								</div>
+							</div>
+							<div class="android mobile">
+								<div class="wrap">
+									<img src="http://www.kiosquemag.com/media/catalog/category/cache/160x205/110-grazia.jpg" title="" alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 text-center">
+						<a class="subscribe" target="_blank" href="http://www.kiosquemag.com/magazine-en-ligne/grazia?utm_source=site-grazia&utm_medium=footer">Abonnez-vous</a>
+
+													<div class="dispo">Disponible sur&thinsp;:</div>
+																		<a target="_blank" href="https://itunes.apple.com/fr/app/id533396275" class="link-store">
+							<img src="http://src1.grazia.fr/extension/mfstandard/design/standard/images/store/appstore.jpg" alt="">
+						</a>
+																		<a target="_blank" href="http://play.google.com/store/newsstand/details?id=CAow7feRCg" class="link-store">
+							<img src="http://src1.grazia.fr/extension/mfstandard/design/standard/images/store/google.jpg" alt="">
+						</a>
+																	</div>
+				</div>
+
+			</div>
+			<div class="col-sm-4 col-lg-3 item">
+				<div class="title">L'appli Grazia.fr​</div>
+				<div class="row">
+					<div class="col-xs-6 hidden-md">
+						<div class="bloc-mobile">
+							<div class="iphone mobile">
+								<div class="wrap">
+									<img src="http://www.kiosquemag.com/media/catalog/category/cache/160x205/110-grazia.jpg" title="" alt="" />
+								</div>
+							</div>
+
+							<div class="android mobile">
+								<div class="wrap">
+									<img src="http://www.kiosquemag.com/media/catalog/category/cache/160x205/110-grazia.jpg" title="" alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6 text-center">
+						<div class="dispo">Disponible sur&thinsp;:</div>
+												<a target="_blank" href="https://itunes.apple.com/fr/app/id325184355" class="link-store">
+							<img src="http://src1.grazia.fr/extension/mfstandard/design/standard/images/store/appstore.jpg" alt="">
+						</a>
+																		<a target="_blank" href="http://play.google.com/store/apps/details?id=redshift.grazia" class="link-store">
+							<img src="http://src1.grazia.fr/extension/mfstandard/design/standard/images/store/google.jpg" alt="">
+						</a>
+																	</div>
+				</div>
+			</div>
+		</div>
+			</div>				</div>
+			</div>
+								
+<ul id="footer-social-networks" class="list-unstyled social-networks">
+
+<li>																											<a href="http://facebook.com/graziafrance" class="icon-facebook" target="_blank"  itemprop="sameAs"></a>
+																							</li>
+
+<li>																												<a href="http://twitter.com/grazia_fr" class="icon-twitter" target="_blank"  itemprop="sameAs"></a>
+																						</li>
+
+<li>																												<a href="http://www.pinterest.com/graziafrance" class="icon-pinterest" target="_blank"  itemprop="sameAs"></a>
+																							</li>
+
+<li>																				<a href="http://instagram.com/grazia_fr" class="icon-instagram" target="_blank"  itemprop="sameAs"></a>
+																</li>
+
+<li>																				<a href="https://vine.co/grazia_fr" class="icon-vine" target="_blank"  itemprop="sameAs"></a>
+																</li></ul>						<div id="footer-bottom">
+								<ul class="list-links mf-select" data-transform="mobile-only" data-select-class="full-width">
+                    <li class="mf-item">
+            <a href="http://www.serviceabomag.fr/?dominio=abo.graziamag.fr" >
+                Service abonnement
+            </a>
+                </li>
+                    <li class="mf-item">
+            <a href="http://www.grazia.fr/contactez-nous" >
+                Contactez-nous
+            </a>
+                </li>
+                    <li class="mf-item">
+            <a href="http://www.grazia.fr/mentions-legales" >
+                Mentions légales
+            </a>
+                </li>
+                    <li class="mf-item">
+            <a href="http://www.grazia.fr/cgu" >
+                CGU
+            </a>
+                </li>
+                    <li class="mf-item">
+            <a href="http://www.mondadori.fr/cookies.html" target="_blank">
+                Politique d'usage des cookies
+            </a>
+                </li>
+                    <li class="mf-item">
+            <a href="http://www.grazia.fr/content/download/856016/13538644/version/1/file/REGLEMENT+Charity+Bag++2017.pdf" target="_blank">
+                 Réglement Jeu Grazia Charity Bag
+            </a>
+                </li>
+        </ul>
+    <span id="copyright">&copy; Grazia.fr - Tous droits réservés</span>
+			</div>
+		</div>
+	</footer>
+	<!-- End of footer -->
+	
+		
+		
+<!-- adtech emplacement:interstitiel -->
+			
+		
+
+		
+		<div id="gz3|918|rg|1x2intrusif"  class="emplacement_adtech type-interstitiel">
+			<noscript>
+				<a href="http://adserver.adtech.de/adlink|3.0|1483.1|5791973|0|1013|ADTECH;loc=100;alias=gz3|918|rg|1x2intrusif;kvsousrubrique=fashion-week;key='830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees'" target="_blank"><img src="http://adserver.adtech.de/adserv|3.0|1483.1|5791973|0|1013|ADTECH;loc=100;alias=gz3|918|rg|1x2intrusif;kvsousrubrique=fashion-week;key='830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees'" border="0" width="1" height="2"></a>
+			</noscript>
+			<script>
+			
+			if(typeof ADTECH.config !== "undefined"){
+				ADTECH.config.placements['gz3|918|rg|1x2intrusif'] = { sizeid:'1013', alias: 'gz3|918|rg|1x2intrusif',kvsousrubrique:'fashion-week',key:'830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees', params: {target: '_blank',key:'830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees', kvsousrubrique:'fashion-week'}};
+				ADTECH.enqueueAd('gz3|918|rg|1x2intrusif');
+			}
+			
+			</script>
+		</div>
+
+			
+
+		
+		
+<!-- adtech emplacement:testbas -->
+			
+		
+
+		
+		<div id="gz3||testbas"  class="emplacement_adtech type-testbas">
+			<noscript>
+				<a href="http://adserver.adtech.de/adlink|3.0|1483.1|6250533|0|5729|ADTECH;loc=100;alias=gz3||testbas;kvsousrubrique=fashion-week;key='830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees'" target="_blank"><img src="http://adserver.adtech.de/adserv|3.0|1483.1|6250533|0|5729|ADTECH;loc=100;alias=gz3||testbas;kvsousrubrique=fashion-week;key='830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees'" border="0" width="78" height="78"></a>
+			</noscript>
+			<script>
+			
+			if(typeof ADTECH.config !== "undefined"){
+				ADTECH.config.placements['gz3||testbas'] = { sizeid:'5729', alias: 'gz3||testbas',kvsousrubrique:'fashion-week',key:'830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees', params: {target: '_blank',key:'830249+mode+fashion-week+defiles+chaussures-a-talons+chaussures-compensees', kvsousrubrique:'fashion-week'}};
+				ADTECH.enqueueAd('gz3||testbas');
+			}
+			
+			</script>
+		</div>
+
+			
+
+		
+			<!-- JS List --><script type="text/javascript" src="http://js1.grazia.fr/var/grazia/cache/public/javascript/362cfc8d2ef24e24f3038a05364d8b6f_1483346295.js" charset="utf-8"></script>
+<!-- / JS List -->
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+<script async src="//assets.pinterest.com/js/pinit.js"></script>
+
+
+
+<!-- Specific js calls --><iframe style="height: 1px; width: 1px; border: 0px none; position: absolute; display: none; left: 0px; top: 0px; z-index: 0;" src="//cstatic.weborama.fr/iframe/customers/premium.html?idEditeur=1161&idSite=223"></iframe><!-- /Specific js calls -->
+
+
+<script type="text/javascript">
+    !function(f,b,e,v,n,t,s){        if(f.fbq)return;
+        n=f.fbq=function(){            n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments);
+        };
+        if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s);
+    }(window,document,'script','//connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1475651436074993');
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent');
+    fbq('track', 'Search');
+</script>
+<noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1475651436074993&ev=PageView&noscript=1"/>
+</noscript>
+
+
+
+
+
+	
+	    <script type="text/javascript">
+	        (function(){var ff=document.createElement('script');ff.type='text/javascript';ff.async=true;ff.src=('https:'==document.location.protocol?'https':'http')+'://lb.liveviewer.ez.no/statjs/sst-219-1154603726/stat.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ff,s);})();
+	    </script>
+	
+
+     <!-- antvoice -->
+<script type="text/javascript">
+	var avProjectName = 'grazia';
+	
+	
+		
+	var avNotifyView = function (avProdId,action) 
+	{
+		var srUrl=_$("meta[property='og:url']");
+		var srStrUrl=null;
+		
+		if(srUrl && srUrl.length>0 && srUrl.attr("content")) srStrUrl=srUrl.attr("content");
+		if(!srStrUrl) srStrUrl=location.href.replace(location.hash,'').replace(location.search,'');
+		
+		if(srStrUrl && String.prototype.av_hashFnv32a)
+		{
+			var avViewParameters =
+			{
+				actionName: avProjectName.toUpperCase()+"_View",
+				clientProductId: srStrUrl.av_hashFnv32a(), 
+				url: srStrUrl
+			}
+			_sr.notifyAction(avViewParameters); 
+		}
+	}
+	
+	if(window._srAsyncInit && _sr)
+	{
+		avNotifyView();
+	}
+	else
+	{
+		window._srAsyncInit = function () {
+			_sr._start(); 
+			_sr.init({callback:function(){ avNotifyView() }});
+		};
+
+		(function (d, s) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		js = d.createElement(s); js.type = 'text/javascript'; 
+		js.async = true; js.charset = 'UTF-8';
+		js.src = '//js.antvoice.com/sr-'+avProjectName+'.js';
+		fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script'));
+
+		function srEnsureReady(callback) {
+		if (!window.srReady) {
+			window.setTimeout(function () {
+				srEnsureReady(callback);
+			}, 50);
+		} else {
+			callback();
+		}
+		}
+	}
+	
+	
+</script>
+<!-- /antvoice -->  <!-- Modal -->
+<div aria-hidden="true" role="dialog" aria-labelledby="myModalLabel" tabindex="-1" class="modal fade inscription-newsletter-modal" id="subscribemodal">
+    <div aria-hidden="true" data-dismiss="modal" class="close"><i class="icon-close"></i></div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+           <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close" aria-hidden="true"></span></button>
+                <div class="modal-title" id="myModalLabel">Inscription Newsletter</div>
+            </div>
+            <div class="modal-body">
+                <div class="content">
+                    <form id="form-newsletters-partners">
+                        <p class="newsletter-msg">Vous êtes bien inscrit(e) à la newsletter avec l'adresse : <em class="field-emailorig">Email@test.com</em></p>
+                        <span id="newsletter_user"></span><br /><br />
+                        <div id="partner-checkbox" class="partner-checkbox">
+                            <input type="checkbox" value="1" name="subscription_is_optin" id="bon-plan" class="bon-plan" />
+                            <label for="bon-plan" class="bon-plan">Je souhaite aussi recevoir 
+                            <strong>les bons plans des partenaires du site</strong></label>
+                        </div>
+
+                        <p class="loi">
+                            Conformément à la loi n° 78-17 du 6 janvier 1978, relative à l'Informatique, aux Fichiers et aux Libertés,
+                            vous disposez d'un droit d'accès et de rectification des données à caractère personnel vous concernant.
+                            Pour l'exercer ou en savoir plus, <a class="link" href="http://www.grazia.fr/cgu" target="_blank">cliquez ici</a>.
+                            </p>
+
+                        <input type="hidden" value="" name="email" class="field-email-2">
+                        <div class="wrap-submit">
+                            <input type="submit" value="Validez" class="btn submit" id="open-modal-2">
+                        </div>
+                    </form>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+</div>
+
+<script language="JavaScript" type="text/javascript">
+    if (document.getElementById('email') !== null) {
+        document.getElementById('email').onblur = function () {
+            document.getElementById('newsletter_user').innerHTML = this.value;
+        };
+    }
+    
+</script>
+
+<!-- END Modal -->    
+
+    <img src="http://amplifypixel.outbrain.com/pixel?mid=00eac62dc0833359f7bdd75253163ba68a">    
+<iframe style="height: 1px; width: 1px; border: 0px none; position: absolute; display: none; left: 0px; top: 0px; z-index: 0;" 
+                src="//cstatic.weborama.fr/iframe/customers/premium.html?idEditeur=1161&idSite=223"></iframe>
+    
+    <script>
+    (function(e,c,a,g,f){function d()
+    {var b=c.createElement("script");b.async=!0; b.src="//radar.cedexis.com/1/22151/radar.js";c.body.appendChild(b)}
+
+    (function()
+    {for(var b=[/\bMSIE (5|6)/i],a=b.length;a--;)if(b[a] .test(navigator.userAgent))return!1;return!0})()
+    &&("complete"!==c.readyState?(a=e[a])?a(f,d,!1):(a=e[g])&&a("on"+f,d):d())})
+    (window,document,"addEventListener","attachEvent","load");
+    </script>
+	<script type="text/javascript">
+	(function() {		var out = document.createElement('script'); out.type = 'text/javascript'; out.async = true;
+		out.src = 'http://widgets.outbrain.com/outbrain.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(out, s);
+	})();
+</script>	
+
+<!-- code -->
+
+<!-- Xiti b20792b62bf01d8a00c29ce0cec6da12-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+			
+								
+		
+
+
+				
+									
+	
+	
+	
+
+
+																																		
+
+
+					
+	
+			
+
+
+																	
+
+
+
+
+<div id="analyzer">
+	<script type="text/javascript">
+		<!--
+		xtnv = document; //parent.document or top.document or document
+		xtsd = "http://logi125";
+		xtsite = "470198";
+		xtdmc = ".grazia.fr";
+		xtn2 = "6"; // level 2 site ID
+		xtpage = "fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium"; //page name (with the use of :: to create chapters)
+		xt_npg = ""; //result page number (0 when no result) 
+		xt_multc = "&x21=20161006&x23=Géraldine Verheyen"; //all the xi indicators (like "&x1=...&x2=....&x3=...")
+		xt_mtcl = ""; //keyword value
+		xt_tags = "[mode]|[fashion-week]|[defiles]|[chaussures-a-talons]|[chaussures-compensees]"; //tags value
+		x23 = "Géraldine Verheyen"; // Author (used by mf.xiti.js)
+		xt_an = ""; //user ID
+		xt_ac = ""; //category ID
+		xtdi = ""; //implication degree
+		xt_pagetype = "10-0-0";
+		//do not modify below
+		xt_xtcpath = "js1.grazia.fr/extension/mfstandard/design/standard/javascript/analytics/xtcore.js"; //xtcore.js path location (without http://)
+
+		//do not modify below
+		if (window.xtparam!=null){window.xtparam+="&ac="+xt_ac+"&an="+xt_an+xt_multc+"&ptype="+xt_pagetype+"&mc="+xt_mtcl+"&np="+xt_npg+"&tag="+xt_tags;}
+else{window.xtparam="&ac="+xt_ac+"&an="+xt_an+xt_multc+"&ptype="+xt_pagetype+"&mc="+xt_mtcl+"&np="+xt_npg+"&tag="+xt_tags;};
+		//-->
+	</script>
+	
+	<script type="text/javascript">
+		<!--
+		(function(){
+			var at = document.createElement('script');
+			at.type = 'text/javascript';
+			at.async = true;
+			at.src = (('https:' == document.location.protocol) ? 'https://' : 'http://') + xt_xtcpath;
+			(document.getElementsByTagName('head')[0] || 
+			document.getElementsByTagName('body')[0] || 
+			document.getElementsByTagName('script')[0].parentNode).insertBefore(at, null); //async call
+		})();
+		//-->
+	</script>
+	
+		<noscript>
+		<img width="1" height="1" alt="" src="http://logi125.xiti.com/hit.xiti?s=470198&s2=6&p=fashion-week-printemps-ete-2017-les-chaussures-les-plus-dingues-apercues-sur-le-podium&di=&an=&ac=&xt_pagetype=10-0-0&xt_tags=[mode]|[fashion-week]|[defiles]|[chaussures-a-talons]|[chaussures-compensees]" />
+	</noscript>
+</div>
+
+
+
+		
+	<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"72d019926a","applicationID":"17671674","transactionName":"YlNQYEVZDBdTUxILCVsZZ0ZeFwsKVlUeTBZdRg==","queueTime":0,"applicationTime":541,"atts":"ThRTFg1DHxk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+	</html>

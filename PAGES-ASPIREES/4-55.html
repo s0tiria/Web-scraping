@@ -1,0 +1,654 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="el" xml:lang="el">
+	<head>
+		<title>Κόμματα σε κατάσταση… νευρικής κρίσης | News</title>
+<meta name="pubdate" content="">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VwICWFRRGwAAVFdaBwA="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(12),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(c){try{i("ierr",[c,(new Date).getTime(),!0])}catch(s){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(13),c=t("ee"),s=t("loader"),f=window.onerror,u=!1,d=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(5),t(4),"addEventListener"in window&&t(3),s.xhrWrappable&&t(6),u=!0)}c.on("fn-start",function(t,e,n){u&&(d+=1)}),c.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),c.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),c.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(14)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],4:[function(t,e,n){var r=t("ee").get("raf"),o=t(14)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],5:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(14)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],6:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,v,"fn-",c)}function i(t){y.push(t),h&&(w=-w,b.data=w)}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(3);var f=t("ee"),u=f.get("xhr"),d=t(14)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",v=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var g=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,g),g.prototype=p.prototype,d.inPlace(g.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var w=1,b=document.createTextNode(w);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],7:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(8),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(11),h=t(10),m=window.XMLHttpRequest;a.features.xhr=!0,t(6),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],8:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],9:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(12),c=t(13),s=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),f.setCurrentRouteName=o(d+"routeName",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{s.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],10:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],11:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],12:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],13:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],14:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(13),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){l([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o)}catch(a){l([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){l([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function l(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o){if(!l.aborted){t&&t(n,r,o);for(var i=e(o),a=h(n),c=a.length,s=0;s<c;s++)a[s].apply(i,r);var f=u[g[n]];return f&&f.push([w,n,r,i]),i}}function p(t,e){y[t]=h(t).concat(e)}function h(t){return y[t]||[]}function m(t){return d[t]=d[t]||o(n)}function v(t,e){f(t,function(t,n){e=e||"feature",g[n]=e,e in u||(u[e]=[])})}var y={},g={},w={on:p,emit:n,get:m,listeners:h,context:e,buffer:v,abort:a,aborted:!1};return w}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var c="nr@context",s=t("gos"),f=t(12),u={},d={},l=e.exports=o();l.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!b++){var t=w.info=NREUM.info,e=d.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(y,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()],null,"api");var n=d.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var c=t("handle"),s=t(12),f=t("ee"),u=window,d=u.document,l="addEventListener",p="attachEvent",h=u.XMLHttpRequest,m=h&&h.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:h,REQ:u.Request,EV:u.Event,PR:u.Promise,MO:u.MutationObserver},t(9);var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-998.min.js"},g=h&&m&&m[l]&&!/CriOS/.test(navigator.userAgent),w=e.exports={offset:a(),origin:v,features:{},xhrWrappable:g};d[l]?(d[l]("DOMContentLoaded",i,!1),u[l]("load",r,!1)):(d[p]("onreadystatechange",o),u[p]("onload",r)),c("mark",["firstbyte",a()],null,"api");var b=0},{}]},{},["loader",2,7]);</script>
+
+
+<link href="http://www.sigmalive.com/application/themes/default/css/simerini/base.css" type="text/css" rel="stylesheet" />
+<link href="http://www.sigmalive.com/application/themes/default/css/simerini/inc.master.css" type="text/css" rel="stylesheet" />
+<link href="http://www.sigmalive.com/application/themes/default/css/simerini/grid.css" type="text/css" rel="stylesheet" />
+<link href="http://www.sigmalive.com/application/themes/default/css/simerini/ui.tabs.css" type="text/css" rel="stylesheet" />
+<link href="http://www.sigmalive.com/application/themes/default/css/simerini/simerini.css" type="text/css" rel="stylesheet" />
+
+<link href="/assets/css/jquery.bxslider.css" type="text/css" rel="stylesheet" />
+<link href="/assets/css/lightbox.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="/assets/js/jquery.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="/assets/js/lightbox.js"></script>
+
+
+<meta property="og:url" content="http://www.sigmalive.com/simerini/politics/371311/kommata-se-katastasi-nevrikis-krisis" />
+<meta property="og:title" content="Κόμματα σε κατάσταση… νευρικής κρίσης | News" />
+
+<meta property="og:description" content="ΚΥΠΡΙΑΚΟ ΚΑΙ ΔΗΜΟΤΙΚΕΣ: ΣΥΜΠΤΩΣΕΙΣ, ΑΠΟΚΛΙΣΕΙΣ ΚΑΙ ΠΟΛΥΕΠΙΠΕΔΕΣ ΜΑΧΕΣ
+	
+	Το μωσαϊκό συμπληρώνουν υποψηφιότητες που ξεφεύγουν από τις κομματικές επιλογές και..." />
+
+<link rel="image_src" href="http://www.sigmalive.com/uploads/images/news/DOC.20161015_.1347077_.GM0_2662_.jpg" />
+<meta property="og:image" content="http://www.sigmalive.com/uploads/images/news/DOC.20161015_.1347077_.GM0_2662_.jpg" />
+
+
+<script>
+	$(document).ready(function() {
+		$('.thickbox').lightBox({
+            imageLoading: '/application/themes/default/img/inbusiness/lightbox-ico-loading.gif',
+            imageBtnClose: '/application/themes/default/img/inbusiness/lightbox-btn-close.gif',
+            imageBtnPrev: '/application/themes/default/img/inbusiness/lightbox-btn-prev.gif',
+            imageBtnNext: '/application/themes/default/img/inbusiness/lightbox-btn-next.gif',
+            txtImage: 'Εικόνα',
+            txtOf: 'από'
+        });
+	});
+</script>
+
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "ur-a31058ea-8c97-46b1-e1e1-279bf53a6813", doNotHash: true, doNotCopy: false, hashAddressBar: false});</script>
+
+
+
+
+
+<script type='text/javascript'>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') + 
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+</script>
+
+<script type='text/javascript'>
+googletag.cmd.push(function() {
+googletag.defineSlot('/45099537/Simerini_220x90', [220, 90], 'div-gpt-ad-1421653926404-0').addService(googletag.pubads());
+googletag.defineSlot('/45099537/Simerini_728x90', [728, 90], 'div-gpt-ad-1421654177302-0').addService(googletag.pubads());
+googletag.defineSlot('/45099537/Simerini_160x600', [160, 600], 'div-gpt-ad-1421654473194-0').addService(googletag.pubads());
+
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+</script>
+		
+				<script type="text/javascript">
+					var APPPATH_URI = "/";
+					var BASE_URI = "http://www.sigmalive.com";
+				</script>
+		<link rel="canonical" href="http://www.sigmalive.com/simerini/politics/371311" />
+		<meta name="article_id" content="371311" />
+		<meta name="keywords" content="" />
+		<meta name="pubdate" content="20161016" />
+		<meta name="pubdatetime" content="201610161200" />
+		<meta name="section" content="simerini" />
+		<meta name="type" content="article" />
+		<meta name="ptitle" content="Κόμματα σε κατάσταση… νευρικής κρίσης" />
+		<meta name="author" content="Του Χρύσανθου Τσουρούλλη" />		    </head>
+
+	<body class="sub">
+		 
+
+<!-- Google Tag Manager container - Used to deploy ga.js and dc.js -->
+<!-- VERSION: GTM_Nov_v1 -->
+<!-- WEBSITE: www.sigmalive.com -->
+<!-- CATEGORY: publishing -->
+<!-- MARKET: Cyprus -->
+<!-- GTM-LIVE: UA-2971319-3 -->
+<!-- GTM-DEV: UA-2971319-3 -->
+<!-- Replace GTM-xxxx with GTM-WX8JML for DEV, or GTM-WX8JML for live -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WX8JML');
+</script>
+<noscript>
+<iframe src="//www.googletagmanager.com/ns.html?id=GTM-WX8JML" height="0" width="0" style="display:none;visibility:hidden">
+</iframe>
+</noscript>
+<!-- End Google Tag Manager -->		<div id="globalBar">
+	<div class="menu">
+		<div class="left"></div>
+		<div class="right">
+			Τρίτη, 03/01/2017		</div>
+	</div>
+</div>	
+		<div id="gridContainer">
+			<div id="headerBanners">
+	<div class="banner right-padding ad728x90">
+		<!-- Simerini_728x90 -->
+		<div id='div-gpt-ad-1421654177302-0'>
+				<script type='text/javascript'>
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1421654177302-0'); });
+				</script>
+				</div>	</div>
+	<div class="banner ad220x90">
+		<!-- Simerini_220x90 -->
+		<div id='div-gpt-ad-1421653926404-0'>
+				<script type='text/javascript'>
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1421653926404-0'); });
+				</script>
+				</div>	</div>
+	<div class="clear">
+		<!-- Stretch the div according to the content -->
+	</div>
+</div>
+
+			<div id="navContainer">
+				<div class="cmDiv">
+					<ul class="topMenu clickMenu">
+						<li class="portalLink main"><a href="/">SigmaLive.com</a></li>
+						<li class="newspapers active main"><a title="Εφημερίδες" href="/simerini/simerini/pdf/archive/">Εφημερίδες</a></li>
+					</ul>
+					<div style="clear: both; visibility: hidden;"></div>
+				</div>
+			</div>
+
+			<div id="headerContainer">
+				<h1><a href="/simerini" title="Σημερινή">Σημερινή</a></h1>
+				<div id="search">
+<script>$(document).ready(function(){$('#search-block-form').submit(function(fields) {var url = '/simerini/search/#/'; url += encodeURIComponent( $('#search-block-form input[name=s]').val() ).split('%20').join('+') + '/relevance/simerini'; document.location.href = url; if($('#fsearch').length > 0) {document.location.reload(true);} return false;});})</script>
+<form action="/search" method="get" id="search-block-form">
+	<div>
+		<input type="text" maxlength="128" name="s" id="edit-search_theme_form_keys" size="25" value="" title="Εισάγετε τις λέξεις για αναζήτηση" class="form-text" />
+		<input type="image" src="http://www.sigmalive.com/assets/simerini/header-search-button-bg.gif" title="Search" class="inputButton" onclick="return doSearch( this.form );" />
+	</div>
+</form>
+</div>
+			
+				<div class="clear"></div>
+			</div>
+
+			<div class="pageContainer noTopBorder">
+				<div id="date-tools">
+					<div id="ticker">Τρίτη, 03/01/2017</div>
+					<div class="tools">
+						<a class="rss" href="/rss/simerini">RSS</a>
+					</div>
+				</div>
+
+				<div class="grid-five">
+	<div id="articleContainer">
+		<!-- Column name -->
+		<div class="columnTitle"></div>
+		<!-- End column name -->
+		<h1>Κόμματα σε κατάσταση… νευρικής κρίσης</h1>
+		<h4>
+			<span class='st_email' displayText='Email'></span>
+			<span class='st_facebook' displayText='Facebook'></span>
+			<span class='st_twitter' displayText='Tweet'></span>| 
+			<a "="" href="javascript:window.print()" class="print">Εκτύπωση</a> | 16 Οκτώβριος 2016, 12:00 | Του Χρύσανθου Τσουρούλλη		</h4>
+
+		<div class="articleImg">
+			<div class="img">
+				<img title="" alt="" src="/application/cache/default/images/news/280x210/DOC.20161015_.1347077_.GM0_2662_.jpg">
+			</div>
+			<div class="info">
+			    <span class="picname"></span>
+				<a class="thickbox" title="" href="/uploads/images/news/DOC.20161015_.1347077_.GM0_2662_.jpg">
+					<img src="/assets/images/btn-zoom.png" />
+				</a>
+				<div style="clear: both"></div>
+			</div>
+		</div>
+
+		<div class="content">
+			<p>
+	<strong>ΚΥΠΡΙΑΚΟ ΚΑΙ ΔΗΜΟΤΙΚΕΣ: ΣΥΜΠΤΩΣΕΙΣ, ΑΠΟΚΛΙΣΕΙΣ ΚΑΙ ΠΟΛΥΕΠΙΠΕΔΕΣ ΜΑΧΕΣ<br />
+	<br />
+	Το μωσαϊκό συμπληρώνουν υποψηφιότητες που ξεφεύγουν από τις κομματικές επιλογές και στο παρελθόν θα ονομάζονταν &laquo;αντάρτες&raquo;. Τέτοιοι υποψήφιοι, παίρνοντας απόσταση από το κόμμα τους, βρίσκουν υποστήριξη από άλλα κόμματα<br />
+	<br />
+	Από την πλευρά τους τα μικρότερα και τα καινούργια κόμματα φαίνεται ότι δεν καταφέρνουν σε κανένα δήμο να αναδείξουν δική τους υποψηφιότητα για δημαρχία</strong><br />
+	<br />
+	Οι δημοτικές εκλογές του Δεκεμβρίου &laquo;τρέχουν&raquo; μαζί με το Κυπριακό. Συχνά μάλιστα επανέρχεται το ερώτημα &laquo;Μα θα γίνουν εκλογές; Αφού εδώ, όπως λέγεται, μπορεί και να έχουμε λύση...&raquo;. Κανένας δεν μπορεί να απαντήσει κατηγορηματικά. Οι εκλογές θα γίνουν, μέχρι ίσως να μην γίνουν. Όπως και το Κυπριακό προχωρά για να λυθεί, μέχρι να... μην λυθεί. Είναι όμως μόνο αυτή η σχέση ανάμεσα στις εκλογές και το Κυπριακό;<br />
+	<br />
+	<strong>Συμπίπτουν μόνο χρονικά</strong></p>
+<p>
+	Σύμφωνα με το τι λένε όλα τα κόμματα, δεν υπάρχει βέβαια καμία διασύνδεση ανάμεσα στις δημοτικές εκλογές και το εθνικό θέμα. Πολύ περισσότερο δεν φαίνεται να βρίσκει κάποια σχέση ο κόσμος. Ο οποίος κόσμος, για να είμαστε ειλικρινείς, ελάχιστα έως καθόλου δεν ασχολείται με δημοτικές εκλογές και τις δημαρχίες.</p>
+<p>
+	Στην πράξη βλέπουμε όμως καθημερινά να &laquo;τρέχουν&raquo; δίπλα-δίπλα τα προεκλογικά των κομμάτων και των υποψηφίων μαζί με τις αψιμαχίες για το Κυπριακό. Τις μέρες αυτές που η υφυπουργός Νούλαντ πηγαινοέρχεται ανάμεσα στο Προεδρικό και τον Μ. Ακιντζί μεταφέροντας σκέψεις, πληροφορίες και προτάσεις, τα συλλογικά όργανα διαφόρων κομμάτων συσκέπτονται και αποφασίζουν τι θα κάνουν με τις δημαρχίες. Την ώρα που σταυρώνουν ξίφη για τις εξελίξεις στο Κυπριακό, τα κόμματα χτυπιούνται και με ανακοινώσεις και δηλώσεις για τις επιλογές υποψήφιων δημάρχων.</p>
+<p>
+	Έχοντας σχεδόν ολοκληρώσει τις δικές του διεργασίες και διαδικασίες και έχοντας ζήσει μια πολύ έντονη &laquo;νευρική κρίση&raquo; στη Λεμεσό, ο ΔΗΣΥ παρακολουθεί τώρα τους άλλους να παίρνουν αποφάσεις και να κλυδωνίζονται με τη σειρά τους από τριγμούς και αντιδράσεις, όπως έγινε με το ΔΗΚΟ στη Λάρνακα. Θέλοντας και μη, δημοτικές εκλογές και Κυπριακό διάγουν παράλληλους βίους.<br />
+	<br />
+	<strong>Λεμεσός: υποψήφιος &laquo;του ΝΑΙ&raquo; για ΔΗΚΟ-ΕΔΕΚ και &laquo;του ΟΧΙ&raquo; για ΔΗΣΥ</strong></p>
+<p>
+	Ποιος θυμάται πώς και γιατί &laquo;μετακινήθηκε&raquo; ο Ανδρέας Χρίστου από την ανώτατη ηγεσία του ΑΚΕΛ στην τοπική αυτοδιοίκηση και στη Λεμεσό; Ο σημερινός δήμαρχος Λεμεσού και επαναδιεκδικητής ήταν μέχρι την εκλογή του Τ. Παπαδόπουλου, το 2003, ένα από τα 3-4 πρόσωπα της ανώτατης ηγεσίας του κόμματος. Μαζί με τον Νίκο Κατσουρίδη ήταν οι δύο &laquo;δελφίνοι&raquo; του Δημήτρη Χριστόφια. Έτσι, με την εκλογή του Τ. Παπαδόπουλου ανέλαβε εκ μέρους του ΑΚΕΛ ένα επιτελικό υπουργείο, το Εσωτερικών. Βρέθηκε σε αυτό το κρίσιμο πόστο και την ώρα που άνοιξαν τα οδοφράγματα της κατοχής.</p>
+<p>
+	Πώς όμως μεταπήδησε στη συνέχεια στην τοπική αυτοδιοίκηση; Γιατί άφησε την κεντρική πολιτική σκηνή και πέρασε το 2006 στα δημαρχιακά; Η απάντηση είναι το Κυπριακό. Ο λόγος ήταν η στάση του Ανδρέα Χρίστου στο Δημοψήφισμα του 2004. Ήταν ένα από τα στελέχη του κόμματος που δεν πειθάρχησε στην τελική απόφαση, αλλά βρέθηκε στην άλλη πλευρά μαζί με όσους παρατάχθηκαν στην &laquo;πλατφόρμα του Ναι&raquo;.</p>
+<p>
+	Μετά που το ΑΚΕΛ πήρε εκείνη την επεισοδιακή απόφαση, ο Ανδρέας Χρίστου ήταν ένας από εκείνους που δεν προχώρησαν με την τελική απόφαση και δεν το έκρυψαν. Μετά το Δημοψήφισμα, το κόμμα είχε ανακοινώσει δημόσια ότι θα υπήρχαν κυρώσεις για στελέχη που δεν πήγαν με την επίσημη απόφαση. Κάπως έτσι ο άλλοτε κοινοβουλευτικός εκπρόσωπος του ΑΚΕΛ κατέληξε &laquo;τιμωρητικά&raquo; υποψήφιος και δήμαρχος Λεμεσού. Επειδή &laquo;ήταν πολύ του Ναι&raquo;.</p>
+<p>
+	Στην περίπτωση του δημάρχου Λεμεσού φαίνεται ότι Κυπριακό και δημαρχιακά μπορεί και να σχετίζονται πολύ άμεσα. Γι&rsquo; αυτό φαίνεται παράδοξο ότι ΔΗΚΟ και ΕΔΕΚ υποστηρίζουν σήμερα τον δήμαρχο Λεμεσού, ο οποίος έφτασε στη δημαρχία μέσα από το... &laquo;ναι&raquo; στο Σχέδιο Ανάν. Στην άλλη όχθη συμβαίνει κάτι ανάλογο. Ο ΔΗΣΥ υποστηρίζει για τη δημαρχία της Λεμεσού έναν επίσης παλιό υπουργό, ο οποίος αφού προέρχεται από την ΕΔΕΚ λογικά δεν μπορεί να θεωρείται ότι στρατεύεται με το &laquo;ναι&raquo;.</p>
+<p>
+	Βέβαια, ο Νίκος Νικολαΐδης έχει πάψει τον τελευταίο καιρό να παίζει ρόλο στην κεντρική ηγεσία της ΕΔΕΚ και η απομάκρυνσή του από τα πολιτικά δρώμενα δεν έχει να κάνει με το εθνικό θέμα. Άσχετα όμως αν κατατάσσεται στην ενδοκομματική αντιπολίτευση, στο εθνικό ζήτημα θα μπορούσε να θεωρηθεί πολύ πιο κοντά στο ΔΗΚΟ και την ΕΔΕΚ και μάλλον μακριά από τον ΔΗΣΥ που τον υποστηρίζει. Είναι σαν να έχει και ο ΔΗΣΥ &laquo;υποψήφιο του όχι&raquo;...</p>
+<p>
+	Θα μας έλεγε βέβαια κάποιος πως δεν έχουν καμία σχέση τα δύο. Και ότι οι πολιτικές δυνάμεις άλλα πράγματα έχουν στον νου τους όταν παίρνουν αποφάσεις για τις δημαρχιακές και όχι το Κυπριακό. Πώς είναι όμως δυνατόν, ειδικά αυτές τις μέρες που συνέχεια ανεβαίνουν οι τόνοι και που έχουμε δραματικές αντεγκλήσεις γύρω από το εθνικό ζήτημα, αυτό να μην μετράει καθόλου όταν παίρνουν αποφάσεις για την τύχη των μεγάλων πόλεων; Αλλά το γεγονός είναι πως την ίδια ώρα που οι διεργασίες κορυφώνονται, που πολλοί μιλούν για συμφωνία και Δημοψήφισμα και που αρχίζουν να αποκρυσταλλώνονται ξανά τα δύο &laquo;αντίπαλα στρατόπεδα&raquo;, τα κομματικά &laquo;στρατεύματα&raquo; για τις δημοτικές συντάσσονται σε άλλα &laquo;στρατόπεδα&raquo;.<br />
+	<br />
+	<strong>Λευκωσία: Όταν το ΔΗΚΟ αναγκάζεται να &laquo;κολλήσει&raquo; στον ΔΗΣΥ...</strong></p>
+<p>
+	Ένα άλλο παράδειγμα είναι και εκείνο της Λευκωσίας. Το τελευταίο που θα ήθελε το ΔΗΚΟ αυτή την περίοδο είναι να συμπράξει με τον ΔΗΣΥ. Δεν χάνουν ευκαιρία για να επικρίνουν το κόμμα του προέδρου της Δημοκρατίας και τα όσα κάνει στο Κυπριακό. Αλλά έρχεται στον δήμο της πρωτεύουσας και υποστηρίζει μαζί με τον Συναγερμό τον δήμαρχο που επαναδιεκδικεί. Μπορεί να μην υπήρχε άλλος δρόμος και αυτό να είναι απολύτως κατανοητό, αλλά δεν παύει να είναι γεγονός ότι το ΔΗΚΟ στον κύριο δήμο της χώρας συστρατεύεται με τον ΔΗΣΥ και στον εξίσου σημαντικό δήμο της Λεμεσού, μαζί με την ΕΔΕΚ, υποστηρίζει μια πολιτική προσωπικότητα πολύ καθαρά ταγμένη με τις ακριβώς αντίθετες από τις δικές τους θέσεις στο εθνικό.</p>
+<p>
+	Σίγουρα λοιπόν το Κυπριακό δεν πάει στην κάλπη του Δεκεμβρίου. Αν κοιτάξει κανείς το μωσαϊκό ολόκληρης της Κύπρου, υπάρχει μια αφθονία περιπτώσεων και συνδυασμών.</p>
+<p>
+	Σε αρκετές περιπτώσεις ο ΔΗΣΥ υποστηρίζει υποψήφιους που προέρχονται είτε από το ΔΗΚΟ είτε από την ΕΔΕΚ. Ενώ δεν είχε δισταγμούς το κυβερνών κόμμα για να στηρίξει σε κάποιους δήμους και καθαρά αριστερούς. Είτε πρόκειται για επίσημους είτε για ανεπίσημους και &laquo;πρώην&raquo;, επιλέγει πάντως ανθρώπους της αριστεράς. Ενώ το κόμμα βλέπει και δικούς του υποψηφίους, τόσο επίσημους όσο και ανεπίσημους, να υποστηρίζονται κάποτε από άλλα κόμματα. Πόσοι όμως από τους ψηφοφόρους σε παγκύπριο επίπεδο έχουν συνειδητοποιήσει ότι στην περιφέρεια Λευκωσίας οι δύο από τους τρεις αντιδημάρχους που είχε ο ΔΗΣΥ είναι τώρα υποψήφιοι και τρέχουν αντίπαλοι των δημάρχων που στηρίζονται επίσημα από το κόμμα; Ελάχιστοι. Διότι οι ψηφοφόροι τελικά δεν βλέπουν αυτές τις εκλογές με τα ματογυάλια των κομμάτων. Ενώ πολλοί ανάμεσά τους δεν τις βλέπουν καθόλου.<br />
+	<br />
+	<strong>Σε θέσεις μάχης</strong></p>
+<p>
+	Ο ΔΗΣΥ βρέθηκε νωρίς-νωρίς σε &laquo;νευρική κρίση&raquo; με την περίπτωση του δήμου Λεμεσού. Τον ακολούθησε αυτές τις μέρες το ΔΗΚΟ, που ζει τη δική του &laquo;νευρική κρίση&raquo; στην περίπτωση της Λάρνακας. Ενώ με άλλο τρόπο και η ΕΔΕΚ δεν είναι στα καλύτερά της, όταν βλέπει ένα μέχρι προχτές ηγετικό στέλεχός της να διεκδικεί τον δήμο Λεμεσού από το ΑΚΕΛ, αλλά το κόμμα να γυρίζει την πλάτη και να απειλεί μάλιστα και να τιμωρήσει τον Νίκο Νικολαΐδη, προτιμώντας αυτό τον καιρό να σταθεί δίπλα σε δήμαρχο ο οποίος διαχρονικά κατατάσσεται ως &laquo;ένθερμος της λύσης&raquo;...</p>
+<p>
+	Το ΑΚΕΛ αυτήν τη φορά κατάφερε να αποφύγει κάποια &laquo;νευρική κρίση&raquo;, έχοντας μόνο μικρά &laquo;περιφερειακά&raquo; προβλήματα. Αλλά στην πραγματικότητα μετέθεσε τη δική του &laquo;νευρική κρίση&raquo; για τη νύχτα της Κυριακής, 18 Δεκεμβρίου, όταν και θα πρέπει να έχει &laquo;πάρει πίσω&raquo; είτε τον δήμο της Λάρνακας είτε εκείνο της Αμμοχώστου. Σε αντίθετη περίπτωση δεν θα έχει κάτι να δείξει. Ενώ αν χαθεί και ο δήμος της Λεμεσού, πράγμα που αρκετοί δεν αποκλείουν, θα μιλάμε για άλλο ένα &laquo;βατερλώ&raquo;.</p>
+<p>
+	Το αντίστοιχο κρίσιμο τεστ του ΔΗΣΥ κατέληξε να είναι στη Λεμεσό και στη Λάρνακα. Δεν υπάρχει αμφιβολία ότι αν τυχόν ο Νίκος Νικολαΐδης κερδίσει τη Λεμεσό, τη νύχτα των εκλογών όλα τα μάτια και τα σχόλια θα στραφούν εκεί. Και ο ΔΗΣΥ, ό,τι και να γίνει, αλλού μάλλον θα έχει κερδίσει την &laquo;παρτίδα&raquo;. Κάτι ανάλογο σε μικρότερη κλίμακα ισχύει και για τον δήμο Λάρνακας, που στην εκκίνηση εθεωρείτο χαμένος για τον ΔΗΣΥ.</p>
+<p>
+	Αλλά και αντίστροφα, εάν ο Αντρέας Χρίστου τελικά επανεκλεγεί στη Λεμεσό, τότε σχεδόν αυτόματα θα αρχίσουν και πάλι οι &laquo;βολές&raquo; από Λεμεσό προς Πινδάρου και η ηγεσία θα χρεωθεί για &laquo;λανθασμένες επιλογές&raquo;... Δεν είναι όμως μόνο αυτές οι αγωνίες του Αβέρωφ Νεοφύτου. Τυχόν &laquo;παραπάτημα&raquo; στην Πάφο ή και &laquo;δυστύχημα&raquo; σε κάποιο μεγάλο δήμο, όπως ο Στρόβολος, μπορεί να τραβήξει την προσοχή εκείνης της νύχτας, εάν αλλού τα αποτελέσματα θεωρηθούν αναμενόμενα.<br />
+	<br />
+	<strong>Το ΑΚΕΛ &laquo;καθαρό&raquo; δεν στηρίζει ούτε έναν συναγερμικό</strong></p>
+<p>
+	Το ΔΗΚΟ, από την πλευρά του, εκεί που δεν υποστηρίζει δικούς του υποψηφίους, διαλέγει αδιακρίτως. Συχνά κάποιους του ΑΚΕΛ και της ΕΔΕΚ, αλλά και κάποτε υποψηφίους του ΔΗΣΥ. Τελικά &laquo;συνέπεια&raquo; δείχνει μόνο το ΑΚΕΛ ως προς το ότι πουθενά δεν υποστηρίζει υποψήφιο του ΔΗΣΥ. Η Εζεκία Παπαϊωάννου κάνει σε αρκετούς δήμους ανοίγματα προς το ΔΗΚΟ και προς την ΕΔΕΚ. Επιχειρήθηκε σε ορισμένες περιπτώσεις μάλιστα να χτιστεί η πάλαι ποτέ &laquo;τριμερής&raquo; απομονώνοντας τον ΔΗΣΥ. Τελικά όμως περισσότερα ήταν τα προβλήματά τους παρά οι επιτυχίες. Με εξαίρεση την πόλη της Λεμεσού η &laquo;τριμερής&raquo; δεν μπορεί να είναι όχημα σε αυτές τις εκλογές. Αυτό φάνηκε στους άλλους δήμους της περιφέρειας Λεμεσού, όπου η λογική της &laquo;τριμερούς&raquo; και κάποιων συνεννοήσεων δεν αποδίδει πάντα.</p>
+<p>
+	Δεν φαίνεται δηλαδή να υπάρχει καθόλου &laquo;ΔΗΣΑΚΕΛ&raquo; για τις δημοτικές. Αυτό είναι που έκανε και την Πινδάρου να κουνάει το δάχτυλο στο ΔΗΚΟ και να του θυμίζει ότι τελικά μάλλον υπάρχει &laquo;ΔΗΚΑΚΕΛ&raquo;... Φυσικά ιδιαίτερη περίπτωση είναι και ο δήμος Πάφου. Εκεί η ισχυρότατη και πολύκροτη παρουσία του δημάρχου Φαίδωνος εξαναγκάζει σχεδόν όλα τα άλλα κόμματα σε &laquo;πανστρατιά&raquo;, σε μια προσπάθεια να τον αμφισβητήσουν αποτελεσματικά.<br />
+	<br />
+	<strong>Το μόνο που λείπει στις δημοτικές είναι ο &laquo;ενδιάμεσος&raquo;</strong></p>
+<p>
+	Το σίγουρο όμως που δεν παρέλειψε να το αναδείξει ο ΔΗΣΥ είναι ότι στον δρόμο για τις κάλπες του Δεκεμβρίου το ΔΗΚΟ δεν καταφέρνει να συντάξει τον &laquo;ενδιάμεσο χώρο&raquo;. Αλλού προέχει η αντιπολίτευση και ΔΗΚΟ-ΕΔΕΚ βρίσκονται μαζί με το ΑΚΕΛ, αλλού επικρατούν &laquo;ιδιόμορφα στοιχεία&raquo; και το ΔΗΚΟ συντάσσεται με τον όμορο ΔΗΣΥ και, τέλος, αλλού προκύπτουν τοπικές λύσεις που δεν αφήνουν χώρο για &laquo;ενδιάμεσο&raquo;.</p>
+<p>
+	Ενώ, από την πλευρά τους τα μικρότερα και τα καινούργια κόμματα φαίνεται ότι δεν καταφέρνουν σε κανένα δήμο να αναδείξουν δική τους υποψηφιότητα για δημαρχία. Ούτε υποψήφιος δήμαρχος των Οικολόγων υπάρχει ούτε και της Αλληλεγγύης ή της Συμμαχίας Πολιτών και βέβαια ούτε του ΕΛΑΜ. Είναι έτσι καταδικασμένοι να διαλέγουν ανάμεσα στους άλλους και να προβάλλουν συνέχεια τη λογική &laquo;το μη χείρον βέλτιστον&raquo;. Ακολουθούν τις αποφάσεις των μεγάλων κομμάτων και επιλέγουν &laquo;ατάκτως&raquo; τους υποψήφιους τους.</p>
+<p>
+	Διακρίνει όμως κανένας ότι και εδώ το αίμα νερό δεν γίνεται και έτσι η Αλληλεγγύη συνήθως προσεγγίζει συναγερμικής προέλευσης υποψηφίους. Πιο περίπλοκη υπόθεση, η Συμμαχία, άλλοτε προσεγγίζει το ΑΚΕΛ και άλλοτε υποψηφίους ΔΗΚΟ-ΕΔΕΚ, χωρίς όμως να αποκλείονται και κάποιοι του ΔΗΣΥ. Ενώ οι Οικολόγοι &laquo;τσιμπούν&raquo; εδώ και εκεί... Έτσι, παρά την πιο έντονη τοποθέτησή τους στο εθνικό, δεν μπορούν και τα μικρότερα κόμματα να την αναδείξουν σε εκλογές, που γίνονται ακριβώς την πιο κρίσιμη ώρα της διαπραγμάτευσης.<br />
+	<br />
+	<strong>Κάποτε είναι και &laquo;μονά-ζυγά δικά μας&raquo;</strong></p>
+<p>
+	Το μωσαϊκό συμπληρώνουν υποψηφιότητες που ξεφεύγουν από τις κομματικές επιλογές και στο παρελθόν θα ονομάζονταν &laquo;αντάρτες&raquo;. Τέτοιοι υποψήφιοι, παίρνοντας απόσταση από το κόμμα τους, βρίσκουν υποστήριξη από άλλα κόμματα. Όπως για παράδειγμα ο συναγερμικός Φοίβος Ζαχαριάδης που δεν έχει την επίσημη υποστήριξη του ΔΗΣΥ, αλλά στηρίζεται από το ΔΗΚΟ. Συμμετρικά, υπάρχει πιθανότητα να γίνει κάτι ανάλογο στη Λάρνακα, όπου ήδη ο ΔΗΣΥ υποστηρίζει τον Αλέξη Μιχαηλίδη του ΔΗΚΟ, αλλά το τελευταίο υποστηρίζει τον Ανδρέα Πέτρου.</p>
+<p>
+	Κυοφορούμενη εξέλιξη &laquo;ανατροπής&raquo; θα είναι αν Συμμαχία και Οικολόγοι στηρίξουν στον Στρόβολο τη δεύτερη υποψηφιότητα που προέρχεται από τον Συναγερμό, δηλαδή τον αντιδήμαρχο Ανδρέα Παπαχαραλάμπους. Ο οποίος, εφόσον θα έχει και την υποστήριξη της Αλληλεγγύης, θα φανεί να έχει μια &laquo;κρίσιμη μάζα&raquo; που τον φέρνει τουλάχιστον στα ίσα με τον επίσημο υποψήφιο του ΔΗΣΥ και την υποψήφια του ΑΚΕΛ.</p>
+<p>
+	Αυτήν τη φορά ο ΔΗΣΥ απέφυγε στο ιδιόμορφο Παραλίμνι να έχει την περίεργη επιτυχία να εκλεγεί δικός του δήμαρχος που δεν τον υποστηρίζει! Διότι με το μάθημα του 2011 στον νου φρόντισαν και μας έδωσαν τη μοναδική πρωτοτυπία να υποστηρίζουν και τους δύο υποψήφιους! Μήπως όμως τελικά κάποιο άλλο ανάλογο αποτέλεσμα μπορεί να το δει τώρα σε κάποιον άλλο δήμο; Φυσικά στην Πινδάρου δεν κρύβουν και τον φόβο μήπως χάσουν τη μια ή την άλλη από αυτές τις δημαρχίες που θεωρείται ότι ελέγχουν.<br />
+	<br />
+	<strong>Περίεργοι καιροί, περίεργες εκλογές</strong></p>
+<p>
+	Θα έλεγε κάποιος ότι με ένα τέτοιο κατακερματισμένο σκηνικό ο Πρόεδρος Αναστασιάδης, εάν τελικά καταφέρει να φτάσει σε κάποια συμφωνία, μπορεί και να τρίβει τα χέρια. Ο κόσμος δεν ακολουθεί συνήθως την κομματική λογική, αλλά ένα σημαντικό μέρος του κόσμου, που θα κινητοποιηθεί στελεχώνοντας τον προεκλογικό, θα ζήσει συνδυασμούς συνεργασίας ΔΗΚΟ-ΔΗΣΥ ή ΑΚΕΛ-ΔΗΚΟ κ.ο.κ.</p>
+<p>
+	Αυτό βέβαια δεν σημαίνει ότι δεν θα έχουμε ταυτόχρονα και μια λογική πόλωσης, που θα φέρνει το ΔΗΚΟ μαζί με την ΕΔΕΚ και τα άλλα μικρά κόμματα &laquo;απέναντι&raquo; και από τον ΔΗΣΥ και από το ΑΚΕΛ. Θα είναι πάντως περίπλοκο και ίσως αδυνατίζει το &laquo;μέτωπο του Ενδιάμεσου&raquo;. Ή μήπως, όπως επιμένουν άλλοι, όλα αυτά τελικά δεν μετρούν και αν πράγματι προχωρήσει πολύ το Κυπριακό, τότε οι ίδιοι οι πολίτες ανεξάρτητα από κόμματα θα συνταχθούν σε δικές τους γραμμές, όπως εξάλλου έγινε την προηγούμενη φορά;</p>
+<p>
+	Ποιος μπορεί να πει όμως ότι αν το Κυπριακό, αντίθετα από τις ανυπέρβλητες δυσκολίες που παραμένουν, τελικά προχωρήσει και πάμε σε δημαρχιακές κάλπες έχοντας ορίζοντα μια τελική συμφωνία μέσα στον νέο χρόνο, οι ψηφοφόροι δεν θα βρεθούν στην κάλπη για τους δήμους με ψυχολογία ΝΑΙ/ΟΧΙ;</p>			<div class="clear"></div>
+		</div>
+
+		<div id="related_links">
+			<h3>Σημερινή Περισσότερα</h3>
+<ul class="news_related_items">
+        <li class="related_item"><a href="/simerini/politics/392887">Μετά τη Γενεύη τα ενεργειακά</a></li>
+        <li class="related_item"><a href="/simerini/politics/392928">Στην τελική στροφή πριν από τη Γενεύη</a></li>
+        <li class="related_item"><a href="/simerini/politics/392927">«Παρούσα διά του Προέδρου η ΚΔ»</a></li>
+        <li class="related_item"><a href="/simerini/politics/392544">Επιβεβαιωμένο: Αξιωματούχος της Βέρμαχτ ο Κουρτ Βάλντχαϊμ</a></li>
+        <li class="related_item"><a href="/simerini/politics/392932">Πήραν τη σκυτάλη οι νέοι Δήμαρχοι</a></li>
+    </ul>
+		</div>
+	</div>
+</div>				
+						            <div class="grid-three">
+		                <div class="grid-one-half">
+	<div class="ad160x600">
+		<!-- Simerini_160x600 -->
+		<div id='div-gpt-ad-1421654473194-0'>
+				<script type='text/javascript'>
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1421654473194-0'); });
+				</script>
+				</div>	</div>
+	<div class="ad160x120"></div>
+
+	<div style="margin-left: 5px; margin-bottom: 10px;"></div>
+	<div style="margin-left: 5px"></div>
+</div>
+
+<div class="grid-one-half">
+	<div id="tabContainer">
+		<ul class="colTabs">
+			<li><a href="#simerini_tab"><span>Σημερινή</span></a></li>
+			<li><a href="#business-week_tab"><span>Business Weekly</span></a></li>
+			<li><a href="#ygeia_tab"><span>Υγεία &amp; Ομορφιά</span></a></li>
+			<li><a href="#kariera_tab"><span>Καριέρα &amp; Εργασία</span></a></li>
+			<li><a href="#sports_tab"><span>Αθλητικά</span></a></li>
+			<li><a href="#hdifono_tab"><span>Ηδύφωνο</span></a></li>
+		</ul>
+	</div>
+	
+	<div id="simerini_tab">
+	<div class="view view-section-pdfs">
+		<div class="view-content view-content-section-pdfs">
+			<a onclick="javascript: pageTracker._trackPageview('/simerini/pdf/download');"	href="http://www.sigmalive.com/files/download/63683" class="item-cover">
+				<img src="/application/cache/default/images/pdf/152x218/simerini03012017.png" />
+			</a>
+		</div>
+	</div>
+	
+	<div class="view view-pdf-archive">
+		<div class="view-summary view-summary-pdf-archive">
+			<select onchange="if(this.options[this.selectedIndex].value){window.location.href = '/simerini/simerini/pdf/archive/' + this.options[this.selectedIndex].value;}" name="pdf_archive">
+				<option value="">Αρχείο</option>
+								<option value="201701">2017/01</option>
+								<option value="201612">2016/12</option>
+								<option value="201611">2016/11</option>
+								<option value="201610">2016/10</option>
+								<option value="201609">2016/09</option>
+								<option value="201608">2016/08</option>
+								<option value="201607">2016/07</option>
+								<option value="201606">2016/06</option>
+								<option value="201605">2016/05</option>
+								<option value="201604">2016/04</option>
+								<option value="201603">2016/03</option>
+								<option value="201602">2016/02</option>
+								<option value="201601">2016/01</option>
+								<option value="201512">2015/12</option>
+								<option value="201511">2015/11</option>
+								<option value="201510">2015/10</option>
+								<option value="201509">2015/09</option>
+								<option value="201508">2015/08</option>
+								<option value="201507">2015/07</option>
+								<option value="201506">2015/06</option>
+								<option value="201505">2015/05</option>
+								<option value="201504">2015/04</option>
+								<option value="201503">2015/03</option>
+								<option value="201502">2015/02</option>
+								<option value="201501">2015/01</option>
+								<option value="201412">2014/12</option>
+								<option value="201411">2014/11</option>
+								<option value="201410">2014/10</option>
+								<option value="201409">2014/09</option>
+								<option value="201408">2014/08</option>
+								<option value="201407">2014/07</option>
+								<option value="201406">2014/06</option>
+								<option value="201405">2014/05</option>
+								<option value="201404">2014/04</option>
+								<option value="201403">2014/03</option>
+								<option value="201402">2014/02</option>
+								<option value="201401">2014/01</option>
+								<option value="201312">2013/12</option>
+								<option value="201311">2013/11</option>
+							</select>
+		</div>
+	</div>
+</div>	
+	<div id="business-week_tab">
+	<div class="view view-section-pdfs">
+		<div class="view-content view-content-section-pdfs">
+			<a onclick="javascript: pageTracker._trackPageview('/business-week/pdf/download');"	href="http://www.sigmalive.com/files/download/35570" class="item-cover">
+				<img src="/application/cache/default/images/pdf/152x218/b_weekly_06092015.png" />
+			</a>
+		</div>
+	</div>
+	
+	<div class="view view-pdf-archive">
+		<div class="view-summary view-summary-pdf-archive">
+			<select onchange="if(this.options[this.selectedIndex].value){window.location.href = '/simerini/business-week/pdf/archive/' + this.options[this.selectedIndex].value;}" name="pdf_archive">
+				<option value="">Αρχείο</option>
+								<option value="201509">2015/09</option>
+								<option value="201508">2015/08</option>
+								<option value="201507">2015/07</option>
+								<option value="201506">2015/06</option>
+								<option value="201505">2015/05</option>
+								<option value="201504">2015/04</option>
+								<option value="201503">2015/03</option>
+								<option value="201502">2015/02</option>
+								<option value="201501">2015/01</option>
+								<option value="201412">2014/12</option>
+								<option value="201411">2014/11</option>
+								<option value="201410">2014/10</option>
+								<option value="201409">2014/09</option>
+								<option value="201408">2014/08</option>
+								<option value="201407">2014/07</option>
+								<option value="201406">2014/06</option>
+								<option value="201405">2014/05</option>
+								<option value="201404">2014/04</option>
+								<option value="201403">2014/03</option>
+								<option value="201402">2014/02</option>
+								<option value="201401">2014/01</option>
+								<option value="201312">2013/12</option>
+								<option value="201311">2013/11</option>
+							</select>
+		</div>
+	</div>
+</div>	
+	<div id="sports_tab">
+	<div class="view view-section-pdfs">
+		<div class="view-content view-content-section-pdfs">
+			<a onclick="javascript: pageTracker._trackPageview('/sports/pdf/download');"	href="http://www.sigmalive.com/files/download/63682" class="item-cover">
+				<img src="/application/cache/default/images/pdf/152x218/sporttime03012017.png" />
+			</a>
+		</div>
+	</div>
+	
+	<div class="view view-pdf-archive">
+		<div class="view-summary view-summary-pdf-archive">
+			<select onchange="if(this.options[this.selectedIndex].value){window.location.href = '/simerini/sports/pdf/archive/' + this.options[this.selectedIndex].value;}" name="pdf_archive">
+				<option value="">Αρχείο</option>
+								<option value="201701">2017/01</option>
+								<option value="201612">2016/12</option>
+								<option value="201611">2016/11</option>
+								<option value="201610">2016/10</option>
+								<option value="201609">2016/09</option>
+								<option value="201608">2016/08</option>
+								<option value="201607">2016/07</option>
+								<option value="201606">2016/06</option>
+								<option value="201605">2016/05</option>
+								<option value="201604">2016/04</option>
+								<option value="201603">2016/03</option>
+								<option value="201602">2016/02</option>
+								<option value="201601">2016/01</option>
+								<option value="201512">2015/12</option>
+								<option value="201511">2015/11</option>
+								<option value="201510">2015/10</option>
+								<option value="201509">2015/09</option>
+								<option value="201508">2015/08</option>
+								<option value="201507">2015/07</option>
+								<option value="201506">2015/06</option>
+								<option value="201505">2015/05</option>
+								<option value="201504">2015/04</option>
+								<option value="201503">2015/03</option>
+								<option value="201502">2015/02</option>
+								<option value="201501">2015/01</option>
+								<option value="201412">2014/12</option>
+								<option value="201411">2014/11</option>
+								<option value="201410">2014/10</option>
+								<option value="201409">2014/09</option>
+								<option value="201408">2014/08</option>
+								<option value="201407">2014/07</option>
+								<option value="201406">2014/06</option>
+								<option value="201405">2014/05</option>
+								<option value="201404">2014/04</option>
+								<option value="201403">2014/03</option>
+								<option value="201402">2014/02</option>
+								<option value="201401">2014/01</option>
+								<option value="201312">2013/12</option>
+								<option value="201311">2013/11</option>
+							</select>
+		</div>
+	</div>
+</div>	
+	<div id="kariera_tab">
+	<div class="view view-section-pdfs">
+		<div class="view-content view-content-section-pdfs">
+			<a onclick="javascript: pageTracker._trackPageview('/kariera/pdf/download');"	href="http://www.sigmalive.com/files/download/20006" class="item-cover">
+				<img src="/application/cache/default/images/pdf/152x218/kariera_21122014.png" />
+			</a>
+		</div>
+	</div>
+	
+	<div class="view view-pdf-archive">
+		<div class="view-summary view-summary-pdf-archive">
+			<select onchange="if(this.options[this.selectedIndex].value){window.location.href = '/simerini/kariera/pdf/archive/' + this.options[this.selectedIndex].value;}" name="pdf_archive">
+				<option value="">Αρχείο</option>
+								<option value="201412">2014/12</option>
+								<option value="201411">2014/11</option>
+								<option value="201410">2014/10</option>
+								<option value="201409">2014/09</option>
+								<option value="201408">2014/08</option>
+								<option value="201407">2014/07</option>
+								<option value="201406">2014/06</option>
+								<option value="201405">2014/05</option>
+								<option value="201404">2014/04</option>
+								<option value="201403">2014/03</option>
+								<option value="201402">2014/02</option>
+								<option value="201401">2014/01</option>
+								<option value="201311">2013/11</option>
+							</select>
+		</div>
+	</div>
+</div>	
+	<div id="ygeia_tab">
+	<div class="view view-section-pdfs">
+		<div class="view-content view-content-section-pdfs">
+			<a onclick="javascript: pageTracker._trackPageview('/ygeia/pdf/download');"	href="http://www.sigmalive.com/files/download/7256" class="item-cover">
+				<img src="/application/cache/default/images/pdf/152x218/ygeia06062009.png" />
+			</a>
+		</div>
+	</div>
+	
+	<div class="view view-pdf-archive">
+		<div class="view-summary view-summary-pdf-archive">
+			<select onchange="if(this.options[this.selectedIndex].value){window.location.href = '/simerini/ygeia/pdf/archive/' + this.options[this.selectedIndex].value;}" name="pdf_archive">
+				<option value="">Αρχείο</option>
+								<option value="201311">2013/11</option>
+							</select>
+		</div>
+	</div>
+</div>	
+	<div id="hdifono_tab">
+	<div class="view view-section-pdfs">
+		<div class="view-content view-content-section-pdfs">
+			<a onclick="javascript: pageTracker._trackPageview('/hdifono/pdf/download');"	href="http://www.sigmalive.com/files/download/59658" class="item-cover">
+				<img src="/application/cache/default/images/pdf/152x218/hdyfono_25092016.png" />
+			</a>
+		</div>
+	</div>
+	
+	<div class="view view-pdf-archive">
+		<div class="view-summary view-summary-pdf-archive">
+			<select onchange="if(this.options[this.selectedIndex].value){window.location.href = '/simerini/hdifono/pdf/archive/' + this.options[this.selectedIndex].value;}" name="pdf_archive">
+				<option value="">Αρχείο</option>
+								<option value="201609">2016/09</option>
+								<option value="201608">2016/08</option>
+								<option value="201607">2016/07</option>
+								<option value="201606">2016/06</option>
+								<option value="201605">2016/05</option>
+								<option value="201604">2016/04</option>
+								<option value="201603">2016/03</option>
+								<option value="201602">2016/02</option>
+								<option value="201601">2016/01</option>
+								<option value="201512">2015/12</option>
+								<option value="201511">2015/11</option>
+								<option value="201510">2015/10</option>
+								<option value="201509">2015/09</option>
+								<option value="201508">2015/08</option>
+								<option value="201507">2015/07</option>
+								<option value="201506">2015/06</option>
+								<option value="201505">2015/05</option>
+								<option value="201504">2015/04</option>
+							</select>
+		</div>
+	</div>
+</div>	
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#tabContainer").tabs();
+		});
+    </script>
+
+	<ul class="sideMenu ui-accordion-container">
+			<li>
+		<a href="http://www.sigmalive.com/simerini/news" class="ui-accordion-link">Αρχική</a>
+	</li>
+	<li>
+		<a href="http://www.sigmalive.com/simerini/politics" class="ui-accordion-link">Πολιτική</a>
+	</li>
+	<li>
+		<a href="http://www.sigmalive.com/simerini/news" class="ui-accordion-link">Ειδήσεις</a>
+	</li>
+	<li>
+		<a href="http://www.sigmalive.com/simerini/business" class="ui-accordion-link">Οικονομία</a>
+	</li>
+	<li class="expanded">
+		<a href="http://www.sigmalive.com/simerini/sport-time" class="ui-accordion-link">Sport Time</a>
+		<ul>
+			<li>
+				<a href="http://www.sigmalive.com/simerini/sport-time/cyprus">Κύπρος</a>
+			</li>
+			<li>
+				<a href="http://www.sigmalive.com/simerini/sport-time/greece">Ελλάδα</a>
+			</li>
+			<li>
+				<a href="http://www.sigmalive.com/simerini/sport-time/international">Διεθνή</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<a href="http://www.sigmalive.com/simerini/columns" class="ui-accordion-link">Στήλες</a>
+	</li>
+	<li>
+		<a href="http://www.sigmalive.com/simerini/simerina" class="ui-accordion-link">Σημερινά</a>
+	</li>
+	<li>
+		<a href="http://www.sigmalive.com/simerini/anafandon" class="ui-accordion-link">Αναφανδόν</a>
+	</li>
+	<li>
+		<a href="http://www.sigmalive.com/simerini/politics/interviews" class="ui-accordion-link">Συνεντεύξεις</a>
+	</li>
+	<li>
+		<a href="http://www.sigmalive.com/simerini/analiseis" class="ui-accordion-link">Άρθρα</a>
+	</li>
+	<li>
+		<a href="http://www.sigmalive.com/simerini/world" class="ui-accordion-link">Κόσμος</a>
+	</li>
+	<li>
+		<a href="http://www.sigmalive.com/simerini/politismos" class="ui-accordion-link">Πολιτισμός</a>
+	</li>
+	<li>
+		<a href="http://www.sigmalive.com/simerini/environment" class="ui-accordion-link">Περιβάλλον</a>
+	</li>
+	<li>
+		<a href="http://www.sigmalive.com/simerini/horoscopes" class="ui-accordion-link">Ωροσκόπια</a>
+	</li>
+	<li>
+		<a href="http://www.sigmalive.com/pharmacies" class="ui-accordion-link">Χρηστικά</a>
+	</li>
+	</ul>
+	
+	<div style="clear: both;"></div>
+</div>		            </div>
+            	            	
+            	<div class="clear"></div>
+            	<div class="bottom"></div>
+			</div>
+			
+			<div id="footer">
+	&copy; 2007-2017 Dias Publishing House Public Ltd<br />
+	<div class="links">
+	<span><span><a href="http://www.sigmalive.com/personal-data-policy" class="ui-accordion-link">Προσωπικά Δεδομένα</a></span></span><span><span><a href="http://www.sigmalive.com/terms-and-conditions" class="ui-accordion-link">Όροι Χρήσης</a></span></span><span><span><a href="http://www.sigmalive.com/about" class="ui-accordion-link">Ταυτότητα</a></span></span><span><span><a href="http://www.sigmalive.com/site-credits" class="ui-accordion-link">Site Credit</a></span></span>	</div>
+</div>		</div>
+
+		<!-- START Nielsen Online SiteCensus V6.0 -->
+		<!-- COPYRIGHT 2010 Nielsen Online -->
+		<script type="text/javascript" src="//secure-uk.imrworldwide.com/v60.js"></script>
+		<script type="text/javascript">
+			var pvar = { cid: "cy-dias", content: "0", server: "secure-uk" };
+			var feat = { surveys_enabled: 1, sample_rate: 0.05 };
+			var trac = nol_t(pvar, feat);
+			var _rsND = trac.getSchemeHost(); // For compatibility with v53 surveys
+			var _rsCI = "cy-dias"; // For compatibility with v53 surveys
+			trac.record().post().do_sample();
+		</script>
+		<noscript>
+			<div>
+				<img src="//secure-uk.imrworldwide.com/cgi-bin/m?ci=cy-dias&amp;cg=0&amp;cc=1&amp;ts=noscript" width="1" height="1" alt="" />
+			</div>
+		</noscript>
+		<!-- END Nielsen Online SiteCensus V6.0 -->
+	<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"a6b223e43b","applicationID":"3006801","transactionName":"ZFFbZhZUXURTVhEMXV0bbEANGlpZVlAdS0JbRA==","queueTime":0,"applicationTime":1145,"atts":"SBZYEF5OTko=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

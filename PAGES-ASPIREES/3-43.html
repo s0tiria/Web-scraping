@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+<meta charset="UTF-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQ8EVlBUGwIJXVBTAgA="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(15),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(c){try{i("ierr",[c,(new Date).getTime(),!0])}catch(s){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(16),c=t("ee"),s=t("loader"),f=window.onerror,u=!1,d=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),s.xhrWrappable&&t(9),u=!0)}c.on("fn-start",function(t,e,n){u&&(d+=1)}),c.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),c.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),c.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),c=t(7),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState";t("loader").features.stn=!0,t(6);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=Date.now())}),o.on(w,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on(m,function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),this.bstType])}),c.on(m,function(){this.bstStart=Date.now()}),c.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,!1),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(17)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(17)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(17)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(17)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],9:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",c)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t(17)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(15),c=t(16),s=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),f.setCurrentRouteName=o(d+"routeName",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{s.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],14:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],15:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],16:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],17:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){l([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o)}catch(a){l([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){l([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function l(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o){if(!l.aborted){t&&t(n,r,o);for(var i=e(o),a=h(n),c=a.length,s=0;s<c;s++)a[s].apply(i,r);var f=u[y[n]];return f&&f.push([g,n,r,i]),i}}function p(t,e){v[t]=h(t).concat(e)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(n)}function w(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var v={},y={},g={on:p,emit:n,get:m,listeners:h,context:e,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var c="nr@context",s=t("gos"),f=t(15),u={},d={},l=e.exports=o();l.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!b++){var t=g.info=NREUM.info,e=d.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(v,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()],null,"api");var n=d.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var c=t("handle"),s=t(15),f=t("ee"),u=window,d=u.document,l="addEventListener",p="attachEvent",h=u.XMLHttpRequest,m=h&&h.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:h,REQ:u.Request,EV:u.Event,PR:u.Promise,MO:u.MutationObserver},t(12);var w=""+location,v={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-998.min.js"},y=h&&m&&m[l]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:a(),origin:w,features:{},xhrWrappable:y};d[l]?(d[l]("DOMContentLoaded",i,!1),u[l]("load",r,!1)):(d[p]("onreadystatechange",o),u[p]("onload",r)),c("mark",["firstbyte",a()],null,"api");var b=0},{}]},{},["loader",2,10,4,3]);</script>
+<title>Bizarre : le jeune Macron séduit les retraités de gauche! | Histoire de le dire</title>
+  <link rel="icon" href="http://www.lexpress.fr/favicon.ico" />
+  
+<meta name="viewport" content="user-scalable=yes, width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="description" content="&nbsp;
+Une étude d&rsquo;opinion récente a montré que chez les sympathisants de gauche, c&rsquo;était dans la tranche d&rsquo;âge supérieure à 60 ans qu&rsquo;Emmanuel Macron et son mouvement &laquo;&nbsp;En marche&nbsp;&raquo; suscitaient le maximum d&rsquo;intérêt. C&rsquo;est apparemment paradoxal, puisque le ministre de 38 ans est généralement présenté comme un facteur de rajeunissement de la vie politique,...  Lire la suite de  " />
+<!--STARTING WP_HEAD-->
+<link rel="alternate" type="application/rss+xml" title="Histoire de le dire &raquo; Flux" href="http://blogs.lexpress.fr/histoire-politique/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Histoire de le dire &raquo; Flux des commentaires" href="http://blogs.lexpress.fr/histoire-politique/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Histoire de le dire &raquo; Bizarre : le jeune Macron séduit les retraités de gauche! Flux des commentaires" href="http://blogs.lexpress.fr/histoire-politique/2016/04/28/bizarre-le-jeune-macron-seduit-les-retraites-de-gauche/feed/" />
+<link rel='stylesheet' id='jquery-twitter-group-css' href='http://blogs.lexpress.fr/histoire-politique/wp-content/plugins/bwp-minify/min/?f=wp-content/themes/express-blogs-v4-resp/library/js/jquery.twitter.css,wp-content/plugins/express-widget/css/widget-express.css,wp-content/plugins/wp-pagenavi/pagenavi-css.css' type='text/css' media='all' />
+<link rel='stylesheet' id='EWS_fontawesome-css'  href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' type='text/css' media='all' />
+<script type='text/javascript' src='http://blogs.lexpress.fr/histoire-politique/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='http://blogs.lexpress.fr/histoire-politique/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js'></script>
+<script type='text/javascript' src='http://blogs.lexpress.fr/histoire-politique/wp-content/plugins/bwp-minify/min/?f=wp-content/themes/express-blogs-v4-resp/library/js/jquery.lazyload.js,wp-content/themes/express-blogs-v4-resp/library/js/post.counter.js'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://blogs.lexpress.fr/histoire-politique/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://blogs.lexpress.fr/histoire-politique/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Jaurès-Macron, même combat?' href='http://blogs.lexpress.fr/histoire-politique/2016/04/23/jaures-macron-meme-combat/' />
+<link rel='next' title='Vers la fin du cycle néolibéral?' href='http://blogs.lexpress.fr/histoire-politique/2016/05/06/vers-la-fin-du-cycle-neoliberal/' />
+<meta name="generator" content="WordPress 4.0.11" />
+<link rel='shortlink' href='http://blogs.lexpress.fr/histoire-politique/?p=1041' />
+<script type="text/javascript">var id_blog = "985/1041";</script>	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+
+<!-- All in One SEO Pack 2.2.3.1 by Michael Torbert of Semper Fi Web Design[158,262] -->
+<meta name="description" itemprop="description" content="&nbsp; Une étude d'opinion récente a montré que chez les sympathisants de gauche, c'était dans la tranche d'âge supérieure à 60 ans qu'Emmanuel Macron et son" />
+
+<link rel="canonical" href="http://blogs.lexpress.fr/histoire-politique/2016/04/28/bizarre-le-jeune-macron-seduit-les-retraites-de-gauche/" />
+<!-- /all in one seo pack -->
+<!-- Vipers Video Quicktags v6.5.2 | http://www.viper007bond.com/wordpress-plugins/vipers-video-quicktags/ -->
+<style type="text/css">
+.vvqbox { display: block; max-width: 100%; visibility: visible !important; margin: 10px auto; } .vvqbox img { max-width: 100%; height: 100%; } .vvqbox object { max-width: 100%; } 
+</style>
+<script type="text/javascript">
+// <![CDATA[
+	var vvqflashvars = {};
+	var vvqparams = { wmode: "opaque", allowfullscreen: "true", allowscriptaccess: "always" };
+	var vvqattributes = {};
+	var vvqexpressinstall = "http://blogs.lexpress.fr/histoire-politique/wp-content/plugins/vipers-video-quicktags/resources/expressinstall.swf";
+// ]]>
+</script>
+		<style type="text/css">
+		body{background-color:#FFFFFF;}
+		#header{border-color:#FFFFFF;}
+		.widget-a-propos .widget-title{color:#000000;border-color:#000000;}
+		.widget-title{color:#000000;border-top:8px solid #e2e2e2;}
+		.widget-title a{color:#000000;}
+		.twitterwidget-title{color:#000000;}
+		.asset-footer a,.comment-footer a,.search-results-header span,.lien span,.widget-twitter .widget-content .twitter-message span {color:#000000;}
+		.asset-name a:hover{color:#000000;}
+		</style>
+		
+<!-- START - Facebook Open Graph, Google+ and Twitter Card Tags 1.5.1 -->
+<meta property="og:locale" content="fr_FR"/>
+<meta property="og:site_name" content="Histoire de le dire"/>
+<meta property="og:title" content="Bizarre : le jeune Macron séduit les retraités de gauche!"/>
+<meta itemprop="name" content="Bizarre : le jeune Macron séduit les retraités de gauche!"/>
+<meta property="og:url" content="http://blogs.lexpress.fr/histoire-politique/2016/04/28/bizarre-le-jeune-macron-seduit-les-retraites-de-gauche/"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2016-04-28T15:38:01+00:00"/>
+	<meta property="article:modified_time" content="2016-04-28T15:38:01+00:00" />
+<meta property="og:updated_time" content="2016-04-28T15:38:01+00:00" />
+<meta property="article:section" content="histoire"/>
+<meta property="article:section" content="nationale"/>
+<meta property="article:section" content="Politique"/>
+<meta property="og:description" content="&nbsp;
+
+Une étude d&#039;opinion récente a montré que chez les sympathisants de gauche, c&#039;était dans la tranche d&#039;âge supérieure à 60 ans qu&#039;Emmanuel Macron et son mouvement &quot;En marche&quot; suscitaient le maximum d&#039;intérêt. C&#039;est apparemment paradoxal, puisq"/>
+<meta itemprop="description" content="&nbsp;
+
+Une étude d&#039;opinion récente a montré que chez les sympathisants de gauche, c&#039;était dans la tranche d&#039;âge supérieure à 60 ans qu&#039;Emmanuel Macron et son mouvement &quot;En marche&quot; suscitaient le maximum d&#039;intérêt. C&#039;est apparemment paradoxal, puisq"/>
+<!-- END - Facebook Open Graph, Google+ and Twitter Card Tags -->
+
+<!--ENDING WP_HEAD-->
+<script src="http://static.lexpress.fr/min/js/mobile_redirect_lexpress.js" type="text/javascript"></script>
+<link href="http://static.lexpress.fr/min/css/lifestyle_content.css" rel="stylesheet" type="text/css" />
+<script src="http://static.lexpress.fr/min/js/rwd/common_top.js" type="text/javascript"></script>
+  <script src="http://static.lexpress.fr/min/js/rwd/content.js?v=123" type="text/javascript"></script>
+<script type="text/javascript" src="https://communaute.lexpress.fr/bar.js"></script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<link href="http://blogs.lexpress.fr/histoire-politique/wp-content/themes/express-blogs-v4-resp/style.css?version=586b5f46e44bf" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <link href="http://static.lexpress.fr/min/css/lifestyle/structure_ie+06eb59b3245684cf026387921a548560eb726b5bcc88138366a134f085bada99.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+<script>
+window.lazySizesConfig = {
+	addClasses: true
+};
+</script>
+<style>
+		
+	.content .article_container a:hover{
+		opacity:.8;	
+	}
+	
+	.widget .article_container a:hover{
+		opacity:.8;	
+	}
+	
+	div.widget-title,
+	h3.widget-title{
+		color:	#000000!important;
+	}
+	
+	</style>
+<!-- Haut de page :: TABOOLA -->
+  <script type="text/javascript">
+   window._taboola = window._taboola || [];
+      _taboola.push({article:'auto'});
+   !function (e, f, u) {
+     e.async = 1;
+     e.src = u;
+     f.parentNode.insertBefore(e, f);
+   }(document.createElement('script'),
+   document.getElementsByTagName('script')[0],
+   'http://cdn.taboola.com/libtrc/lexpress-network/loader.js');
+  </script>
+</head>
+<body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=128508963869724";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!--HEADER HTML-->
+<!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <link href="http://static.lexpress.fr/min/css/news/structure_ie+5f17b743bebb77987736c13e48ed27a3199fea1bf924e19e372563d07cf8d7b9.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+<div id="header" class="header">
+
+  <header class="header_top"><div class="header_top_left"><button class="icon icon_burger" id="nav_main_icon_burger"><span>Menu</span></button><ul class="header_list_link"><li class="header_list_link_item fil_info"><a href="http://www.lexpress.fr/actualites-a-la-une/">Fil info</a></li><li class="header_list_link_item"><a href="http://applications-mobile.lexpress.fr/" target="_blank">App Mobile</a></li><li class="header_list_link_item"><a href="https://communaute.lexpress.fr/inscription-newsletter" id="nav_newsletter_header" data-topic="blog" data-channel="lexpress">Newsletter</a></li><li class="header_list_link_item socials"><div class="header_socials"><ul class="header_socials_list"><li class="header_socials_list_item header_socials_text">Nous suivre :</li><li class="header_socials_list_item"><a href="http://www.facebook.com/LExpress" class="icon icon_fb" target="_blank">Facebook</a></li><li class="header_socials_list_item"><a href="https://twitter.com/LEXPRESS" class="icon icon_twitter" target="_blank">Twitter</a></li><li class="header_socials_list_item"><a href="https://plus.google.com/u/0/+L-Express/posts" class="icon icon_gplus" target="_blank">Google plus</a></li><li class="header_socials_list_item"><a href="/outils/rss.html" class="icon icon_rss">RSS</a></li></ul></div></li><li class="header_list_link_item subscribe"><a href="http://communaute.lexpress.fr/abonnements?xtatc=INT-13" class="btn btn_subscribe">S'abonner</a></li></ul></div><div class="header_top_logo"><a href="http://www.lexpress.fr/" class="header_top_logo_link "><img src="https://static.lexpress.fr/min/images/logos/svg/lexpress.svg" alt="Actualités Politique, Monde, Economie et Culture - L'Express" class="logo_site img_resp"/></a></div><div class="header_top_right"><div class="header_search"><button class="icon icon_search header_search_button">Rechercher</button><form action="/recherche" method="get" class="search_form" id="form_search"><label for="search" class="mask">Rechercher</label><div class="field_search"><input name="q" id="search" type="text" placeholder="Rechercher" required="required" class="input_search" pattern=".{3,}" title="3 caractères minimum"><input type="submit" class="icon icon_search" value="Rechercher"></div></form></div><div class="header_top_right_account hide" id="header_account_connected"><button href="" class="header_account_avatar trigger_account"><span class="avatar"><img width="35" src="https://communaute.lexpress.fr/avatar_8d_ae/w_50,h_50,c_fill,g_center/default-0.png" class="img_resp"></span><span class="pseudo">Pseudo</span><span class="icon icon_trigger"><span class="text">Ouverture menu mon compte</span></span></button><ul class="header_account_menu_list"><li class="header_account_menu_list_item"><a onclick="return xt_click(this,'C','0','Menu_Profil::Communaute::Mon_profil','N')" href="https://communaute.lexpress.fr/mon-compte/accueil">Mon profil</a></li><li class="header_account_menu_list_item"><a onclick="return xt_click(this,'C','0','Menu_Profil::Communaute::Ecrire_un_article','N')" href="https://communaute.lexpress.fr/mon-compte/contributions/creation">Écrire un article</a></li><li class="header_account_menu_list_item"><a onclick="return xt_click(this,'C','0','Menu_Profil::Communaute::Rejoindre_un_club','N')" href="https://communaute.lexpress.fr/mon-compte/clubs">Rejoindre un club</a></li><li class="header_account_menu_list_item border_bottom"><a onclick="return xt_click(this,'C','0','Menu_Profil::Communaute::Gerer_mes_newsletters','N')" href="https://communaute.lexpress.fr/mon-compte/newsletters">Gérer mes newsletters</a></li><li class="header_account_menu_list_item border_bottom hide" id="header_account_edition_numerique"><a onclick="_kmq.push(['record', 'click-edition-numerique']) ;return xt_click(this,'C','0','Menu_Profil::Communaute::Edition_numerique','N')" href="https://communaute.lexpress.fr/edition-numerique">Edition numérique</a></li><li class="header_account_menu_list_item hide" id="header_account_abo_paywall"><a onclick="_kmq.push(['record', 'click-myabo-header']) ;return xt_click(this,'C','0','Menu_Profil::Communaute::Gerer_mes_newsletters','N')" href="https://communaute.lexpress.fr/cleeng/abonnements" target='_blank'>Mon abonnement</a></li><li class="header_account_menu_list_item hide" id="header_account_abo_paywall_and_print"><a href="http://www.lexpress.fr/actualite/les-unes-de-l-express_1684353.html">Articles magazine</a></li><li class="header_account_menu_list_item"><a onclick="return xt_click(this,'C','0','Menu_Profil::Communaute::Mes_infos_publiques','N')" href="https://communaute.lexpress.fr/mon-compte/profil">Mes infos publiques</a></li><li class="header_account_menu_list_item"><a onclick="return xt_click(this,'C','0','Menu_Profil::Communaute::Mes_infos_persos','N')" href="https://communaute.lexpress.fr/mon-compte/infos-persos">Mes infos privées</a></li><li class="fb_activity" style="display:none;"><label for="fb_activity_trigger">Activité : </label><button id="fb_activity_trigger" class="fb_activity_button fb_activity_button_off btn btn_epsilon">off</button></li><li class="header_account_menu_list_item border_bottom"><a onclick="return xt_click(this,'C','0','Menu_Profil::Communaute::Parametres','N')" href="https://communaute.lexpress.fr/mon-compte/parametres">Paramètres</a></li><li class="header_account_menu_list_item"><a href="#" onclick="location.href='https://communaute.lexpress.fr/deconnexion?after_signout_redirect_url='+encodeURI(location.href)">Déconnexion</a></li></ul></div><div class="header_top_right_account" id="header_account_not_connected"><a id="identification" href="https://communaute.lexpress.fr" class="icon icon_connect"><span class="text">Se connecter</span></a></div></div></header>
+    <div class="nav nav_header" id="nav_header">
+    <div class="nav_container">
+      <div class="nav_content">
+
+                        <div id="nav_main" class="nav_main">
+          <div class="nav_main_content" id="nav_main_content">
+
+                        <button class="icon icon_close" id="nav_main_icon_close">Fermer</button>
+
+                        <div class="nav_main_list_logo" id="nav_main_list_logo">
+              <a href="http://www.lexpress.fr">
+                <img width="77" height="35" class="logo_xpr" alt="L'Express" src="http://static.lexpress.fr/min/images/logos/svg/xpr_FFF+983278b1ab0d8810c4bd574377d66f9941e59e60dcfc53171da996c6f7ebe181.svg">
+              </a>
+            </div>
+
+                        
+  <div class="header_search">
+
+  <button class="icon icon_search header_search_button">Rechercher</button>
+  <form action="/recherche" method="get" class="search_form" id="form_search">
+
+
+        
+    <label for="search" class="mask">Rechercher</label>
+    <div class="field_search">
+      <input name="q" id="search" type="text" placeholder="Rechercher" required="required" class="input_search" pattern=".{3,}" title="3 caractères minimum">
+      <input type="submit" class="icon icon_search" value="Rechercher">
+    </div>
+  </form>
+</div>
+
+                        <nav class="nav_main_content_tag" id="nav_main_content_tag" role="primary">
+              <ul class="nav_main_list" id="nav_main_list">
+                                  <li class="nav_main_list_item active" data-type="edito"><a href="http://www.lexpress.fr" data-slug="lexpress">Actualité</a></li>
+                                  <li class="nav_main_list_item" data-type="edito"><a href="http://lexpansion.lexpress.fr/" data-slug="lexpansion">Économie</a></li>
+                                  <li class="nav_main_list_item" data-type="edito"><a href="http://votreargent.lexpress.fr/" data-slug="votreargent">Finances Perso</a></li>
+                                  <li class="nav_main_list_item" data-type="edito"><a href="http://lentreprise.lexpress.fr/" data-slug="lentreprise">Entreprise</a></li>
+                                  <li class="nav_main_list_item" data-type="edito"><a href="http://www.lexpress.fr/emploi/" data-slug="emploi">Emploi</a></li>
+                                  <li class="nav_main_list_item" data-type="edito"><a href="http://www.lexpress.fr/styles/" data-slug="styles">Styles</a></li>
+                                  <li class="nav_main_list_item" data-type="edito"><a href="http://www.lexpress.fr/tendances/" data-slug="tendances">Tendances</a></li>
+                                  <li class="nav_main_list_item nav_main_list_item_video nav_main_list_item_link" data-type="edito"><a href="http://www.lexpress.fr/videos/" data-slug="videos">Vidéos</a></li>
+                                  <li class="nav_main_list_item nav_main_list_item_link" data-type="pub"><a href="http://codepromo.lexpress.fr/" data-slug="Codes Promo">Codes Promo</a></li>
+                                  <li class="nav_main_list_item" data-type="edito"><a href="http://www.cotemaison.fr/" data-slug="cotemaison">Cotémaison</a></li>
+                              </ul>
+            </nav>
+
+                                    <div class="header_socials" id="header_socials">
+              <ul class="header_socials_list">
+                <li class="header_socials_list_item header_socials_text">Nous suivre :</li>
+                                  <li class="header_socials_list_item">
+                    <a href="http://www.facebook.com/LExpress" class="icon icon_fb" target="_blank">Facebook</a>
+                  </li>
+                                  <li class="header_socials_list_item">
+                    <a href="https://twitter.com/LEXPRESS" class="icon icon_twitter" target="_blank">Twitter</a>
+                  </li>
+                                  <li class="header_socials_list_item">
+                    <a href="https://plus.google.com/u/0/+L-Express/posts" class="icon icon_gplus" target="_blank">Google plus</a>
+                  </li>
+                                                  <li class="header_socials_list_item">
+                    <a href="/outils/rss.html" class="icon icon_rss">RSS</a>
+                  </li>
+                              </ul>
+            </div>
+            
+          </div>
+        </div>
+        
+                        <div class="nav_sub" id="nav_sub">
+          <div class="nav_sub_content" id="nav_sub_content">
+            <div class="nav_sub_header" id="nav_sub_header">
+
+                          <button class="nav_sub_header_label">
+                Actualité
+              </button>
+
+                            <button class="icon icon_close" id="nav_sub_icon_close">Fermer</button>
+
+            </div>
+
+                                      <div class="nav_sub_logo_xpr" id="nav_sub_list_logo">
+                <a href="http://www.lexpress.fr">
+                  <img width="100" class="nav_sub_logo_xpr_img" height="27" alt="L'Express" src="http://static.lexpress.fr/min/images/logos/xpr_565656+e8539a4bcfc024e2bb0f13dbdd0aa2fe56fe35a362ba0f1dd0ca265b93fc15e1.svg">
+                </a>
+              </div>
+            
+            <button class="icon icon_burger" id="nav_sub_icon_burger"><span class="nav_sub_label">Menu</span></button>
+
+                        <a class="nav_sub_logo_site" href="/">
+              <img src="https://static.lexpress.fr/min/images/logos/svg/lexpress.svg" alt="Actualités Politique, Monde, Economie et Culture - L'Express" width="100" height="27" class="nav_sub_logo_site_img" />
+            </a>
+
+            <div class="nav_sub_lists" id="nav_sub_lists">
+
+                            <nav class="nav_sub_content_tag" id="nav_sub_content_tag">
+                <ul class="nav_sub_list" id="nav_sub_list">
+                                      <li class="nav_sub_list_item" data-type="edito"><a href="http://www.lexpress.fr/" onclick="return xt_click(this,&#039;C&#039;,&#039;2&#039;,&#039;Sub_Nav::Lexpress::A_la_Une&#039;,&#039;N&#039;)"><span>À la Une</span></a></li>
+                                      <li class="nav_sub_list_item active" data-type="edito"><a href="http://www.lexpress.fr/actualite/politique/" onclick="return xt_click(this,&#039;C&#039;,&#039;2&#039;,&#039;Sub_Nav::Lexpress::Politique&#039;,&#039;N&#039;)"><span>Politique</span></a></li>
+                                      <li class="nav_sub_list_item" data-type="edito"><a href="http://www.lexpress.fr/actualite/monde/" onclick="return xt_click(this,&#039;C&#039;,&#039;2&#039;,&#039;Sub_Nav::Lexpress::Monde&#039;,&#039;N&#039;)"><span>Monde</span></a></li>
+                                      <li class="nav_sub_list_item" data-type="edito"><a href="http://www.lexpress.fr/actualite/societe/" onclick="return xt_click(this,&#039;C&#039;,&#039;2&#039;,&#039;Sub_Nav::Lexpress::Societe&#039;,&#039;N&#039;)"><span>Société</span></a></li>
+                                      <li class="nav_sub_list_item" data-type="edito"><a href="http://www.lexpress.fr/actualite/sport/" onclick="return xt_click(this,&#039;C&#039;,&#039;2&#039;,&#039;Sub_Nav::Lexpress::Sport&#039;,&#039;N&#039;)"><span>Sport</span></a></li>
+                                      <li class="nav_sub_list_item" data-type="edito"><a href="/culture/" onclick="return xt_click(this,&#039;C&#039;,&#039;2&#039;,&#039;Sub_Nav::Lexpress::Culture&#039;,&#039;N&#039;)"><span>Culture</span></a></li>
+                                      <li class="nav_sub_list_item" data-type="edito"><a href="http://www.lexpress.fr/actualite/sciences/" onclick="return xt_click(this,&#039;C&#039;,&#039;2&#039;,&#039;Sub_Nav::Lexpress::Sciences&#039;,&#039;N&#039;)"><span>Sciences</span></a></li>
+                                      <li class="nav_sub_list_item" data-type="edito"><a href="http://www.lexpress.fr/actualite/medias/" onclick="return xt_click(this,&#039;C&#039;,&#039;2&#039;,&#039;Sub_Nav::Lexpress::Medias&#039;,&#039;N&#039;)"><span>Médias</span></a></li>
+                                      <li class="nav_sub_list_item" data-type="edito"><a href="http://www.lexpress.fr/education/" onclick="return xt_click(this,&#039;C&#039;,&#039;2&#039;,&#039;Sub_Nav::Lexpress::Education&#039;,&#039;N&#039;)"><span>Éducation</span></a></li>
+                                      <li class="nav_sub_list_item" data-type="edito"><a href="http://lexpansion.lexpress.fr/high-tech/" onclick="return xt_click(this,&#039;C&#039;,&#039;2&#039;,&#039;Sub_Nav::Lexpress::High_Tech&#039;,&#039;N&#039;)"><span>High-Tech</span></a></li>
+                                      <li class="nav_sub_list_item" data-type="edito"><a href="http://www.lexpress.fr/insolite/" onclick="return xt_click(this,&#039;C&#039;,&#039;2&#039;,&#039;Sub_Nav::Lexpress::Insolite&#039;,&#039;N&#039;)"><span>Insolite</span></a></li>
+                                      <li class="nav_sub_list_item" data-type="edito"><a href="http://www.lexpress.fr/region/" onclick="return xt_click(this,&#039;C&#039;,&#039;2&#039;,&#039;Sub_Nav::Lexpress::Regions&#039;,&#039;N&#039;)"><span>Régions</span></a></li>
+                                      <li class="nav_sub_list_item" data-type="edito"><a href="http://www.lexpress.fr/palmares/palmares-immobilier/" onclick="return xt_click(this,&#039;C&#039;,&#039;2&#039;,&#039;Sub_Nav::Lexpress::Immobilier&#039;,&#039;N&#039;)"><span>Immobilier</span></a></li>
+                                      <li class="nav_sub_list_item" data-type="edito"><a href="/opinions/blogs/" onclick="return xt_click(this,&#039;C&#039;,&#039;2&#039;,&#039;Sub_Nav::Lexpress::Blogs&#039;,&#039;N&#039;)"><span>Blogs</span></a></li>
+                                      <li class="nav_sub_list_item" data-type="edito"><a href="http://www.lexpress.fr/vie-pratique/" onclick="return xt_click(this,&#039;C&#039;,&#039;2&#039;,&#039;Sub_Nav::Lexpress::Vie_Pratique&#039;,&#039;N&#039;)"><span>Vie pratique</span></a></li>
+                                      <li class="nav_sub_list_item" data-type="edito"><a href="http://www.lexpress.fr/diaporama/" onclick="return xt_click(this,&#039;C&#039;,&#039;2&#039;,&#039;Sub_Nav::Lexpress::En_Images&#039;,&#039;N&#039;)"><span>En images</span></a></li>
+                                      <li class="nav_sub_list_item item_ops" data-type="pub"><a href="http://www6.smartadserver.com/h/cc?imgid=17737798&amp;tmstp=[timestamp]&amp;tgt=[reference]" onclick="return xt_click(this,&#039;C&#039;,&#039;2&#039;,&#039;Sub_Nav::Lexpress::Cadeaux de Noël&#039;,&#039;N&#039;)"><span><span style="color: #ee535f;">C</span>adeaux de <span style="color: #ee535f;">N</span>oël</span></a></li>
+                                      <li class="nav_sub_list_item item_ops" data-type="pub"><a href="http://www6.smartadserver.com/h/cc?imgid=17866769&amp;tmstp=[timestamp]&amp;tgt=[reference]" onclick="return xt_click(this,&#039;C&#039;,&#039;2&#039;,&#039;Sub_Nav::Lexpress::Cadeaux de Noël&#039;,&#039;N&#039;)"><span><span style="color: #ee535f;">V</span>acances d’hiver</span></a></li>
+                                  </ul>
+              </nav>
+
+                            <ul class="header_list_link">
+                <li class="header_list_link_item">
+                  <a href="http://applications-mobile.lexpress.fr/">App Mobile</a>
+                </li>
+                <li class="header_list_link_item">
+                  <a href="https://communaute.lexpress.fr/inscription-newsletter" id="nav_newsletter_header" data-topic="blog" data-channel="lexpress">Newsletter</a>
+                </li>
+                <li class="header_list_link_item">
+                  <a href="http://communaute.lexpress.fr/abonnements?xtatc=INT-13" data-channel="lexpress">Abonnement</a>
+                </li>
+              </ul>
+
+            </div>
+
+
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+</div>
+<div id="page"><!-- close in wp code (footer.php) -->
+</div><!--FERMETURE PAGE GESTION HEADER-->
+<!--ENDOFHEADER HTML-->
+    <section id="prepage">
+    	
+		        
+			<!--HEADER IMAGE aaaa-->
+            <h1>
+		 	<a href="http://blogs.lexpress.fr/histoire-politique/" title="Histoire de le dire" rel="home">
+        		<div class="banner _98 lifestyle" style="background-image: url('http://blogs.lexpress.fr/histoire-politique/files/2016/03/histoire-de-le-dire.jpg')"></div>
+        	</a>
+            </h1>
+       
+        
+        
+        
+    </section>
+		<script>
+$(document).ready(function(){
+    $('div.article_container iframe[src*="youtube.com"], div.article_container iframe[src*="dailymotion.com"], div.article_container iframe[src*="vimeo.com"]').each(function(){
+        $(this)
+        .addClass('lazyload')
+        .wrap('<div class="media_content media_content_video" />');
+    });
+
+    $('div.article_container img').not('.wp-smiley').each(function(){
+        $(this)
+        .wrap('<figure class="media_content" />')
+        .addClass('img_resp_full media_content_full lazyload')
+        .attr('sizes', '100%, (min-width:62.5em) 61.666666666666664%')
+        .attr('itemprop','images')
+
+    });
+
+    $('div.article_container blockquote.twitter-tweet').each(function(){
+        $(this)
+        .addClass('lazyload')
+        .wrap('<div class="media_embed" />')
+    });
+
+    $('.the_tags a').each(function(){
+        $(this)
+        .addClass('icon_slash');
+    })
+
+});
+
+// Communaute l'Express comments
+var ecCommentForm = function(){
+    if (!window.ecCommentProcessed && typeof EpBar == 'object' && EpBar.isAuthenticated) {
+
+        window.ecCommentProcessed = true;
+
+        $('form#comments_form').append('<p style="display: none;">'
+            + '<input type="hidden" name="Api-UserId" value="' + EpBar.uniqueId.toString().replace(/[^0-9]+/gi, '') + '" />'
+            + '<input type="hidden" name="Api-UserSecurityToken" value="' + EpBar.securityToken.replace(/[^a-f0-9\-_=]+/gi, '') + '" />'
+            + '</p>'
+        );
+
+        $('.block_comment_form_txt').html('Bienvenue, ' + EpBar.displayName.replace(/[^a-z0-9\-_\s]+/gi, '') + ' <span>Vous pouvez commenter en direct.</span>');
+        $('div#comments_form .block_comment_avatar').html('<img src="' + EpBar.avatar.replace(/[^a-z0-9\-_=\:\/\.,#\?&]+/gi, '') + '" class="avatar-50 photo" height="50" width="50">');
+
+        // if anonymous WP form, but connected by Account:
+
+        if ($("form#comments_form label[for='author']").length > 0){
+            $("form#comments_form label[for='author']").remove();
+            $("form#comments_form label[for='email']").remove();
+            $("form#comments_form label[for='url']").remove();
+
+            $('.block_comment_form_txt').next('ul').remove();
+
+            ecDisplayName = $('<div/>').text(EpBar.displayName).html();
+
+            $('form#comments_form').append('<p style="display: none;">'
+                + '<input type="hidden" name="author" value="' + ecDisplayName + '" />'
+                + '<input type="hidden" name="email" value="' + EpBar.email.replace(/[^a-z0-9\-_@\.]+/gi, '') + '" />'
+                + '<input type="hidden" name="url" value="' + EpBar.link.replace(/[^a-z0-9\-_=\:\/\.,#\?&]+/gi, '') + '" />'
+                + '</p>'
+            );
+        }
+    }
+}
+window.ecCommentProcessed = false;
+$(window).on('epinit', ecCommentForm);
+$(window).on('fbinit', ecCommentForm);
+
+</script>
+<div id="mainpage">
+        
+    <br />
+
+
+    <article class="content" itemscope itemtype="http://schema.org/NewsArticle">
+        <header class="article_header">
+            <div class="article_header_grid">
+                <h1 class="title_alpha" itemprop="Headline">Bizarre : le jeune Macron séduit les retraités de gauche!</h1>
+                    <div class="signature">
+                        <!--BREADCRUMB FUNCTION-->
+                               <nav role="breadcrumb" class="breadcrumb">
+                            <ul class="list_inbl" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"> <a itemprop="item" class="icon_slash" href="http://blogs.lexpress.fr/histoire-politique/category/histoire/" " alt="View all posts in histoire"><span itemprop="name"></span>histoire</a><meta itemprop="position" content="1" /></li><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"> <a itemprop="item" class="icon_slash" href="http://blogs.lexpress.fr/histoire-politique/category/politique/nationale/" " alt="View all posts in nationale"><span itemprop="name"></span>nationale</a><meta itemprop="position" content="1" /></li><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"> <a itemprop="item" class="icon_slash" href="http://blogs.lexpress.fr/histoire-politique/category/politique/" " alt="View all posts in Politique"><span itemprop="name"></span>Politique</a><meta itemprop="position" content="1" /></li></ul>
+                        </nav>
+
+
+
+                        André Ropert, publié le <time itemprop="datePublished" pubdate="" datetime="28/04/2016 à 15:38:01"> 28/04/2016 à 15:38</time>
+                        
+                        <br /><br />
+
+
+
+                    </div><!--END OF SIGNATURE-->
+
+
+
+
+            <div class="block block_share block_share_row">
+                <ul class="block_share_list share_list_large">
+                    <li class="block_share_list_item nb_share_item"> <span class="nb_share"></span> <span class="text">partages</span> </li>
+                    <li class="block_share_list_item"> <a href="http://po.st/v1/share/facebook?publisherKey=jj3s7kubef9il40pcpep&url=http://blogs.lexpress.fr/histoire-politique/2016/04/28/bizarre-le-jeune-macron-seduit-les-retraites-de-gauche/&title=Bizarre+%3A+le+jeune+Macron+s%C3%A9duit+les+retrait%C3%A9s+de+gauche%21&image=" class="btn btn_icon btn_fb" target="_blank"><span class="icon_large icon_fb"><span class="mask">facebook</span></span><span class="btn_text">Partager</span></a> </li>
+                    <li class="block_share_list_item display_ml"> <a href="http://po.st/v1/share/twitter?via=Lexpress&publisherKey=jj3s7kubef9il40pcpep&url=http://blogs.lexpress.fr/histoire-politique/2016/04/28/bizarre-le-jeune-macron-seduit-les-retraites-de-gauche/&title=Bizarre+%3A+le+jeune+Macron+s%C3%A9duit+les+retrait%C3%A9s+de+gauche%21" class="btn btn_icon btn_twitter" target="_blank"><span class="icon_large icon_twitter"><span class="mask">Twitter</span></span><span class="btn_text">Tweeter</span></a> </li>
+                                    <li class="block_share_list_item display_ml"> <a href="http://po.st/v1/share/googleplus?publisherKey=jj3s7kubef9il40pcpep&url=http://blogs.lexpress.fr/histoire-politique/2016/04/28/bizarre-le-jeune-macron-seduit-les-retraites-de-gauche/&title=Bizarre+%3A+le+jeune+Macron+s%C3%A9duit+les+retrait%C3%A9s+de+gauche%21" class="btn btn_icon btn_gplus" target="_blank"><span class="icon_large icon_gplus"><span class="mask">Google plus</span></span><span class="btn_text">Partager</span></a> </li>
+                    <li class="block_share_list_item"> <a href="http://po.st/v1/share/pinterest?publisherKey=jj3s7kubef9il40pcpep&url=http://blogs.lexpress.fr/histoire-politique/2016/04/28/bizarre-le-jeune-macron-seduit-les-retraites-de-gauche/&title=Bizarre+%3A+le+jeune+Macron+s%C3%A9duit+les+retrait%C3%A9s+de+gauche%21&image=" class="btn btn_icon btn_pinterest" target="_blank"><span class="icon_large icon_pinterest"><span class="mask">Pinterest</span></span> <span class="btn_text">Epingler</span></a> </li>
+                                                    <li class="block_share_list_item item_mail display_ml"> <a href="http://po.st/v1/share/email?publisherKey=jj3s7kubef9il40pcpep&url=http://blogs.lexpress.fr/histoire-politique/2016/04/28/bizarre-le-jeune-macron-seduit-les-retraites-de-gauche/&title=Bizarre+%3A+le+jeune+Macron+s%C3%A9duit+les+retrait%C3%A9s+de+gauche%21" class="btn btn_icon btn_alpha btn_icon_only" target="_blank"><span class="icon_large icon_mail_gray"><span class="mask">Mail</span></span> <span class="btn_text">Envoyer</span></a> </li>
+<!--                     <li class="block_share_list_item item_whatsapp"> <a href="http://po.st/v1/share/whatsapp?publisherKey=jj3s7kubef9il40pcpep&url=http://blogs.lexpress.fr/histoire-politique/2016/04/28/bizarre-le-jeune-macron-seduit-les-retraites-de-gauche/&title=Bizarre+%3A+le+jeune+Macron+s%C3%A9duit+les+retrait%C3%A9s+de+gauche%21" class="btn btn_icon btn_whatsapp btn_icon_secondary" target="_blank"><span class="icon_large icon_whatsapp"><span class="mask">Whatsapp</span></span> <span class="btn_text">Whatsapp</span></a> </li> -->
+                    <li class="item_comments"> <a href="#comments" class="item_comments_link" id="item_comments_link"> <span class="item_comments_title"><span class="js-comments-count">0</span><span class="item_comments_title_text" data-alternativetext="Réagir">réaction</span></span><span class="icon icon_comments"><span class="mask">commentaire</span></span> </a> </li>
+                </ul>
+            </div>
+
+            </div><!--ENDOF ARTICLE HEADER GRID-->
+                        <figure class="cover trigger_scroll">
+            </figure>
+        </header>
+
+        <div class="article_content">
+            <div class="article_full_container">
+                <!--The content-->
+                <div class="article_container" itemprop="articleBody">
+                    <!--<h2 class="chapo title_gamma" itemprop="description"><p>&nbsp;<br />
+Une étude d&rsquo;opinion récente a montré que chez les sympathisants de gauche, c&rsquo;était dans la tranche d&rsquo;âge supérieure à 60 ans qu&rsquo;Emmanuel Macron et son mouvement &laquo;&nbsp;<em>En marche</em>&nbsp;&raquo; suscitaient le maximum d&rsquo;intérêt. C&rsquo;est apparemment paradoxal, puisque le ministre de 38 ans est généralement présenté comme un facteur de rajeunissement de la vie politique,&#8230;
+<div class="clearfix"></div>
+<p><span class="more-link"> Lire la suite de </span> <a #more-$id"="" class="more-link more-link-content" href="http://blogs.lexpress.fr/histoire-politique/2016/04/28/bizarre-le-jeune-macron-seduit-les-retraites-de-gauche/">Bizarre : le jeune Macron séduit les retraités de gauche!</a></p>
+</h2>-->
+                    <p>&nbsp;</p>
+<p>Une étude d&rsquo;opinion récente a montré que chez les sympathisants de gauche, c&rsquo;était dans la tranche d&rsquo;âge supérieure à 60 ans qu&rsquo;Emmanuel Macron et son mouvement &laquo;&nbsp;<em>En marche</em>&nbsp;&raquo; suscitaient le maximum d&rsquo;intérêt. C&rsquo;est apparemment paradoxal, puisque le ministre de 38 ans est généralement présenté comme un facteur de rajeunissement de la vie politique, mais le fait relève peut-être aussi d&rsquo;une certaine logique. Ayant avec le temps perdu toute illusion, ces personnes âgées perçoivent plus intensément que les jeunes qu&rsquo;il n&rsquo;est plus possible de continuer ainsi et que c&rsquo;est à une révision complète des références et des programmes qu&rsquo;il faut procéder. Si le concept de gauche a encore un sens, c&rsquo;est bien dans cette opposition fondamentale progressistes-conservateurs évoquée par Macron qu&rsquo;il doit se concrétiser. Au terme de plus de cinquante ans d&rsquo;échecs répétés, ceux qui ont traversé la seconde moitié du XX° siècle ne s&rsquo;en laissent plus conter.</p>
+<p>&nbsp;</p>
+<p>Les plus âgés ont connu les promesses de &laquo;&nbsp;l&rsquo;avenir radieux&nbsp;&raquo; et des &laquo;&nbsp;lendemains qui chantent&nbsp;&raquo;. Non seulement les lendemains en question étaient régulièrement reportés à la prochaine fois, mais de la découverte de la réalité soviétique à l&rsquo;effondrement des diverses versions du marxisme-léninisme, du destin du maoïsme chinois au triste résultat des révolutions latino-américaines, le mirage s&rsquo;est progressivement dissipé.</p>
+<p>Aux temps lointains de la IV° République, beaucoup ont espéré qu&rsquo;une voie nouvelle allait être tracée par Pierre Mendès-France. Etranger aux appareils de partis, lucide face aux potentialités totalitaires du communisme, Mendès-France alliait rigueur et pragmatisme et face au grand problème des années 1950, la décolonisation, il faisait preuve de courage et de clairvoyance et remodelait une pensée de gauche ouverte, affranchie des utopies et soucieuse de résultats immédiats. Il dérangeait évidemment les partis institutionnels : les communistes s&rsquo;allièrent à la droite pour renverser son gouvernement et les socialistes ne firent rien pour vraiment le soutenir, préférant le phagocyter dans un prétendu Front républicain qui permit à leur secrétaire, Guy Mollet, d&rsquo;accéder en 1956 au pouvoir.</p>
+<p>Que fit alors ce dernier? Elu pour négocier avec les rebelles d&rsquo;Algérie, il accomplit une complète volte-face et engagea la France dans un conflit de sept ans qui emporta le régime et ramena au pouvoir le général de Gaulle.</p>
+<p>Tout en étant reconnaissant au général d&rsquo;avoir extrait le pays du bourbier algérien, nos citoyens et citoyennes de gauche montraient peu d&rsquo;attirance pour le régime crypto-présidentiel de la V° République. Ils se raccrochèrent alors, oubliant son passé et ses intrigues, à François Mitterrand qui avait, à la fois, fait le procès de l&rsquo;état gaulliste et offert un programme de démocratisation en publiant en 1964 &laquo;&nbsp;<em>le coup d&rsquo;état permanent</em>&laquo;&nbsp;. Ils soutinrent son action quand il réorganisa en 1971 le vieux parti socialiste, puis noua une alliance avec les communistes, donnant ainsi l&rsquo;illusion d&rsquo;une union des gauches. Entre temps, nombre d&rsquo;entre eux avaient participé à Mai 68 et constaté que son seul résultat politique concret avait été l&rsquo;élection de l&rsquo;assemblée la plus à droite de l&rsquo;histoire de la V° République.</p>
+<p>C&rsquo;est pourtant avec enthousiasme que nos défenseurs de l&rsquo;idéal de gauche portèrent Mitterrand au pouvoir en 1981, ayant cru qu&rsquo;il allait &laquo;&nbsp;changer la vie&nbsp;&raquo; et même (comme il le proclamait) &laquo;&nbsp;rompre avec le capitalisme&nbsp;&raquo;.</p>
+<p>&nbsp;</p>
+<p>Hélas! Il y avait les promesses et il y avait la réalité. Non seulement Mitterrand, oublieux du &laquo;&nbsp;coup d&rsquo;état permanent&nbsp;&raquo;, se coula dans les institutions et s&rsquo;en servit même si bien qu&rsquo;il devint le chef d&rsquo;état le plus longtemps installé au poste suprême depuis… Napoléon III, mais dès 1983, il se convertit à une pratique de fait libérale tout en continuant d&rsquo;user d&rsquo;une rhétorique prétendument socialiste.</p>
+<p>Nos gens de gauche n&rsquo;étaient néanmoins pas découragés. Jacques Chirac ayant été élu président, ils profitèrent de la maladroite dissolution de 1997 pour lui imposer une cohabitation avec le socialiste Jospin. Non content de s&rsquo;avérer bientôt le champion incontesté des privatisations, ce dernier procéda, avec la mise en place du quinquennat et l&rsquo;inversion du calendrier électoral, à un renforcement du pouvoir présidentiel jadis dénoncé avant de se faire éliminer, quand il brigua lui-même la magistrature suprême, par une extrême droite que nul n&rsquo;avait vue progresser.</p>
+<p>Cela commençait à faire beaucoup, d&rsquo;autant que depuis bientôt trente ans, la France vivait une crise rampante et que le chômage ne cessait d&rsquo;augmenter sans qu&rsquo;aucun pouvoir, de gauche ou de droite, ne sache le résorber. Quelque chose ne tournait pas rond et chaque tentative de réforme se heurtait à une opposition prompte à mobiliser la rue, précisément au nom de la défense des principes de la gauche. Ceux-ci seraient-ils donc devenus conservateurs puisqu&rsquo;ils aboutissaient finalement à faire… qu&rsquo;on ne faisait rien?</p>
+<p>Nos vieux électeurs de gauche allaient pourtant une fois encore faire confiance à leur camp et élire, en 2012, François Hollande, l&rsquo;homme qui assurait &laquo;&nbsp;le changement maintenant&nbsp;&raquo;.</p>
+<p>&nbsp;</p>
+<p>Alors est arrivée l&rsquo;heure du désenchantement intégral. Entre retournement des uns, radicalisation des autres, gesticulations impuissantes, slogans cent fois entendus, les vieux fidèles de la gauche, recrus de fatigue et las des échecs répétés, se sont interrogés, fort de leur expérience, sur les raisons de ce constant fiasco. Ils ont alors compris que l&rsquo;erreur constitutive avait toujours été d&rsquo;imaginer le monde au lieu de l&rsquo;aborder tel qu&rsquo;il est réellement, de préférer l&rsquo;idéologie au pragmatisme et de se condamner ainsi à l&rsquo;inefficacité. Ils ont réalisé que les appareils de partis fonctionnaient d&rsquo;abord dans le but de se pérenniser en évitant les turbulences. A l&rsquo;aube de l&rsquo;un des plus grands bouleversements qu&rsquo;ait connu l&rsquo;humanité, ils ont découvert la médiocrité des propositions et la vanité des utopies. Ils ont assisté, accablés, au retour des illusions gauchistes de leur jeunesse. Ils se sont aperçus qu&rsquo;il fallait d&rsquo;urgence tourner la page si on voulait vraiment obtenir un jour des résultats.</p>
+<p>Voilà sans doute pourquoi les propos d&rsquo;un jeune dissident les ont intéressés. Non qu&rsquo;ils les approuvent nécessairement dans leur totalité, mais Macron a au moins le mérite de dire clairement que le roi est nu et qu&rsquo;il faut tout reconstruire, sur des bases nouvelles et résolument réalistes.</p>
+<p>Pour les plus vieux d&rsquo;entre eux, il n&rsquo;est pas impossible que revienne alors, comme un souvenir oublié, l&rsquo;image de Pierre Mendès-France.</p>
+<div class="linkwithin_hook" id="http://blogs.lexpress.fr/histoire-politique/2016/04/28/bizarre-le-jeune-macron-seduit-les-retraites-de-gauche/"></div>                </div>
+                
+                                         <!--VOUS AIMEREZ PEUT ETRE-->
+                     <div class="block block_summary_gpt">
+                        <aside class="item_second">
+                            <p class="title_zeta">
+                                <span class="icon icon_more">+</span>
+                                Derniers articles publi&eacute;s :
+                            </p>
+                            <ul class="list_normal">
+                                                        <li><a href="http://blogs.lexpress.fr/histoire-politique/2016/12/28/le-fantasme-des-grandes-invasions/">Le fantasme des &laquo;&nbsp;grandes invasions&nbsp;&raquo;.</a></li>
+                                                        <li><a href="http://blogs.lexpress.fr/histoire-politique/2016/12/18/nouvel-echiquier-politique-en-france/">Nouvel échiquier politique en France?</a></li>
+                                                        <li><a href="http://blogs.lexpress.fr/histoire-politique/2016/12/11/populisme-et-anti-systeme/">Populisme et anti-système.</a></li>
+                                                        <li><a href="http://blogs.lexpress.fr/histoire-politique/2016/12/01/la-meteorite-fillon/">La météorite Fillon.</a></li>
+                                                        <li><a href="http://blogs.lexpress.fr/histoire-politique/2016/11/26/abstention/">Abstention.</a></li>
+                                                        </ul>
+                    </aside>
+                    <br />
+                    </div>
+                    <!--END OF VOUS AIMEREZ PEUT ETRE-->
+                                                            <!-- Insertion à l'emplacement du module -->
+                    <section class="section block_partners block_partners_epsilon" id="block_script_aussi" style="position:relative">
+
+                        <header>
+                            <p class="title_beta icon_slash">AILLEURS SUR LE WEB</p>
+                            <p class="title_sponsor">Contenu proposé par Taboola</p>
+                        </header>
+
+                      <div id="taboola-below-article-thumbnails"></div>
+
+                      <script type="text/javascript">
+                        window._taboola = window._taboola || [];
+                        _taboola.push({
+                        mode: 'thumbnails-a',
+                        container: 'taboola-below-article-thumbnails',
+                        placement: 'Below Article Thumbnails',
+                        target_type: 'mix'
+                        });
+                      </script>
+
+                    </section>
+                    <!--<script type="text/javascript"><!--
+                    google_ad_client = "pub-8025210940948649";
+                    /* expv5_blog_cafemode_300_250 */
+                    google_ad_slot = "6556260885";
+                    google_ad_width = 468;
+                    google_ad_height = 60;
+
+                    </script>
+                    <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>-->
+
+                   <div id="rebund-under-article" class="hide-xs">
+                    <!-- Bas d'article blogs XPR -->
+                    <ins class="adsbygoogle"
+                    style="display:inline-block;width:468px;height:60px;"
+                    data-ad-client="ca-pub-8025210940948649"
+                    data-ad-slot="6556260885"></ins>
+                    </div>
+
+
+
+
+
+            </div>
+
+                        
+	<section id="comments" class="section block_comment">
+		<header>
+			<p class="title_beta icon_slash">Commentez cet article</p>
+		</header>
+
+		<div class="block_comment_link center">
+			<a href="#comments_form" class="btn btn_large btn_gamma center inbl add_comment">Publier votre commentaire</a>
+			<a href="#comments_item" class="btn btn_large btn_epsilon center inbl show_comment">Voir les <span class="js-comments-count">?</span> commentaires</a>
+		</div>
+		<div class="block_comment_container">
+			<div id="comments_form" class="block_comment_post">
+				<a name="form-comment"></a>
+				<div class="block_comment_avatar">
+											<img src="https://communaute.lexpress.fr/avatar_8d_ae/w_50,h_50,c_fill,g_center/default-0.png" class="img_resp lazyload">
+									</div>
+				<div class="field">
+
+											<p class="block_comment_form_txt">
+						<ul>
+							<li>Vous avez un compte L'Express ? <a class="identification" href="http://communaute.lexpress.fr/connexion/barre" target="_blank">Connectez-vous pour commenter</a></li>
+							<li>Pas encore membre ? <a href="http://communaute.lexpress.fr/inscription-classique" target="_blank">Rejoignez-nous, c'est gratuit</a></li>
+						</ul>
+						</p>
+																		<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title"> <small><a rel="nofollow" id="cancel-comment-reply-link" href="/histoire-politique/2016/04/28/bizarre-le-jeune-macron-seduit-les-retraites-de-gauche/#respond" style="display:none;">Annuler la réponse.</a></small></h3>
+									<form action="http://blogs.lexpress.fr/histoire-politique/wp-comments-post.php" method="post" id="comments_form" class="comment-form">
+																										<div class="field">
+                <label for="author">
+                  <span class="mask">Nom*</span>
+                  <input name="author" id="author" type="text" class="full_width input_text" placeholder="Nom*">
+                </label>
+              </div>
+<div class="field">
+                <label for="email">
+                  <span class="mask">Email*</span>
+                  <input name="email" id="email" type="text" class="full_width input_text" placeholder="Adresse de contact*">
+                </label>
+              </div>
+<div class="field">
+                <label for="url">
+                  <span class="mask">Site Web</span>
+                  <input name="url" id="url" type="text" class="full_width input_text" placeholder="Site Web">
+                </label>
+              </div>
+												
+									  <textarea id="comment_mess" name="comment" class="full_width bg_gray_white" maxlength="2000" rows="6"></textarea>
+									
+									<div class="block_comment_form_auth">
+												<p class="txt_small"> Votre commentaire sera publié directement et modéré a posteriori. En publiant vous acceptez la <a href="http://www.lexpress.fr/outils/charte.asp" class="link_theta" target="_blank">charte des commentaires</a> 
+												</p>
+											</div>
+																					<p class="form-submit">
+							<input name="submit" type="submit" id="register_and_comment" value="Laisser un commentaire" />
+							<input type='hidden' name='comment_post_ID' value='1041' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="bd79d15736" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="234"/></p>					</form>
+							</div><!-- #respond -->
+							</div>
+			</div>
+		</div>
+		<div id="comments_item" class="block_comment_list">
+						<div class="block_comment_list block_comment_container" id="comments_item">
+				<p class="title_iota border_top">Aucun commentaire</p>
+							</div>
+		</div>
+
+	</section>
+	<script type="text/javascript">
+		// Sets the count of comments in various places in the page.
+		(function ($){
+			var count = (0);
+			$('.js-comments-count').each(function () {
+				this.innerHTML = this.innerHTML.replace('?', count);
+			});
+		})(jQuery);
+	</script>
+
+            <script>
+                $(document).ready(function(){
+                    $('.comment-reply-link-alt').each(function(){
+                        $(this).on('click', function(e){
+                            e.preventDefault();
+                            $('html, body').animate({
+                                scrollTop: $("#comment_mess").offset().top - 100
+                            }, 500);
+
+                            $('#comment_mess').text('@' + $(this).data('username') + ' :');
+                            $('#comment_parent').val( $(this).data('replyid') );
+
+                            console.log($(this).data('username'));
+                            console.log($(this).data('replyid'));
+                        });
+                    });
+                });
+            </script>
+            
+
+
+        </div>
+        <section class="aside widget aside_right">
+ 
+	
+
+				<div id="text-2" class="widget-container widget_text"><div class="widget-title">A propos du blog</div>			<div class="textwidget"><h3><a href="http://blogs.lexpress.fr/histoire-politique/a-propos/">André Ropert</a></h3>
+<p><a href="http://blogs.lexpress.fr/histoire-politique/a-propos/"><img style="float:right;margin:0 0 5px 5px" src="http://blogs.lexpress.fr/histoire-politique/files/2013/06/vignette-andre-ropert.jpg" width="150 alt="André Ropert"/></a>
+Des questions d’actualité décryptées par une grille  d'interprétation historique.
+</p>
+<p><a href="http://blogs.lexpress.fr/histoire-politique/a-propos/" class="voir">Voir mon profil</a></p></div>
+		</div><div class="widget-container widget_express_social_widget">		
+		<div class="widget-title">Flux RSS</div>	
+		<ul><li><i class="fa fa-rss round_logo"></i><a href="http://blogs.lexpress.fr/histoire-politique/feed/" target="_blank">Flux RSS</a></li></ul></div><div id="linkcat-11" class="widget-container widget_links"><div class="widget-title">Blogroll</div>
+	<ul class='xoxo blogroll'>
+<li><a href="http://blogs.lexpress.fr/barbier/" target="_blank">Le blog de Christophe Barbier</a></li>
+<li><a href="http://reynie.typepad.fr/" target="_blank">Le blog de Dominique Reynié</a></li>
+<li><a href="http://fressoz.blog.lemonde.fr/" target="_blank">Le blog de Françoise Fressoz</a></li>
+<li><a href="http://blogs.lexpress.fr/attali/" target="_blank">Le blog de Jacques Attali</a></li>
+<li><a href="http://blogs.lexpress.fr/economie-sans-demagogie/" target="_blank">Le blog de Jean Peyrelevade</a></li>
+
+	</ul>
+</div>
+<div id="search-3" class="widget-container widget_search"><div class="widget-title">Recherche</div><form role="search" method="get" id="searchform" class="searchform" action="http://blogs.lexpress.fr/histoire-politique/">
+				<div>
+					<label class="screen-reader-text" for="s">Rechercher&nbsp;:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Rechercher" />
+				</div>
+			</form></div><div id="categories-3" class="widget-container widget_categories"><div class="widget-title">Catégories</div>		<ul>
+	<li class="cat-item cat-item-21"><a href="http://blogs.lexpress.fr/histoire-politique/category/economie/" >Economie</a> (18)
+</li>
+	<li class="cat-item cat-item-9"><a href="http://blogs.lexpress.fr/histoire-politique/category/elections/" >Elections</a> (18)
+</li>
+	<li class="cat-item cat-item-25"><a href="http://blogs.lexpress.fr/histoire-politique/category/europe/" >Europe</a> (29)
+</li>
+	<li class="cat-item cat-item-7"><a href="http://blogs.lexpress.fr/histoire-politique/category/histoire/" >histoire</a> (77)
+</li>
+	<li class="cat-item cat-item-1"><a href="http://blogs.lexpress.fr/histoire-politique/category/non-classe/" >Non classé</a> (2)
+</li>
+	<li class="cat-item cat-item-5"><a href="http://blogs.lexpress.fr/histoire-politique/category/politique/" >Politique</a> (95)
+<ul class='children'>
+	<li class="cat-item cat-item-15"><a href="http://blogs.lexpress.fr/histoire-politique/category/politique/internationale/" >internationale</a> (24)
+</li>
+	<li class="cat-item cat-item-13"><a href="http://blogs.lexpress.fr/histoire-politique/category/politique/nationale/" >nationale</a> (75)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-23"><a href="http://blogs.lexpress.fr/histoire-politique/category/proche-orient/" >Proche-Orient</a> (17)
+</li>
+	<li class="cat-item cat-item-19"><a href="http://blogs.lexpress.fr/histoire-politique/category/religion/" >Religion</a> (37)
+</li>
+	<li class="cat-item cat-item-17"><a href="http://blogs.lexpress.fr/histoire-politique/category/societe/" >Société</a> (101)
+</li>
+		</ul>
+</div>		<div id="recent-posts-3" class="widget-container widget_recent_entries">		<div class="widget-title">Articles récents</div>		<ul>
+					<li>
+				<a href="http://blogs.lexpress.fr/histoire-politique/2016/12/28/le-fantasme-des-grandes-invasions/">Le fantasme des &laquo;&nbsp;grandes invasions&nbsp;&raquo;.</a>
+						</li>
+					<li>
+				<a href="http://blogs.lexpress.fr/histoire-politique/2016/12/18/nouvel-echiquier-politique-en-france/">Nouvel échiquier politique en France?</a>
+						</li>
+					<li>
+				<a href="http://blogs.lexpress.fr/histoire-politique/2016/12/11/populisme-et-anti-systeme/">Populisme et anti-système.</a>
+						</li>
+					<li>
+				<a href="http://blogs.lexpress.fr/histoire-politique/2016/12/01/la-meteorite-fillon/">La météorite Fillon.</a>
+						</li>
+					<li>
+				<a href="http://blogs.lexpress.fr/histoire-politique/2016/11/26/abstention/">Abstention.</a>
+						</li>
+				</ul>
+		</div>		<div id="recent-comments-3" class="widget-container widget_recent_comments">			<div class="widget-title">Commentaires récents</div>			<ul id="recentcomments"><li class="recentcomments"><b><a href='https://communaute.lexpress.fr/membre/tacotact' rel='external nofollow' class='url'>tacotact</a></b> a commenté sur <a href="http://blogs.lexpress.fr/histoire-politique/2016/12/28/le-fantasme-des-grandes-invasions/#comment-4657">Le fantasme des &laquo;&nbsp;grandes invasions&nbsp;&raquo;.</a>: Il y a en a qui se font grand plaisir , à trouver des vérités, dans une idéologie qui sera...</li><li class="recentcomments"><b><a href='http://www.lexildesmots.hautetfort.com' rel='external nofollow' class='url'>Bertrand Redonnet</a></b> a commenté sur <a href="http://blogs.lexpress.fr/histoire-politique/2016/12/28/le-fantasme-des-grandes-invasions/#comment-4647">Le fantasme des &laquo;&nbsp;grandes invasions&nbsp;&raquo;.</a>: Qu'il est agréable - et rassurant - de lire de l'intelligence ! Merci</li><li class="recentcomments"><b><a href='https://mes-actus.fr/prsidentielle-dj-fillon-se-hollandise/' rel='external nofollow' class='url'>Pr&eacute;sidentielle : d&eacute;j&agrave; Fillon se &quot;hollandise&quot;... - Mes Actus</a></b> a commenté sur <a href="http://blogs.lexpress.fr/histoire-politique/2016/12/18/nouvel-echiquier-politique-en-france/#comment-4599">Nouvel échiquier politique en France?</a>: [&#8230;] Lire la suite sur blogs.lexpress.fr&#8230; [&#8230;]</li><li class="recentcomments"><b>André Ropert</b> a commenté sur <a href="http://blogs.lexpress.fr/histoire-politique/2016/11/26/abstention/#comment-4555">Abstention.</a>: Comparaison n'est pas raison. J'ai voulu, dans ce dernier paragraphe, user d'un exemple historique (c'est l'esprit du blog) pour éclairer...</li><li class="recentcomments"><b><a href='https://communaute.lexpress.fr/membre/ectelion' rel='external nofollow' class='url'>Ectelion</a></b> a commenté sur <a href="http://blogs.lexpress.fr/histoire-politique/2016/11/26/abstention/#comment-4551">Abstention.</a>: Je suis déçu par cette intervention moralisatrice et particulièrement par le dernier paragraphe outrancier : quel remarquable point Godwin digne...</li></ul>
+			
+			
+		</div><div id="archives-3" class="widget-container widget_archive"><div class="widget-title">Archives</div>			<select name="archive-dropdown" onchange='document.location.href=this.options[this.selectedIndex].value;'> <option value="">Choisir un mois</option> 	<option value='http://blogs.lexpress.fr/histoire-politique/2016/12/'> décembre 2016 &nbsp;(4)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2016/11/'> novembre 2016 &nbsp;(2)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2016/10/'> octobre 2016 &nbsp;(5)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2016/09/'> septembre 2016 &nbsp;(3)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2016/08/'> août 2016 &nbsp;(4)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2016/07/'> juillet 2016 &nbsp;(4)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2016/06/'> juin 2016 &nbsp;(2)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2016/05/'> mai 2016 &nbsp;(4)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2016/04/'> avril 2016 &nbsp;(5)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2016/03/'> mars 2016 &nbsp;(4)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2016/02/'> février 2016 &nbsp;(5)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2016/01/'> janvier 2016 &nbsp;(5)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2015/12/'> décembre 2015 &nbsp;(3)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2015/11/'> novembre 2015 &nbsp;(4)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2015/10/'> octobre 2015 &nbsp;(5)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2015/09/'> septembre 2015 &nbsp;(4)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2015/08/'> août 2015 &nbsp;(4)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2015/07/'> juillet 2015 &nbsp;(4)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2015/06/'> juin 2015 &nbsp;(4)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2015/05/'> mai 2015 &nbsp;(7)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2015/04/'> avril 2015 &nbsp;(5)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2015/03/'> mars 2015 &nbsp;(4)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2015/02/'> février 2015 &nbsp;(4)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2015/01/'> janvier 2015 &nbsp;(6)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2014/12/'> décembre 2014 &nbsp;(5)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2014/11/'> novembre 2014 &nbsp;(2)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2014/10/'> octobre 2014 &nbsp;(3)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2014/09/'> septembre 2014 &nbsp;(2)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2014/08/'> août 2014 &nbsp;(3)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2014/07/'> juillet 2014 &nbsp;(4)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2014/06/'> juin 2014 &nbsp;(3)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2014/05/'> mai 2014 &nbsp;(4)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2014/04/'> avril 2014 &nbsp;(5)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2014/03/'> mars 2014 &nbsp;(2)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2014/02/'> février 2014 &nbsp;(3)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2014/01/'> janvier 2014 &nbsp;(6)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2013/12/'> décembre 2013 &nbsp;(4)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2013/11/'> novembre 2013 &nbsp;(3)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2013/10/'> octobre 2013 &nbsp;(4)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2013/09/'> septembre 2013 &nbsp;(3)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2013/08/'> août 2013 &nbsp;(3)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2013/07/'> juillet 2013 &nbsp;(4)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2013/06/'> juin 2013 &nbsp;(3)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2013/05/'> mai 2013 &nbsp;(5)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2013/04/'> avril 2013 &nbsp;(2)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2013/03/'> mars 2013 &nbsp;(2)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2013/02/'> février 2013 &nbsp;(2)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2013/01/'> janvier 2013 &nbsp;(4)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2012/12/'> décembre 2012 &nbsp;(3)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2012/11/'> novembre 2012 &nbsp;(1)</option>
+	<option value='http://blogs.lexpress.fr/histoire-politique/2012/10/'> octobre 2012 &nbsp;(4)</option>
+ </select>
+			<p class="spacer"></p>
+						</div><div id="feed-2" class="widget-container widget-feed"><div class="widget-title">A la une en ce moment sur L'Express</div>		<div class="widget-content">
+			<ul class="widget-list">
+									<li class="widget-list-item"><a target="_blank" href="http://www.lexpress.fr/actualite/monde/video-un-spectaculaire-incendie-ravage-les-collines-de-valparaiso-au-chili_1865164.html">VIDÉO. Un spectaculaire incendie ravage les collines de Valparaiso au Chili</a></li>
+									<li class="widget-list-item"><a target="_blank" href="http://www.lexpress.fr/actualites/1/politique/guillaume-ps-valls-ne-proposera-pas-un-catalogue-de-promesses_1865180.html">Guillaume (PS): Valls ne proposera pas &quot;un catalogue de promesses&quot;</a></li>
+									<li class="widget-list-item"><a target="_blank" href="http://lexpansion.lexpress.fr/actualites/1/actualite-economique/le-lse-accepte-de-vendre-lch-sa-a-euronext-pour-510-m-eur_1865176.html">Bourse: le London Stock Exchange va vendre LCH SA à Euronext</a></li>
+									<li class="widget-list-item"><a target="_blank" href="http://www.lexpress.fr/actualite/monde/asie/trump-se-moque-des-ambitions-nucleaires-de-la-coree-du-nord_1865174.html">Trump se moque des ambitions nucléaires de la Corée du Nord</a></li>
+									<li class="widget-list-item"><a target="_blank" href="http://www.lexpress.fr/actualite/politique/ps/arnaud-montebourg-propose-de-baisser-la-csg-sur-le-smic_1865170.html">Arnaud Montebourg propose de baisser la CSG sur le Smic</a></li>
+									<li class="widget-list-item"><a target="_blank" href="http://lexpansion.lexpress.fr/actualites/1/actualite-economique/cinema-le-box-office-chinois-marque-le-pas-en-2016_1865169.html">Cinéma: le box-office chinois marque le pas en 2016</a></li>
+									<li class="widget-list-item"><a target="_blank" href="http://www.lexpress.fr/actualites/1/monde/turquie-l-auteur-de-la-tuerie-d-istanbul-traque-par-les-autorites_1865168.html">Turquie: l&#039;auteur de la tuerie d&#039;Istanbul traqué par les autorités</a></li>
+									<li class="widget-list-item"><a target="_blank" href="http://www.lexpress.fr/actualites/1/monde/le-fentanyl-fait-des-ravages-dans-les-bas-fonds-de-vancouver_1865167.html">Le fentanyl fait des ravages dans les bas-fonds de Vancouver</a></li>
+									<li class="widget-list-item"><a target="_blank" href="http://www.lexpress.fr/actualite/societe/drome-fausse-alerte-dans-un-tgv-a-cause-d-un-enfant-avec-une-arme-en-plastique_1865155.html">Drôme: fausse alerte dans un TGV à cause d&#039;un enfant avec une arme en plastique</a></li>
+									<li class="widget-list-item"><a target="_blank" href="http://lexpansion.lexpress.fr/actualites/1/actualite-economique/singapour-ralentissement-de-la-croissance-economique-en-2016_1865165.html">Singapour: ralentissement de la croissance économique en 2016</a></li>
+							</ul>
+		</div>
+		</div><div id="text-4" class="widget-container widget_text">			<div class="textwidget"><div class="adsense">
+<script type="text/javascript"><!--
+google_ad_client = "pub-8025210940948649";
+/* cm_blog2_archisimple_300_250 */
+google_ad_slot = "5897216828";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div></div>
+		</div> 
+
+		<div id="text-98" class="hide-xs">
+			<div class="textwidget">
+				<!-- Pavé colonne droite blogs -->
+	    		<ins class="adsbygoogle"
+					 style="display:inline-block;width:300px;height:250px"
+					 data-ad-client="ca-pub-8025210940948649"
+					 data-ad-slot="5718656083"></ins>
+			</div>
+		</div>
+</section>
+</article>
+<div class="block_partners"></div>
+
+
+<a href="#header" class="scroll_to_top smooth_scroll icon icon_up_FFF"><span class="mask">Retour vers le haut de page</span></a>
+</div>
+<div class="block  block_share block_share_col">
+        <ul class="block_share_list">
+          <li class="block_share_list_item">
+            <span class="nb_share"></span>
+            <span class="text">partages</span>
+          </li>
+          
+        
+    
+          
+    <li class="block_share_list_item">
+    <a  href="http://po.st/v1/share/facebook?publisherKey=jj3s7kubef9il40pcpep&url=http://blogs.lexpress.fr/histoire-politique/2016/04/28/bizarre-le-jeune-macron-seduit-les-retraites-de-gauche/&title=Bizarre+%3A+le+jeune+Macron+s%C3%A9duit+les+retrait%C3%A9s+de+gauche%21&image=" class="btn btn_icon btn_icon_circle btn_fb" target="_blank"><span class="icon_large icon_fb"><span class="mask">facebook</span></span></a>
+  </li>
+
+    <li class="block_share_list_item">
+    <a  href="http://po.st/v1/share/twitter?via=Lexpress&publisherKey=jj3s7kubef9il40pcpep&url=http://blogs.lexpress.fr/histoire-politique/2016/04/28/bizarre-le-jeune-macron-seduit-les-retraites-de-gauche/&title=Bizarre+%3A+le+jeune+Macron+s%C3%A9duit+les+retrait%C3%A9s+de+gauche%21" class="btn btn_icon btn_icon_circle btn_twitter" target="_blank"><span class="icon_large icon_twitter"><span class="mask">Twitter</span></span></a>
+  </li>
+
+
+    <li class="block_share_list_item display_ml">
+    <a  href="http://po.st/v1/share/googleplus?publisherKey=jj3s7kubef9il40pcpep&url=http://blogs.lexpress.fr/histoire-politique/2016/04/28/bizarre-le-jeune-macron-seduit-les-retraites-de-gauche/&title=Bizarre+%3A+le+jeune+Macron+s%C3%A9duit+les+retrait%C3%A9s+de+gauche%21" class="btn btn_icon btn_icon_circle btn_gplus btn_icon_secondary" target="_blank"><span class="icon_large icon_gplus"><span class="mask">Google plus</span></span></a>
+  </li>
+
+    <li class="block_share_list_item display_ml">
+    <a  href="http://po.st/v1/share/pinterest?publisherKey=jj3s7kubef9il40pcpep&url=http://blogs.lexpress.fr/histoire-politique/2016/04/28/bizarre-le-jeune-macron-seduit-les-retraites-de-gauche/&title=Bizarre+%3A+le+jeune+Macron+s%C3%A9duit+les+retrait%C3%A9s+de+gauche%21&image=" class="btn btn_icon btn_icon_circle btn_pinterest" target="_blank"><span class="icon_large icon_pinterest"><span class="mask">Pinterest</span></span></a>
+  </li>
+
+
+    <li class="block_share_list_item item_mail display_ml">
+    <a href="http://po.st/v1/share/email?publisherKey=jj3s7kubef9il40pcpep&url=http://blogs.lexpress.fr/histoire-politique/2016/04/28/bizarre-le-jeune-macron-seduit-les-retraites-de-gauche/&title=Bizarre+%3A+le+jeune+Macron+s%C3%A9duit+les+retrait%C3%A9s+de+gauche%21" class="btn btn_icon btn_icon_circle btn_alpha" target="_blank"><span class="icon_large icon_mail_gray"><span class="mask">Mail</span></span></a>
+  </li>
+
+    <li class="block_share_list_item item_whatsapp">
+    <a href="http://po.st/v1/share/whatsapp?publisherKey=jj3s7kubef9il40pcpep&url=http://blogs.lexpress.fr/histoire-politique/2016/04/28/bizarre-le-jeune-macron-seduit-les-retraites-de-gauche/&title=Bizarre+%3A+le+jeune+Macron+s%C3%A9duit+les+retrait%C3%A9s+de+gauche%21" class="btn btn_icon btn_icon_circle btn_whatsapp btn_icon_secondary" target="_blank"><span class="icon_large icon_whatsapp"><span class="mask">Whatsapp</span></span></a>
+  </li>
+
+
+                    <li class="item_comments">
+            <a href="#comments">
+              <span class="nb_comments js-comments-count">0</span>
+              <span class="item_comments_title_text text" data-alternativetext="Réagir">réaction</span>
+            </a>
+          </li>
+                  </ul>
+
+      </div>
+      <div class="block block_share block_share_header show_header_socials_article">
+        <ul class="block_share_list share_list_large">
+          <li class="block_share_list_item"> <a onclick="return xt_click(this,'C','13','Styles::Mode::Les Createurs::Facebook-Header','A')" class="btn btn_icon btn_fb" href="http://po.st/v1/share/facebook?publisherKey=jj3s7kubef9il40pcpep&url=http://blogs.lexpress.fr/histoire-politique/2016/04/28/bizarre-le-jeune-macron-seduit-les-retraites-de-gauche/&title=Bizarre+%3A+le+jeune+Macron+s%C3%A9duit+les+retrait%C3%A9s+de+gauche%21"><span class="icon_large icon_fb"><span class="mask">facebook</span></span><span class="btn_text">Partager</span></a> </li>
+          <li class="block_share_list_item"> <a onclick="return xt_click(this,'C','13','Styles::Mode::Les Createurs::Pinterest-Colonne_de_gauche','A')" href="http://po.st/v1/share/pinterest?publisherKey=jj3s7kubef9il40pcpep&url=http://blogs.lexpress.fr/histoire-politique/2016/04/28/bizarre-le-jeune-macron-seduit-les-retraites-de-gauche/&title=Bizarre+%3A+le+jeune+Macron+s%C3%A9duit+les+retrait%C3%A9s+de+gauche%21&image=" class="btn btn_icon  btn_pinterest" target="_blank"><span class="icon_large icon_pinterest"><span class="mask">Pinterest</span></span><span class="btn_text">Epingler</span></a> </li>
+          <li class="block_share_list_item item_whatsapp"> <a onclick="return xt_click(this,'C','13','Styles::Mode::Les Createurs::Whatsapp-Header','A')" href="http://po.st/v1/share/whatsapp?publisherKey=jj3s7kubef9il40pcpep&url=http://blogs.lexpress.fr/histoire-politique/2016/04/28/bizarre-le-jeune-macron-seduit-les-retraites-de-gauche/&title=Bizarre+%3A+le+jeune+Macron+s%C3%A9duit+les+retrait%C3%A9s+de+gauche%21" class="btn btn_icon btn_whatsapp btn_icon_secondary" target="_blank"><span class="icon_large icon_whatsapp"><span class="mask">Whatsapp</span></span> <span class="btn_text">Whatsapp</span></a> </li>
+        </ul>
+      </div>          <div class="footer">
+                     <!-- Zone: "rwd-l-express-surfooter" --><section class="block_module_event block_module_event_kiosk  event_kiosk_surfooter"><div class="container_event"><div class="bg_img"><picture><source media="(min-width: 1000px)" data-srcset="http://static.lexpress.fr/doc/rwd_home/bandeau_abonnement/lexpress/abo-img-exp-1000x200.jpg"></source><source media="(min-width: 768px)" data-srcset="http://static.lexpress.fr/doc/rwd_home/bandeau_abonnement/lexpress/abo-img-exp-999x200.jpg"></source><source media="(min-width: 480px)" data-srcset="http://static.lexpress.fr/doc/rwd_home/bandeau_abonnement/lexpress/abo-img-xpr-767x200.jpg"></source><img data-src="http://static.lexpress.fr/doc/rwd_home/bandeau_abonnement/lexpress/abo-img-xpr-479x100.jpg" class="lazyload" alt="L'Express"></picture></div><div class="header_event"><div class="title">L'Express</div></div><div class="content_event"><div class="kiosk_img"><img width="137" height="179" alt="" src="http://static.lexpress.fr/assets/746/ger_382115.jpg"></div><ul class="text event_list"><li class="event_list_item">Acc&egrave;s illimit&eacute; &agrave; tous les contenus</li><li class="event_list_item">Sur tous les supports : site, applis, magazine</li></ul><p class="p_button"><a href="http://communaute.lexpress.fr/abonnements?xtatc=INT-23" class="btn_rounded btn_theme more_arrow">S'abonner<span class="display_xxs">&nbsp;&agrave; partir de 1 &euro;</span></a></p></div></div></section>
+<nav class="nav nav_footer" role="navigation"><ul class="nav_list"><li class="nav_list_item">Archives / </li><li class="nav_list_item"><a target="_blank" href="http://www.lexpress.fr/archives/2016/">2016</a></li><li class="nav_list_item"><a target="_blank" href="http://www.lexpress.fr/archives/2015/">2015</a></li><li class="nav_list_item"><a target="_blank" href="http://www.lexpress.fr/archives/2014/">2014</a></li><li class="nav_list_item"><a target="_blank" href="http://www.lexpress.fr/archives/2013/">2013</a></li><li class="nav_list_item"><a target="_blank" href="http://www.lexpress.fr/archives/2012/">2012</a></li><li class="nav_list_item"><a target="_blank" href="http://www.lexpress.fr/archives/2011/">2011</a></li><li class="nav_list_item"><a target="_blank" href="http://www.lexpress.fr/archives/2010/">2010</a></li><li class="nav_list_item"><a target="_blank" href="http://www.lexpress.fr/archives/2009/">2009</a></li><li class="nav_list_item"><a target="_blank" href="http://www.lexpress.fr/archives/2008/">2008</a></li><li class="nav_list_item"><a target="_blank" href="http://www.lexpress.fr/archives/2007/">2007</a></li><li class="nav_list_item"><a target="_blank" href="http://www.lexpress.fr/archives/2006/">2006</a></li><li class="nav_list_item"><a target="_blank" href="http://www.lexpress.fr/archives/2005/">2005</a></li><li class="nav_list_item"><a target="_blank" href="http://www.lexpress.fr/archives/2004/">2004</a></li><li class="nav_list_item"><a target="_blank" href="http://www.lexpress.fr/archives/2003/">2003</a></li><li class="nav_list_item"><a target="_blank" href="http://www.lexpress.fr/archives/2002/">2002</a></li><li class="nav_list_item"><a target="_blank" href="http://www.lexpress.fr/archives/2001/">2001</a></li><li class="nav_list_item"><a target="_blank" href="http://www.lexpress.fr/archives/2000/">2000</a></li><li class="nav_list_item"><a target="_blank" href="http://www.lexpress.fr/archives/1999/">1999</a></li><li class="nav_list_item"><a target="_blank" href="http://www.lexpress.fr/archives/1998/">1998</a></li><li class="nav_list_item"><a target="_blank" href="http://www.lexpress.fr/archives/1997/">1997</a></li></ul></nav>
+<div class="bloc_surfooter two_items"><article class="service"><p class="title_small">Les services de L'Express</p><ul class="list_small"><li><a href="http://www.lexpress.fr/actualite/politique/elections/presidentielle-2017/">Pr&eacute;sidentielle 2017</a></li><li><a href="http://www.lexpress.fr/actualite/politique/elections/presidentielle-2017/resultats-elections/france.html">R&eacute;sultats Pr&eacute;sidentielle 2017</a></li><li><a href="http://www.lexpress.fr/actualite/politique/primaire-des-gauches_1769028.html">Primaire &agrave; gauche</a></li><li><a href="http://www.lexpress.fr/actualite/politique/lr/primaire-a-droite-pour-la-presidentielle-2017_1628249.html">Primaire &agrave; droite</a></li><li><a href="http://www.lexpress.fr/palmares/lycees/">Classement des lyc&eacute;es</a></li><li><a href="http://www.lexpress.fr/concours/">Jeux concours</a></li><li><a href="http://codepromo.lexpress.fr/code-promo-conforama">Code promo Conforama</a></li><li><a href="http://codepromo.lexpress.fr/code-promo-sarenza">Code promo Sarenza</a></li><li><a href="http://app.adjust.io/s3u56c">Application iOS L'Express</a></li><li><a href="https://app.adjust.com/diozpf">Application Andro&iuml;d L'Express</a></li></ul></article>
+<article class="partner"><p class="title_small">Nos partenaires</p><ul class="list_small"><li><a href="http://codepromo.lexpress.fr/">BONS DE R&Eacute;DUCTION avec Cuponation</a></li><li><a href="http://smartphone.lexpress.fr">COMPARATIF SMARTPHONE avec Meilleurmobile</a></li><li><a href="https://www.lexpress.fr/itunes/">CODES ITUNES avec L'Express</a></li><li><a href="http://emploi.lexpress.fr/carriere/offre-emploi">OFFRES D'EMPLOI avec L'Express Emploi</a></li><li><a href="http://immobilier.lexpress.fr/">ANNONCES IMMOBILIERES avec Logic-Immo</a></li></ul></article>
+</div>
+<!-- End Zone: "rwd-l-express-surfooter" -->
+
+              <footer id="footer">
+  <div class="link_group">
+    <p>Les sites du réseau Groupe Altice Média  : </p>
+    <ul class="list_link_inline">
+      <li><a title="Economie" target="_blank" href="http://lexpansion.lexpress.fr/">Economie</a> avec LExpansion.com</li>
+      <li><a title="Décideurs" target="_blank" href="http://www.lalettredelexpansion.com/">Décideurs</a> avec La Lettre de L'Expansion</li>
+      <li><a title="Entreprise" target="_blank" href="http://lentreprise.lexpress.fr/">Entreprise</a> avec LEntreprise.com</li>
+      <li><a title="Bourse" target="_blank" href="http://votreargent.lexpress.fr/">Bourse</a> avec Votreargent.fr</li>
+      <li><a title="Décoration" target="_blank" href="http://www.cotemaison.fr/">Décoration</a> avec CoteMaison.fr</li>
+      <li><a title="Recrutement" target="_blank" href="http://www.jobrencontres.fr/">Recrutement</a> avec Jobrencontres.fr</li>
+      <li><a title="Emploi Grande Distribution" target="_blank" href="http://www.distrijob.fr/">Emploi Grande Distribution</a> avec Distrijob.fr</li>
+      <li><a title="Pianiste" target="_blank" href="http://www.pianiste.fr/">L'apprentissage du piano</a> avec Pianiste</li>
+    </ul>
+  </div>
+<!--   <div>
+  	<ul>
+      <li><a title="Epresse" target="_blank" href="http://www.epresse.fr/">Abonnement presse numérique</a> sur Epresse.fr</li>
+  	</ul>
+  </div> -->
+  <div>
+    <p>© L'Express - </p>
+    <ul class="list_link_inline">
+      <li><a title="Mentions légales" href="http://www.lexpress.fr/outils/mentions-legales.html">Mentions légales</a></li>
+      <li><a title="Charte d'utilisation" href="http://www.lexpress.fr/outils/conditions-generales-utilisation.html">Conditions générales d'utilisation</a></li>
+      <li><a title="Charte des commentaires" href="http://www.lexpress.fr/outils/charte-commentaires.html">Charte des commentaires</a></li>
+      <li><a title="Contacts" href="http://www.lexpress.fr/outils/contacts.html">Contacts</a></li>
+      <li><a rel="nofollow" target="_blank" title="Service Client" href="https://groupeexpressroularta.zendesk.com/anonymous_requests/new">Service Client</a></li>
+      <li><a title="Archives" href="http://www.lexpress.fr/archives/">Archives</a></li>
+      <li><a title="Boutique" href="https://boutique.lexpress.fr/">Boutique</a></li>
+      <li class="x_derniere"><a title="Régie Publicitaire" target="_blank" href="http://www.expressroulartaservices.fr">Régie Publicitaire</a></li>
+    </ul>
+  </div>
+</footer>
+  </div>
+<style>
+	#wpadminbar{
+		z-index:99999999999;	
+	}
+</style>
+<script src="http://static.lexpress.fr/min/js/rwd/common+94fc18ba1a58d0ab16d2eab7710ce6a374ddffe6a3de552ae354b157bc192cbf.js" type="text/javascript"></script> 
+<script src="http://static.lexpress.fr/min/js/rwd/cookie_policy+a6bc7f2135e9c7db01a2f7c286b1ac2fbec492abb15906b979709d06d8f11ac0.js" type="text/javascript"></script>
+<link rel='stylesheet' id='fancybox-group-css' href='http://blogs.lexpress.fr/histoire-politique/wp-content/plugins/bwp-minify/min/?f=wp-content/plugins/bea-report-comment/ressources/css/jquery.fancybox.css,wp-content/plugins/bea-report-comment/ressources/css/reportcomment.css' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var beard_var = {"ajaxurl":"http:\/\/blogs.lexpress.fr\/histoire-politique\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var bearc_var = {"ajaxurl":"http:\/\/blogs.lexpress.fr\/histoire-politique\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://blogs.lexpress.fr/histoire-politique/wp-content/plugins/bwp-minify/min/?f=wp-content/themes/express-blogs-v4-resp/library/js/jquery.twitter.js,wp-content/themes/express-blogs-v4-resp/library/js/jquery-validate/jquery.validate.min.js,wp-content/themes/express-blogs-v4-resp/library/js/commentform.js,BEA_CC_URL/ressources/js/connected-comments3.js,wp-content/plugins/akismet/_inc/form.js,wp-content/plugins/bea-recommend/ressources/js/recommend.js,wp-content/plugins/bea-report-comment/ressources/js/jquery.fancybox.pack.js,wp-content/plugins/bea-report-comment/ressources/js/reportcomment.js'></script>
+        <!-- TAG COMMANDER START //-->
+        <script type="text/javascript">
+        function GetParamValue(a, b, c, d) {
+          var e = void 0 == b ? "" : b + ";",
+              f = void 0 == c ? document.location.href : c,
+              g = new RegExp("undefined" == typeof d ? "(\\?|&|#|^)" + a + "=(.+?)(&|$)" : d);
+          return matches = f.match(g), matches && void 0 != matches[2] ? decodeURIComponent(e + matches[2]).replace(/\+/g, " ") : ""
+        }
+		function setCookie(name,value,days,path,domain,secure) {
+		  var expires, date;
+		  if (typeof days == "number") {
+		    date = new Date();
+		    date.setTime( date.getTime() + (days*24*60*60*1000) );
+		    expires = date.toGMTString();
+		  }
+		  document.cookie = name + "=" + escape(value) +
+		    ((expires) ? "; expires=" + expires : "") +
+		    ((path) ? "; path=" + path : "") +
+		    ((domain) ? "; domain=" + domain : "") +
+		    ((secure) ? "; secure" : "");
+		}
+		function getCookie(name) {
+		  var nameq = name + "=";
+
+		  var c_ar = document.cookie.split(';');
+		  for (var i=0; i<c_ar.length; i++) {
+		    var c = c_ar[i];
+		    while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		    if (c.indexOf(nameq) == 0) return unescape( c.substring(nameq.length, c.length) );
+		  }
+		  return null;
+		}
+        //<![CDATA[
+        // google_editors_picks
+        var u = document.location.href;
+        matches = u.match('^.+(\\?|&|^)google_editors_picks=(.*?)(&|$)');
+        // tagcommander_start
+        var tc_vars = new Array();
+        tc_vars["env_work"]= 'prod';
+        tc_vars["env_template"]= '';
+        tc_vars["env_urlorigini"]= document.URL; //URL origini
+        var uriCourant = document.location.pathname.replace('.html', '');
+        var indiceDepart = uriCourant.indexOf('/')+1;
+        var indiceArrivee = uriCourant.length;
+        var urlPart = uriCourant.substring(indiceDepart, indiceArrivee);
+        tc_vars["URI"]= urlPart;
+        tc_vars["env_urlrewritten"]= urlPart;
+        tc_vars["parameters"]= encodeURIComponent(encodeURIComponent(window.location.search)) + window.location.hash.replace("#", "@");
+        if (typeof document.referrer != 'undefined' && document.referrer.length > 0) {
+          if (document.referrer == document.location.href) {
+            tc_vars["referer"]= "Refresh";
+          } else {
+            tc_vars["referer"]= encodeURIComponent(encodeURIComponent(document.referrer));
+          }
+        } else {
+          tc_vars["referer"]= "Vide";
+        }
+        tc_vars["page_name"]= " " + urlPart;
+        tc_vars["ga_section"]= "Blog " + document.title;
+        tc_vars["template"]= "Postblog";
+        tc_vars["Level2_ID"]= '7'; //Page categorie ---- ParamÃ¨tre du plugin
+        tc_vars["page_categorie"]= '7'; //Page categorie ---- ParamÃ¨tre du plugin
+        tc_vars["page_level"]= 'Blogs'; //Page level ---- ParamÃ¨tre du plugin
+        tc_vars["page_level2"]= 'Histoire-de-le-dire'; //Page level ---- ParamÃ¨tre du plugin
+        tc_vars["page_level3"]= 'histoire-de-le-dire'; //Page level ---- ParamÃ¨tre du plugin
+        tc_vars["page_chapter"]= 'Blogs';
+        if (urlPart.indexOf("styles/")!=-1) {
+                tc_vars["page_chapter2"]= 'Styles';
+        } else if (document.domain == "cotemaison.fr") {
+                tc_vars["page_chapter2"]= 'Cote_Maison';
+        } else {
+                tc_vars["page_chapter2"]= 'Actualite';
+        }
+        tc_vars["page_chapter3"]= 'histoire-de-le-dire'; //Page level ---- ParamÃ¨tre du plugin
+        tc_vars["page_error"]= '200 OK'; //Error page
+        tc_vars["search_keywords"]= '';
+        tc_vars["search_page_number"]= '';
+        tc_vars["search_motor_type"]= '';
+        tc_vars["search_filters"]= '';
+        tc_vars["article_type"]= 'postblog';
+        tc_vars["article_title"]= '/2016/04/28/bizarre-le-jeune-macron-seduit-les-retraites-de-gauche/';
+        tc_vars["article_autor"]= 'André Ropert';
+        tc_vars["article_publication"]= '2016-04-28 15:38:01';
+        tc_vars["article_last_update"]= '2016-04-28 15:38:01';
+        tc_vars["article_linked"]= '';
+        tc_vars["article_keywords"]= '';
+        tc_vars["article_source"]= 'Blogs';
+        tc_vars["article_id"]= '2016/04/28';
+        tc_vars["article_flux"]= '';
+
+        tc_vars["hostname"]= document.location.hostname;
+
+        if (getCookie('expressPlatform')) {
+        tc_vars["authentication_status"]= 'Connecte';
+        } else {
+        tc_vars["authentication_status"]= 'Non Connecte';
+        }
+        if (getCookie('expressPlatform')) {
+        tc_vars["authentication_type"]= getCookie('fbsr_111055588938671') ? 'Facebook' : 'Standard';
+        } else {
+        tc_vars["authentication_type"]= 'Non Connecte';
+        }
+        tc_vars["content_topics"]="";
+        if (typeof OAS_sitepage != 'undefined' && OAS_sitepage != '') {
+        tc_vars["adserver_sitepage"]= OAS_sitepage;
+        } else {
+        tc_vars["adserver_sitepage"]= "Vide";
+        }
+        tc_vars['content_creator']= 'André Ropert';
+        if (typeof Modernizr != "undefined" && typeof $.mq != "undefined") {
+          tc_vars["RWD_format"]= $.mq.getSize();
+        } else {
+          tc_vars["RWD_format"]= "L";
+        }
+        tc_vars["subsite_name"]= '';
+        tc_vars["ocari_xtpage"]= '';
+        if (getCookie('express_xtan')) {
+		  tc_vars["customvar_2"]= getCookie('express_xtan');
+		  tc_vars["user_category"]= "1";
+		  if (GetParamValue('PMID')) {
+		    tc_vars["pmid"]= GetParamValue('PMID');
+		    if (getCookie('xprperspmid') == null) {
+		      setCookie("xprperspmid", GetParamValue('PMID') + "|ID Account", 390, "/", document.domain);
+		    }
+		  } else if (getCookie('xprperspmid')) {
+		    tc_vars["pmid"]= GetParamValue('PMID').replace("|ID Account", "").replace("|PMID", "");
+		  }
+		} else if (GetParamValue('PMID')) {
+		  tc_vars["customvar_2"]= GetParamValue('PMID');
+		  tc_vars["pmid"]= GetParamValue('PMID');
+		  tc_vars["user_category"]= "2";
+		  if (getCookie('xprperspmid') == null) {
+		    setCookie("xprperspmid", GetParamValue('PMID') + "|PMID", 390, "/", document.domain);
+		  }
+		} else if (getCookie('xprperspmid')) {
+		  tc_vars["customvar_2"]= getCookie('xprperspmid').replace("|ID Account", "").replace("|PMID", "");
+		  tc_vars["pmid"]= getCookie('xprperspmid').replace("|ID Account", "").replace("|PMID", "");
+		  tc_vars["user_category"]= "2";
+		} else {
+		  tc_vars["customvar_2"]= "";
+		  tc_vars["user_category"]= "3";
+		  tc_vars["pmid"]= "";
+		  if (getCookie('xprperspmid')) {
+		    tc_vars["pmid"]= getCookie('xprperspmid').replace("|ID Account", "").replace("|PMID", "");
+		  }
+		}
+
+		if (getCookie('meterProd')) {
+		tc_vars["unique_id"]= JSON.parse(getCookie('meterProd')).uniqueId;
+		tc_vars["counter"]= JSON.parse(getCookie('meterProd')) && JSON.parse(getCookie('meterProd')).counts.length > 0 ? JSON.parse(getCookie('meterProd')).counts.length : 0;
+		} else {
+		tc_vars["unique_id"]= "0";
+		tc_vars["counter"]= "0";
+		}
+
+        tc_vars["custom_1"]= '0'; // Google percent
+        tc_vars["custom_2"]= '0'; // Ligatus percent
+        if (matches != null) {
+                tc_vars["customvar_1"]= matches2; // Google Editor Picks text
+        } else {
+                tc_vars["customvar_1"]= ''; // Google Editor Picks text
+        }
+        tc_vars["customvar_3"]= window.location.search ; // URL parameters text
+                        tc_vars["customvar_4"] = 'UA-41356344-1'; // GA
+        
+        if (typeof OAS_query != 'undefined') {
+			tc_vars["ops_tag"]= OAS_query;
+		} else if (typeof sas_target != 'undefined') {
+			tc_vars["ops_tag"]= sas_target;
+		} else {
+			tc_vars["ops_tag"]= '';
+		}
+        tc_vars["customvar_5"]= 'histoire, nationale, Politique';
+        tc_vars["customvar_6"]= '';
+        // tagcommander_end
+        //]]>
+        </script>
+        <script type="text/javascript" src="http://static.lexpress.fr/js/tc_lexpress_2_blog.js?_v=030117"></script>
+        <noscript><iframe src="http://redirect227.tagcommander.com/utils/noscript.php?id=1&mode=iframe" width="1" height="1"></iframe></noscript>
+        <!-- TAG COMMANDER END //-->
+         <!-- En bas de page -->
+  <script type="text/javascript">
+   window._taboola = window._taboola || [];
+   _taboola.push({flush: true});
+  </script>
+<script type="text/javascript">
+	  (adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"92937e9174","applicationID":"1991151","transactionName":"ZFVWYUECD0QDV0ReWF0fdVZHCg5ZTUdZWVBfVQ==","queueTime":0,"applicationTime":214,"atts":"SBJVFwkYHEo=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
+

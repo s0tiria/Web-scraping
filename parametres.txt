@@ -1,0 +1,3 @@
+../URLS
+../TABLEAUX/TABLEAU-FINAL.html
+[Ww]eird(ly|ness|est)?|[Bb]izarres?|([Ππ]ερίεργ(ος|η|ο|οι|ες|α)|[Ππ]εριέργεια)|[Gg]ari(p|b*)|이상(하|할|한|합|해|했|함).*|(غريب|غرائب)
